@@ -1,0 +1,89 @@
+-
+    var footerNav = {
+        0: {
+            'link' : 'catalog-page.html',
+            'name' : 'Каталог'
+        },
+        1: {
+            'link': '#',
+            'name': 'Условия заказа'
+        },
+        2: {
+            'link': '#',
+            'name': 'Доставка'
+        },
+        3: {
+            'link': '#',
+            'name': 'Оплата'
+        },
+        4: {
+            'link': '#',
+            'name': 'О компании'
+        },
+        5: {
+            'link': '#',
+            'name': 'Контакты'
+        },
+    };
+
+    var social = {
+        0: {
+            'link': '#',
+            'img': 'img/connect-sect/instagram.svg',
+            'alt' : 'инстаграм'
+        },
+        1: {
+            'link': '#',
+            'img': 'img/connect-sect/facebook.svg',
+            'alt' : 'фэйсбук'
+
+        },
+        2: {
+            'link': '#',
+            'img': 'img/connect-sect/vk.svg',
+            'alt' : 'вконтакте'
+        },
+        3: {
+            'link': '#',
+            'img': 'img/connect-sect/youtube.svg',
+            'alt' : 'ютуб'
+        },
+        4: {
+            'link': '#',
+            'img': 'img/connect-sect/twitter.svg',
+            'alt' : 'твиттер'
+        },
+    };
+
+
+.footer
+    .container
+        .row
+            .col-12.col-sm-3.d-flex.align-items-center.justify-content-around
+                a.footer-logo(href='index.html')
+            .col-12.col-sm-9
+                nav.footer-nav
+                    .row.footer-nav_list
+                        each val, key in footerNav
+                            .col-6.col-sm-4.col-md-3.col-lg-2.footer-nav_item.d-flex.align-items-center.justify-content-around
+                                a(class='footer-nav_link' href=val.link)=val.name
+                .row.no-gutters.footer-contacts_block
+                    .col-12.col-sm-4.col-xl-3
+                        .footer-contacts +7 (495) 788-93-90<br>
+                            a(href='shop@sedek.ru') shop@sedek.ru
+                    .col-12.col-sm-8.col-xl-5
+                        .footer-contacts 142006, Московская обл., г. Домодедово,<br> мкр-н Востряково, ул. Парковая, д.19.
+                    .col-12.col-xl-4
+                        .footer-contacts Реквизиты: 7656 86876 7678 6564<br> 1995-2021 © Компания «СеДеК»
+                .row.no-gutters
+                    .col-12
+                        ul.social-block
+                            each val, key in social
+                                li.social-item
+                                    a(class='social-link social-link_white' href=val.link)
+                                        img(class='social-icon i-svg' src=val.img alt=val.alt)
+
+
+
+
+

@@ -1,0 +1,119 @@
+-
+    var catalog = {
+        0: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_1.png',
+            'name': 'Томаты',
+            'alt': 'Томаты'
+        },
+        1: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_2.png',
+            'name': 'Огурцы',
+            'alt': 'Огурцы'
+        },
+        2: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_3.png',
+            'name': 'Перцы',
+            'alt': 'Перцы'
+        },
+        3: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_4.png',
+            'name': 'Капуста',
+            'alt': 'Капуста'
+        },
+        4: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_5.png',
+            'name': 'Морковь',
+            'alt': 'Морковь'
+        },
+        5: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_6.png',
+            'name': 'Свекла',
+            'alt': 'Свекла'
+        },
+        6: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_7.png',
+            'name': 'Пряности',
+            'alt': 'Пряности'
+        },
+        7: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_8.png',
+            'name': 'Кабачки',
+            'alt': 'Кабачки'
+        },
+        8: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_5.png',
+            'name': 'Морковь',
+            'alt': 'Морковь'
+        },
+        9: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_6.png',
+            'name': 'Свекла',
+            'alt': 'Свекла'
+        },
+        10: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_7.png',
+            'name': 'Пряности',
+            'alt': 'Пряности'
+        },
+        11: {
+            'link': 'lk-worker-catalog-category.html',
+            'img': 'img/popular-sect/pop_8.png',
+            'name': 'Кабачки',
+            'alt': 'Кабачки'
+        },
+    };
+
+
+section.lk-worker-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-worker-menu-mobile.pug
+            include _lk-worker-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Каталог
+            section.worker-catalog-section
+                .row
+                    .col-12
+                        .search_block
+                            a(class='search-btn' href='javascript:void(0)')
+                                img(src='img/header-icons/search-icon.svg' alt='Кнопка поиска')
+                            input(class='header-search' type='search' placeholder='Найти: Помидоры')
+                .row.pop-cards-row
+                    each val, key in catalog
+                        .col-12.col-sm-6.col-lg-4
+                            .popular-card
+                                a(class='pop-card_link' href=val.link)
+                                    img(src=val.img alt=val.alt)
+                                    h3=val.name
+                .row.justify-content-around
+                    .col-12.col-sm-10.col-md-8.col-lg-6.d-flex.flex-column.align-items-center
+                        a(class='btn view-button' href='javascript:void(0)') Показать ещё
+                        .pagination-wrapper
+                            ul.pagination-list.d-flex.align-items-end.justify-content-between
+                                li.pagination-item
+                                    span.pagination-span
+                                li.pagination-item
+                                    span.pagination-span.span-page 1
+                                li.pagination-item
+                                    a(href='#') 2
+                                li.pagination-item
+                                    a(href='#') 3
+                                li.pagination-item
+                                    span.pagination-span  ...
+                                li.pagination-item
+                                    a(href='#') 12
+                                li.pagination-item
+                                    a.pagination-span.span-next(href='javascript:void(0)')

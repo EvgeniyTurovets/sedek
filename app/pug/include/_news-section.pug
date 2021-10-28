@@ -1,0 +1,48 @@
+-
+    var newsTopCards = {
+        0: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        1: {
+            'name': 'ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+
+
+        2: {
+            'name': 'ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        3: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+    };
+
+section.news-section
+    .row
+        .col-12.col-lg-8.d-flex.discount-goods-top.justify-content-between.align-items-center.order-first.order-lg-first.section-top
+            h2.news-heading Новости
+        .col-12.col-lg-4.d-flex.discount-goods-top.align-items-center.order-last.order-lg-2.justify-content-around.justify-content-lg-end
+            a(class= 'btn section-btn' href='all-news.html') Все новости
+        .col-12.order-2.order-lg-3.interesting-useful_content
+            .row.recommendations-content
+                .col-12.col-sm-10.col-md-8.col-lg-6
+                    a(href='#')
+                        .news-card-active
+                            img(src='img/recommendations-sect/recom_1.png' alt='новости')
+                            .recom-card-active_heading
+                                h3.news-active-heading Для оптового заказа обращайтесь только к нашим менеджерам
+                                span.card-date 25.11.2020
+                .col-12.col-md-4.col-lg-6.news-col
+                    .row
+                        each val, key in newsTopCards
+                            .col-12.col-sm-6.col-md-12.col-lg-6.recom-top_card
+                                a.d-flex.flex-column.justify-content-between(href=val.link)
+                                    h4.rec-card_heading=val.name
+                                    span.card-date=val.date

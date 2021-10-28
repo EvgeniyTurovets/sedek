@@ -1,0 +1,44 @@
+-
+    var menu = {
+        0: {
+            'name' : 'Мой кабинет',
+            'link' : 'lk-buyer-start.html'
+        },
+        1: {
+            'name': 'Личные данные',
+            'link': 'lk-personal.html',
+            'img' : 'img/lk/personal.svg',
+            'alt' : 'Аккаунт'
+        },
+        2: {
+            'name': 'Мои заказы',
+            'link': 'lk-my-orders.html',
+            'img' : 'img/lk/orders.svg',
+            'alt' : 'Список'
+        },
+        3: {
+            'name': 'Любимые товары',
+            'link': 'buyer-favorites.html',
+            'img' : 'img/lk/favor.svg',
+            'alt' : 'Сердечко'
+        },
+        4: {
+            'name': 'Мой счёт',
+            'link': 'my-bill.html',
+            'img' : 'img/lk/calc.svg',
+            'alt' : 'Калькулятор'
+        },
+        5: {
+            'name': 'Выйти',
+            'link': '#',
+            'img' : 'img/lk/exit.svg',
+            'alt' : 'Выйти'
+        },
+    };
+
+nav.lk-menu-left.d-none.d-md-block
+    .menu-left-wrapper.d-flex.flex-column
+        each val, key in menu
+            .link-block
+                a.menu-left_item(href=val.link)=val.name
+

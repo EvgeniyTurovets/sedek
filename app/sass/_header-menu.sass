@@ -1,0 +1,52 @@
+@import "vars"
+.header
+    .wrapper
+        position: absolute
+        display: none
+        width: 100%
+        transition: all .25s ease
+        z-index: 10
+
+        &.active
+            display: block
+            transition: all .25s ease
+
+.header-menu
+    padding: 25px 60px 60px 60px
+    background-color: $white
+
+    .header-menu_item
+        margin-top: 7px
+
+    .header-menu_link
+        font-size: 16px
+        font-weight: 700
+        line-height: 18px
+        color: $def-txt
+        white-space: nowrap
+
+        &:hover
+            opacity: .8
+            text-decoration-line: underline
+
+    .header-submenu_link
+        font-size: 14px
+        font-weight: 400
+        line-height: 18px
+        color: $def-txt
+
+        &:hover
+            color: $accent
+            text-decoration-line: underline
+
+    .header-menu_sidebar
+        height: 50%
+        padding-left: 30px
+        border-left: 1px solid $bg-color_1
+
+    .promo-menu-link
+        white-space: nowrap!important
+
+
+
+

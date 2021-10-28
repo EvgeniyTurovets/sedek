@@ -1,0 +1,72 @@
+@import "vars"
+
+//footer
+.footer-nav
+    padding: 0
+    margin-left: -15px
+
+.footer-logo
+    width: 182px
+    height: 182px
+    background-image: url("../img/header-img/new-logo.png")
+    background-size: contain
+    background-repeat: no-repeat
+
+.footer
+    margin-top: 60px
+    padding: 60px 0
+    background-color: $bg-color_1
+
+    .footer-nav_block
+        justify-content: space-between
+
+    .footer-nav_item
+        margin-bottom: 15px
+
+        &:nth-child(2)
+            margin-right: 20px
+
+
+        &:nth-child(3)
+            align-items: end
+            margin-right: -20px
+
+        a
+            display: block
+            width: 150px
+            text-align: center
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: .001em
+            color: $accent
+            white-space: nowrap
+            font-weight: 400
+
+
+    .footer-contacts_block
+        margin-top: 25px
+
+        a
+            color: $black
+            font-weight: 500
+
+    .footer-contacts
+        margin-bottom: 15px
+        font-weight: 400
+
+    .social-block
+        top: 0
+        margin-top: 20px
+        padding-left: 15px
+        width: 70%
+
+        .social-link
+            background: none
+
+            &:hover
+                background-color: $accent
+
+        .social-link
+
+            path
+                fill: $accent

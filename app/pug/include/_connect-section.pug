@@ -1,0 +1,51 @@
+-
+    var social = {
+        0: {
+            'link' : '#',
+            'img' : 'img/connect-sect/instagram.svg',
+            'alt' : 'инстаграм'
+        },
+        1: {
+            'link': '#',
+            'img': 'img/connect-sect/facebook.svg',
+            'alt' : 'фэйсбук'
+        },
+        2: {
+            'link': '#',
+            'img': 'img/connect-sect/vk.svg',
+            'alt' : 'вконтакте'
+        },
+        3: {
+            'link': '#',
+            'img': 'img/connect-sect/youtube.svg',
+            'alt' : 'ютуб'
+        },
+        4: {
+            'link': '#',
+            'img': 'img/connect-sect/twitter.svg',
+            'alt' : 'твиттер'
+        },
+    };
+
+
+section.connect-section
+    .row
+        .col-11.col-lg-7.connect-left.p-0
+            h2 Оставайтесь на связи
+            p.paragraph-gray Подписывайтесь на нас в соцсетях, узнавайте о новых поступлениях, полезных советах и выгодных предлложениях
+        .col-7
+            .row.social-block.justify-content-between
+                each val, key in social
+                    .col-4.col-lg-2.social-item.p-0
+                        a(class='social-link social-link_white' href=val.link)
+                            img(class='social-icon i-svg' src=val.img alt=val.alt)
+        .col-12.col-lg-5.connect-right
+            .connect-right-bg_block
+            img(class='connect-rect connect-rect_2' src='img/connect-sect/connect-rect_2.png' alt='розовый круг')
+            img(class='connect-rect connect-rect_3' src='img/connect-sect/connect-rect_3.png' alt='розовый круг')
+            img(class='connect-rect connect-rect_4' src='img/connect-sect/connect-rect_4.png' alt='розовый круг')
+            img(class='connect-rect connect-rect_5' src='img/connect-sect/connect-rect_5.png' alt='розовый круг')
+            img(class='connect-rect connect-rect_6' src='img/connect-sect/connect-rect_6.png' alt='карточка инстаграм')
+            img(class='connect-rect connect-rect_7' src='img/connect-sect/connect-rect_7.png' alt='карточка инстаграм')
+            img(class='connect-rect connect-rect_8' src='img/connect-sect/connect-rect_8.png' alt='карточка инстаграм')
+

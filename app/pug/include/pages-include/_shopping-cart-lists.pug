@@ -1,0 +1,297 @@
+-
+    var cartCard = {
+        0: {
+            'name' : 'Список 1',
+            'removeList' : false,
+            'item' :{
+                0: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/delivery.svg',
+                    'iconAlt' : 'курьером',
+                    'method' : 'Только курьером магазина',
+                    'oldPrice': '9 999 ₽',
+                    'newPrice': '9 999 ₽'
+                },
+                1: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/delivery.svg',
+                    'iconAlt' : 'курьером',
+                    'method' : 'Только курьером магазина',
+                    'oldPrice': '9 999 ₽',
+                    'newPrice': '9 999 ₽'
+                },
+                2: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/delivery.svg',
+                    'iconAlt' : 'курьером',
+                    'method' : 'Только курьером магазина',
+                    'oldPrice': '9 999 ₽',
+                    'newPrice': '9 999 ₽'
+                },
+            },
+        },
+        1: {
+            'name': 'Список 2',
+            'removeList' : true,
+            'item': {
+                0: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/pay-card.svg',
+                    'iconAlt' : 'Оплата картой',
+                    'method' : 'Только по предоплате',
+                    'oldPrice': '9 999 ₽',
+                    'newPrice': '9 999 ₽'
+                },
+                1: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/pay-card.svg',
+                    'iconAlt' : 'Оплата картой',
+                    'method' : 'Только по предоплате',
+                    'oldPrice': '9 999 ₽',
+                    'newPrice': '9 999 ₽'
+                },
+            },
+        },
+        2: {
+            'name': 'Список 3',
+            'removeList' : true,
+            'item' : false
+        },
+    };
+
+    var seeds = {
+        0: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-1'
+        },
+        1: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-2'
+        },
+        2: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-3'
+        },
+        3: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-4'
+        },
+    };
+
+section.cart-section
+    .row
+        .col
+            h1.page-header Корзина
+            span.cart_span Сформируйте единый заказ или разделите его на несколько списков
+            .warning-valid-order
+                span.cart_span У Вас уже есть действующий заказ.
+                a(class='order-link' href='order-registration.html') Перейти к заказу
+
+            each val, key in cartCard
+                .row
+                    .col-12
+                        .cart-list_block
+                            .row.d-flex.align-items-center.justify-content-between
+                                if(val.removeList === false)
+                                    .col-5.col-sm-4.col-md-3.col-lg-2.edit-block.d-flex.align-items-center
+                                        a(href='javascript:void(0)')
+                                            img(src='img/shopping-cart/edit.svg' alt='Редактировать')
+                                        h2.cart-list_title=val.name
+                                    .col-7.col-sm-8.col-md-9.col-lg-10
+                                        .cart-list_border
+
+                                else
+                                    .col-7.col-sm-4.col-md-3.col-lg-2.d-flex.align-items-center
+                                        .list-title_icons
+                                            a(href='javascript:void(0)')
+                                                img(src='img/shopping-cart/trash.svg' alt='Удалить')
+                                            a(href='javascript:void(0)')
+                                                img(src='img/shopping-cart/edit.svg' alt='Редактировать')
+                                        h2.cart-list_title=val.name
+                                    .col-4.col-sm-8.col-md-9.col-lg-10
+                                        .cart-list_border-short
+
+                        if (typeof (val.item) === 'object')
+                            each subVal, subKey in val.item
+                                .cart-product
+                                    .row.align-items-center
+                                        .col-11.col-md-5.d-flex.align-items-center.order-first
+                                            .card-prod_menu.d-flex.align-items-center
+                                                img(class='i-svg cart-bars_img' src='img/shopping-cart/bars-solid.svg' alt='Меню')
+                                                .menu-tooltip_wrapper
+                                                    ul.menu-tooltip-content
+                                                        li.menu-tooltip_item
+                                                            a(href='javascript:void(0)') Перенести в список…
+                                                        li.menu-tooltip_item
+                                                            a(href='javascript:void(0)') Копировать в список…
+                                            label.cart-goods
+                                                input(class='card-goods-input' type='checkbox')
+                                                span
+                                            .cart-card
+                                                img(class='cart-card_img' src=subVal.img alt=subVal.alt)
+                                                .goods-title=subVal.name
+
+                                        .col-12.col-md-6.order-last.order-md-2.d-flex.justify-content-around.cart-prod-middle
+                                            .row.justify-content-around.align-items-center.justify-content-md-between
+                                                .col-7.col-sm-2.col-md-3.col-lg-4.align-items-center.d-flex.justify-content-start
+                                                    .tooltip_block
+                                                        img(class='i-svg cart-prod-icon' src=subVal.icon alt=subVal.iconAlt)
+                                                        .icon-tooltip
+                                                            .icon-tooltip_content
+                                                                span.icon-tooltip_text=subVal.method
+
+                                                .col-7.col-sm-3.col-md-4.col-lg-4.d-flex.justify-content-start
+                                                    .product-qty_block
+                                                        span.prod-qty_minus.product-qty_btn -
+                                                        input.product_qty.type_num('maxlength'='3' value=0)
+                                                        span.prod-qty_plus.product-qty_btn +
+                                                .col-6.col-sm-4.col-md-5.col-lg-4.d-flex.justify-content-start
+                                                    .row.align-items-center.justify-content-between
+                                                        .col-10.justify-content-end
+                                                            .cart-price_block.align-items-center
+                                                                span.old-price=subVal.oldPrice
+                                                                span.new-price=subVal.newPrice
+                                        .col-1.order-2.order-md-last.d-flex.justify-content-start.p-0.justify-content-md-around
+                                            span.prod-card-remove
+
+
+                            .col-12.d-flex.align-items-center.justify-content-between.list-sum_block
+                                span.list_sum Сумма по списку:
+                                span.list_sum-digits 999 999 ₽
+                        else
+                            .no-goods_block В этом списке еще нет ни одного товара.<br>
+                                | Перенесите или скопируйте товары из других списков или добавьте их из каталога
+                            .cart-list_block
+                                .row.d-flex.align-items-center
+                                    .col-12.col-sm-4.col-md-3.col-lg-2.d-flex.align-items-center
+                                        a.d-flex.align-items-center.justify-content-between(href='javascript:void(0)')
+                                            img(src='img/shopping-cart/plus.svg' alt='Плюс')
+                                            h4.add-list Добавить список
+                                    .d-none.d-sm-block.col-sm-8.col-md-9.col-lg-10.add-list_border
+                                        .cart-list_border-short
+    .row
+        .col.d-flex.justify-content-end
+            form(class='promo-form' action='#' name='promo')
+                input(class='promo-form_input' type='text' placeholder='Введите промокод или сертификат')
+
+    .row
+        .col
+            .total-amount
+                ul.total-amount_list
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.cart_span Стоимость всего заказа
+                                span.list_sum-digits 999 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.cart_span Сумма доставки:
+                                span.list_sum-digits 9 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.cart_span Сумма скидки:
+                                span.list_sum-digits 9 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.total-amount_span Итоговая сумма:
+                                span.list_sum-digits 999 999 ₽
+    .row
+        .col.d-flex.justify-content-end
+            .cart-btn_block
+                a(class='btn details-btn' href='#') Уточнить детали
+                a(class='return-btn' href='javascript:void(0)') Очистить корзину
+
+section.discount-goods.slider-section.cart-slider-section
+    h2.page-header Специально для Вас
+    .col-12.order2.order-lg-3.slider
+        .owl-carousel.discount-slider.owl-stage
+            each val, key in seeds
+                .sets_card.d-flex.justify-content-around
+                    .slider_card.slider-card_narrow
+                        .discount-card_top
+                            a(class='card-top_link' href=val.link)
+                            img(class='card-top_img' src=val.img alt=val.alt)
+                            .discount-block -10%
+                            .card-icons_block
+                                a(class='card-icon icon-star' href='#')
+                                    img(class='i-svg' src=val.icon1 alt='звезда')
+                                a(class='card-icon' href='#')
+                                    img(class='i-svg' src=val.icon2 alt='категория 1')
+                                a(class='card-icon' href='#')
+                                    img(class='i-svg' src=val.icon3 alt='категория 2')
+                        .discount-card_bottom
+                            .discount-card_description
+                                span.goods-category=val.category
+                                span.goods-title=val.name
+                                .row.discount-card_price
+                                    .col-5
+                                        .new-price_block
+                                            span.new-price=val.newPrice
+                                            a(class='order-conditions' href='#')=val.conditions
+                                    .col-7
+                                        span.old-price=val.oldPrice
+                            .row
+                                .col-6.buy-block
+                                    .product-qty_block
+                                        span.prod-qty_minus.product-qty_btn -
+                                        input.product_qty.type_num('maxlength'='3' value=0)
+                                        span.prod-qty_plus.product-qty_btn +
+                                .col-6.buy-btn-col
+                                    a(class='btn card-btn buy-btn' href='javascript:void(0)') Купить
+
+
+
+

@@ -1,0 +1,97 @@
+-
+    var sets = {
+        0: {
+            'name' : 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link' : 'sets-details.html',
+            'img' : 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        1: {
+            'name': 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link': 'sets-details.html',
+            'img': 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        2: {
+            'name': 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link': 'sets-details.html',
+            'img': 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        3: {
+            'name' : 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link' : 'sets-details.html',
+            'img' : 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        4: {
+            'name': 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link': 'sets-details.html',
+            'img': 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        5: {
+            'name': 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link': 'sets-details.html',
+            'img': 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        6: {
+            'name' : 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link' : 'sets-details.html',
+            'img' : 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        7: {
+            'name': 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link': 'sets-details.html',
+            'img': 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+        8: {
+            'name': 'Томат, огурчик, перчик. И то, что им необходимо',
+            'link': 'sets-details.html',
+            'img': 'img/hero-bg.png',
+            'alt' : 'товар'
+        },
+    };
+
+h1.page-header Наборы
+section.sets-top-section
+    .row.sets
+        each val, key in sets
+            if key == 0
+                .col-12.col-sm-10.col-lg-6.sets_card
+                    .interesting-useful_left
+                        img(src=val.img alt=val.alt)
+                        .interesting-useful-content_block
+                            h3.card-heading=val.name
+                            a(class='btn card-btn' href='javascript:void(0)') В корзину
+
+            else
+                .col-12.col-sm-6.col-lg-4.sets_card
+                    .sets-card-small
+                        img(src=val.img alt=val.alt)
+                        .interesting-useful-right_block
+                          h4=val.name
+                          a(class='btn card-btn' href='javascript:void(0)') В корзину
+    .row.justify-content-around
+        .col-12.col-md-8.col-lg-6.d-flex.flex-column.align-items-center
+            a(class='btn separate-pay-btn' href='javascript:void(0)') Показать ещё
+            .pagination-wrapper
+                ul.pagination-list.d-flex.align-items-end.justify-content-between
+                    li.pagination-item
+                        span.pagination-span
+                    li.pagination-item
+                        span.pagination-span.span-page 1
+                    li.pagination-item
+                        a(href='#') 2
+                    li.pagination-item
+                        a(href='#') 3
+                    li.pagination-item
+                        span.pagination-span  ...
+                    li.pagination-item
+                        a(href='#') 12
+                    li.pagination-item
+                        a.pagination-span.span-next(href='javascript:void(0)')
+

@@ -1,0 +1,460 @@
+@import "vars"
+
+.cart-section
+    padding-top: 60px
+
+.cart_span
+    margin-top: 13px
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+
+.warning-valid-order
+    position: relative
+    width: fit-content
+    margin-top: 30px
+    padding: 12px 24px 24px 56px
+    border: 1px solid $light-purple
+    border-radius: 12px
+
+
+    &:before
+        content: url("../img/shopping-cart/info.svg")
+        position: absolute
+        top: 24px
+        left: 20px
+        font-size: 6px
+
+    .cart_span
+        font-size: 16px
+        font-weight: 400
+        color: $text
+
+.order-link
+    display: inline-block
+    margin-left: 5px
+    color: $light-purple
+    transition: all ease .3s
+
+    &:hover
+        color: $light-purple
+        opacity: .8
+
+.cart-list_block
+    margin-top: 50px
+
+    a
+        white-space: nowrap
+
+        &:hover
+            opacity: .7
+
+    .list-title_icons
+        display: flex
+
+        img
+            width: 19px
+            margin-right: 9px
+
+    .cart-list_title
+        position: relative
+        white-space: nowrap
+        padding-right: 20px
+        padding-left: 10px
+        margin-top: 0
+
+        &:hover
+            cursor: pointer
+
+    .cart-list_border,
+    .cart-list_border-short
+        padding-top: 12px
+        border-bottom: 1px solid $yellow_2
+
+.cart-product
+    margin-top: 28px
+    padding-bottom: 6px
+    border-bottom: 1px solid $bg-color_1
+
+    .product-qty_block
+        width: fit-content
+        
+.cart-prod_menu
+    position: relative
+    padding: 0
+    border: none
+    background-color: $white
+
+    &:hover
+        cursor: pointer
+
+.card-prod_menu:hover > .menu-tooltip_wrapper
+    display: block
+
+.cart-bars_img
+    position: absolute
+    display: block
+    width: 20px
+    height: 24px
+    cursor: pointer
+
+.menu-tooltip_wrapper
+    position: absolute
+    top: -19px
+    left: 42px
+    display: none
+
+.menu-tooltip-content
+    position: relative
+    padding: 18px 14px
+    border: 1px solid $light-purple
+    border-radius: 20px
+    background-color: $white
+    z-index: 2
+
+    &:before
+        content: ""
+        width: 0
+        height: 0
+        position: absolute
+        border-left: 10px solid transparent
+        border-right: 10px solid $light-purple
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+        top: 50%
+        transform: translateY(-50%)
+        left: -20px
+
+    &:after
+        content: ""
+        width: 0
+        height: 0
+        position: absolute
+        border-left: 10px solid transparent
+        border-right: 10px solid #fff
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+        top: 50%
+        transform: translateY(-50%)
+        left: -18px
+
+.menu-tooltip_item
+
+    a
+        display: block
+        white-space: nowrap
+        font-size: 14px
+        color: $text
+
+        &:hover
+            opacity: .7
+
+.cart-price_block
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-left: 30px
+
+    .old-price
+        font-size: 14px
+        line-height: 14px
+        white-space: nowrap
+
+    .new-price
+        font-size: 16px
+        line-height: 16px
+        font-weight: 600
+        white-space: nowrap
+        margin-left: 35px
+
+.cart-goods
+    position: absolute
+    top: 50%
+    left: 45px
+    transform: translateY(-50%)
+    width: 20px
+    height: 20px
+    margin: 0
+
+    & span
+        position: relative
+        width: 20px
+        height: 20px
+        line-height: 20px
+        border: 1px solid  $bg-color_1
+        border-radius: 5px
+        cursor: pointer
+
+    input
+        display: none
+        &:checked
+            & + span:before
+                content: url("../img/shopping-cart/input-aft.svg")
+                position: absolute
+                display: block
+                width: 5px
+                height: 5px
+
+.cart-card
+    display: flex
+    align-items: center
+    margin-left: 78px
+    overflow: hidden
+
+    .goods-title
+        display: inline-block
+        flex-shrink: 1
+        margin-left: 10px
+        font-size: 13px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+.tooltip_block
+    position: relative
+    display: flex
+    align-items: center
+    align-content: center
+    width: 20px
+
+    &:hover
+        cursor: pointer
+
+    .icon-tooltip
+        position: absolute
+        bottom: calc(100% + 10px)
+        left: 50%
+        transform: translateX(-50%)
+        display: none
+        width: 200px
+        text-align: center
+
+        .icon-tooltip_content
+            padding: 8px 10px
+            border: 1px solid $light-purple
+            border-radius: 20px
+            background-color: $white
+            z-index: 2
+
+            &:before
+                content: ""
+                width: 0
+                height: 0
+                position: absolute
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid $light-purple
+                border-bottom: 10px solid transparent
+                right: 50%
+                transform: translateX(50%)
+                bottom: -19px
+                z-index: 2
+
+            &:after
+                content: ""
+                width: 0
+                height: 0
+                position: absolute
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid $white
+                border-bottom: 10px solid transparent
+                right: 50%
+                transform: translateX(50%)
+                bottom: -18px
+                z-index: 2
+
+.icon-tooltip_text
+    font-size: 14px
+    line-height: 18px
+    color: $def-txt
+
+.cart-prod-icon
+    display: block
+    cursor: pointer
+
+.tooltip_block:hover > .icon-tooltip
+    display: block
+
+
+.prod-card-remove
+    cursor: pointer
+
+    &:before
+        content: url("../img/shopping-cart/x1.svg")
+
+
+    &:hover
+        &:before
+            content: url("../img/shopping-cart/x.svg")
+            color: $purple
+
+.cart-section
+    .list-sum_block
+        margin-top: 10px
+        padding-left: 0
+        padding-right: 112px
+
+.list_sum,
+.list_sum-digits
+    line-height: 30px
+    font-weight: 700
+    color: $def-txt
+
+.list_sum
+    font-size: 16px
+
+.list_sum-digits
+    font-size: 18px
+
+.no-goods_block
+    margin-top: 30px
+    padding-bottom: 40px
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    color: $def-txt
+    text-align: center
+    border-bottom: 2px solid $yellow_2
+
+.add-list
+    margin-left: 15px
+    font-size: 15px
+    font-weight: 500
+    line-height: 28px
+    color: $text
+
+.add-list_border
+
+    .cart-list_border-short
+        padding-top: 0
+
+.promo-form
+    margin-top: 50px
+
+.promo-form_input
+    width: 450px
+    padding: 12px 15px
+    border: 1px solid $purple
+    border-radius: 40px
+
+
+    &::-webkit-input-placeholder
+        color: $gray
+
+    &::-moz-placeholder
+        color: $gray
+
+.total-amount
+    padding: 8px 30px
+    border: 1px solid $yellow_2
+    border-radius: 20px
+
+.total-amount_list
+    margin: 0
+
+.total-amount_item
+    padding: 12px 0 12px 0
+
+    &:not(:last-child)
+        border-bottom: 1px solid $bg-color_1
+
+    .cart_span
+        margin: 0
+
+.total-amount_span
+    font-size: 18px
+    font-weight: 600
+    line-height: 30px
+    color: $text
+
+.cart-btn_block
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 50px
+
+.details-btn
+    width: 354px
+    padding: 10px 0
+    font-size: 16px
+    font-weight: 600
+    text-align: center
+    color: $def-txt
+    background-color: $btn-bg-yellow
+    border-radius: 50px
+    border: 1px dashed $old-price-gray
+
+.recycle-clean
+    margin-top: 20px
+    font-size: 14px
+    font-weight: 400
+    text-decoration-line: underline
+    color: $def-txt
+
+    &:hover
+        text-decoration-line: underline
+
+.special-slider-section
+    .page-header
+        color: $btn-orange
+
+
+//shopping-cart-page
+
+.shop-cart-short
+    margin-top: 30px
+
+    .cart-goods
+        position: relative
+        left: 0
+        top: 8px
+
+    .cart-card
+        margin-left: 10px
+
+    .tooltip
+        display: flex
+
+    .icon-tooltip_text
+        font-size: 14px
+        line-height: 18px
+        color: $def-txt
+
+    .icon-tooltip_content
+
+        &:before
+            bottom: -18px
+
+        &:after
+            bottom: -16px
+
+    .tooltip_block
+        &:first-child
+            margin-right: 20px
+
+.cart-slider-section
+    .slider_card
+        .card-icons_block
+            right: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

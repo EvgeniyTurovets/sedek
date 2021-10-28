@@ -1,0 +1,154 @@
+@import "vars"
+
+.prod-card-img
+    width: 100%
+    height: 379px
+
+.prod-card-section
+    padding-top: 50px
+
+    .card-icons_block
+        display: flex
+        flex-direction: row
+        left: 15px
+        top: 0
+
+        .card-icon
+            margin-bottom: 0
+            width: 34px
+            height: 34px
+
+            &:not(:first-child)
+                margin-left: 10px
+
+    .discount-icon
+        margin: 0
+        font-size: 13px
+        line-height: 36px
+        color: $white
+
+    .prod-card-heading
+        margin-top: 50px
+        font-size: 30px
+        font-weight: 600
+        line-height: 40px
+
+    .price-block
+        display: flex
+        align-items: baseline
+        margin-top: 25px
+
+        .new-price
+            font-size: 50px
+            line-height: 30px
+
+    .old-price
+        margin-left: 25px
+        font-size: 30px
+        line-height: 30px
+        text-decoration-line: line-through
+
+    .in-stock
+        display: inline-block
+        padding: 3px 52px
+        margin-top: 25px
+        font-size: 14px
+        color: $in-stock-gray
+        background-color: $in-stock-green
+        border-radius: 20px
+
+    .product-qty_block
+        display: flex
+        justify-content: space-between
+        width: 172px
+        margin-top: 20px
+
+.prod-btn_block
+    margin-top: 22px
+
+    .buy-btn
+        padding: 14px 0
+        width: 100%
+        text-align: center
+
+        &:before
+            top: 14px
+            left: 70px
+
+    .pink-btn
+        padding: 8px 0 13px 0
+        width: 100%
+        text-align: center
+
+        &:before
+            content: url("../img/prod-card/heart-o.svg")
+            position: relative
+            top: 5px
+            left: -25px
+            width: 23px
+            height: 20px
+
+        &:hover
+            color: $pink-btn
+            opacity: .7
+
+
+.pink-btn
+    font-size: 14px
+    line-height: 20px
+    color: $pink-btn
+    font-weight: 400
+    border: 1px solid $pink-btn
+    border-radius: 24px
+
+.about-prod_section
+    padding-top: 70px
+
+    h3
+        font-size: 24px
+        font-weight: 400
+        line-height: 30px
+        color: $def-txt
+
+aside
+    .aside_link
+        display: inline-block
+        width: 100%
+        height: 200px
+        font-size: 20px
+        font-weight: 400
+        line-height: 200px
+        color: $form-input
+        background-color: $gray-3
+        border-radius: 10px
+        text-align: center
+
+    .paragraph-content-black
+        margin-top: 40px
+        font-size: 14px
+        line-height: 26px
+        color: $def-txt
+
+.about-prod_list
+    margin-top: 20px
+
+    p
+        display: inline-block
+        margin: 8px 0
+        font-size: 14px
+    .paragraph-gray
+        color: $gray-2
+
+    .paragraph-content-black
+        color: $def-txt
+
+
+
+
+
+
+
+
+
+
+

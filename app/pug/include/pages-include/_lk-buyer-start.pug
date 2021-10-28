@@ -1,0 +1,17 @@
+section.lk-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-menu.pug
+            include _lk-menu-mobile
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Мой кабинет (Покупатель, Блогер)
+            nav.lk-menu-right
+                .row.menu-right-wrapper
+                    each val, key in menu
+                        .col-12.col-sm-6.col-lg-4.menu-right_item
+                            a.menu-right_link.d-flex.align-items-center.justify-content-start(href=val.link)
+                                if(val.img)
+                                    img(src=val.img alt=val.alt)
+                                    span=val.name

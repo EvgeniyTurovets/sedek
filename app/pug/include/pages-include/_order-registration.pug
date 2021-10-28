@@ -1,0 +1,235 @@
+include ../../mixins/_mixins
+-
+    var fastDelivery = {
+        0: {
+            'name' : 'Список 1',
+            'cost' : '999 999 ₽',
+            'quantity' : '3 товара'
+        },
+        1: {
+            'name': 'Список 2',
+            'cost': '999 999 ₽',
+            'quantity': '3 товара'
+        },
+    };
+
+    var fastDeliveryCommon = {
+        0: {
+            'listsQuantity': '2 списка',
+            'commonCost': '1999 999 ₽',
+            'prodsQuantity': '5 товаров'
+        },
+    };
+
+    var laterDelivery = {
+        0: {
+            'name': 'Список 1',
+            'cost': '999 999 ₽',
+            'quantity': '2 товара'
+        },
+    };
+
+    var laterDeliveryCommon = {
+        0: {
+            'listsQuantity': '1 список',
+            'commonCost': '999 999 ₽',
+            'prodsQuantity': '2 товара'
+        },
+    };
+
+    var deliveryMethod = {
+        0: {
+            'name' : 'доставка 1',
+            'id' : '1'
+        },
+        1: {
+            'name': 'доставка 2',
+            'id' : '2'
+        },
+        2: {
+            'name': 'доставка 3',
+            'id' : '3'
+        },
+        3: {
+            'name': 'доставка 4',
+            'id' : '4'
+        },
+    };
+    var paymentMethod = {
+        0: {
+            'name': 'оплата 1',
+            'id' : '1'
+        },
+        1: {
+            'name': 'оплата 2',
+            'id' : '2'
+        },
+        2: {
+            'name': 'оплата 3',
+            'id' : '3'
+        },
+    };
+
+section.order-section
+    .row.justify-content-between
+        .col-12.col-md-7.col-xl-8
+            h1.page-header Оформление заказа
+
+        .col-12.col-md-5.col-xl-4.order-right.order-1.order-md-3
+            section.your-order-section
+                .your-order-header.d-flex.align-items-center.justify-content-between
+                    h2.page-header Ваш заказ
+                    .your-order-open.d-block.d-md-none
+
+                .your-order-block
+                    .delivery-block.fast-delivery_block
+                        .row
+                            .col-12.col-sm-6.col-md-12
+                                h3.delivery-block_heading Доставка быстро
+                            each val, key in fastDelivery
+                                .col-6.col-md-12.delivery_info.d-none.d-md-block
+                                    .row
+                                        .col-md-6.d-none.d-md-flex.justify-content-start
+                                            h4.input-heading=val.name
+                                        .col-12.col-md-6
+                                            .row.delivery-cost_block
+                                                .col-12.d-flex.justify-content-end
+                                                    span.input-heading.delivery_cost=val.cost
+                                                .col-12.d-flex.justify-content-end
+                                                    span.delivery_goods=val.quantity
+                            each val, key in fastDeliveryCommon
+                                .col-12.col-sm-6.col-md-12.d-flex.flex-column.d-md-none.delivery_info
+                                    span.input-heading.d-flex.justify-content-start.justify-content-sm-end.delivery_cost=val.commonCost
+                                    .delivery_info-common.d-flex.justify-content-start.justify-content-sm-end
+                                        span.delivery_goods=val.listsQuantity
+                                        span.delivery_goods=val.prodsQuantity
+
+                    .later-delivery_block.delivery-block
+                        .row
+                            .col-12.col-sm-6.col-md-12
+                                h3.delivery-block_heading Доставка позже
+                            each val, key in laterDelivery
+                                .col-6.col-md-12.delivery_info.d-none.d-md-block
+                                    .row
+                                        .col-md-6.d-none.d-md-flex.justify-content-start
+                                            h4.input-heading=val.name
+                                        .col-12.col-md-6
+                                            .row.delivery-cost_block
+                                                .col-12.d-flex.justify-content-end
+                                                    span.input-heading.delivery_cost=val.cost
+                                                .col-12.d-flex.justify-content-end
+                                                    span.delivery_goods=val.quantity
+
+                            each val, key in laterDeliveryCommon
+                                .col-12.col-sm-6.col-md-12.d-flex.flex-column.d-md-none.delivery_info
+                                    span.input-heading.d-flex.justify-content-start.justify-content-sm-end.delivery_cost=val.commonCost
+                                    .delivery_info-common.d-flex.justify-content-start.justify-content-sm-end
+                                        span.delivery_goods=val.listsQuantity
+                                        span.delivery_goods=val.prodsQuantity
+
+                    .order-amount_block
+                        .row.justify-content-between.align-items-center.order-amount_item
+                            .col-9
+                                span.input-heading Сумма скидки
+                            .col-3.d-flex.justify-content-end
+                                span.amount-cost - 9 999 ₽
+                        .row.order-amount_item.justify-content-between.align-items-center
+                            .col-9
+                                span.input-heading Стоимость доставки
+                            .col-3.d-flex.justify-content-end
+                                span.amount-cost 0 ₽
+
+
+                        .row.order-amount_item.order-amount.justify-content-between.align-items-center
+                            .col-7.p-0
+                                span.input-heading Сумма заказа
+                            .col-5.p-0.d-flex.justify-content-end
+                                span.amount-cost 9 900 000 ₽
+
+                    .phone-block
+                        span.phone_span По всем вопросам связывайтесь с менеджером по телефону:
+                        span.phone_span-bold  +7 999 999 99 99
+
+        .col-12.col-md-7.col-xl-8.order-3.order-md-2
+            form(class='order-form contact-form')
+                .row
+                    .col-12.form-block
+                        .form-heading.d-flex.justify-content-between.align-items-center
+                            h3 Контактное лицо
+                            span.arrow-open
+                        .row
+                            .col-12.form_inputs
+                                ul.form_list
+                                    li.form_item
+                                        h4.input-heading ФИО
+                                        input(class='header-search' type='text' required)
+                                    li.form_item
+                                        h4.input-heading E-mail
+                                        input(class='header-search' type='text' required)
+                                    li.form_item
+                                        h4.input-heading Телефон
+                                        input(class='header-search' type='text' required)
+
+                    .col-12.form-block
+                        .form-heading.d-flex.justify-content-between.align-items-center
+                            h3 Доставка
+                            span.arrow-open
+                        .row
+                            .col-12.form_inputs
+                                h3.delivery-date Доставка 30 апреля
+                                ul.form_list
+                                    li.form_item
+                                        h4.input-heading Способ доставки
+                                        +customSelect(deliveryMethod)
+                                    li.form_item
+                                        h4.input-heading Адрес
+                                        input(class='header-search' type='text')
+
+                        .row
+                            .col-12.form_inputs
+                                h3.delivery-date Доставка 23 мая
+                                ul.form_list
+                                    li.form_item
+                                        h4.input-heading Способ доставки
+                                        +customSelect(deliveryMethod)
+                                    li.form_item
+                                        h4.input-heading Адрес
+                                        input(class='header-search' type='text')
+
+                    .col-12.form-block
+                        .form-heading.d-flex.justify-content-between.align-items-center
+                            h3 Оплата
+                            span.arrow-open
+                        .row
+                            .col-12.form_inputs
+                                ul.form_list
+                                    li.form_item
+                                        h4.input-heading Способ оплаты
+                                        +customSelect(paymentMethod)
+
+                    .col-12.form-block
+                        .form-heading.d-flex.justify-content-between.align-items-center
+                            h3 Дополнительная информация
+                            span.arrow-open
+                        .row
+                            .col-12.form_inputs
+                                ul.form_list
+                                    li.form_item
+                                        h4.input-heading Комментарий к заказу
+                                        textarea(class='header-search form-textarea' rows='5' name='text')
+
+                .row.justify-content-around
+                    .col-12.col-sm-10.col-md-8.col-lg-6.d-flex.flex-column.justify-content-between.align-items-center.order-details_bottom
+                        button(class='btn separate-pay-btn' type='submit') Оформить заказ
+                        a(class='return-btn' href='javascript:void(0)') Вернуться в корзину
+
+
+
+
+
+
+
+
+
+
+

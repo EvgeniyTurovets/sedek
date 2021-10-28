@@ -1,0 +1,82 @@
+@import "vars"
+
+.contacts-section
+
+    .page-paragraph
+        margin-top: 0
+
+.map
+    padding: 0
+
+.map-container
+    width: 100%
+    height: 375px
+
+.contacts-feedback-section
+    position: relative
+    height: 476px
+    margin-top: 80px
+    padding: 0
+
+    .feedback-right
+        height: 475px
+
+    .feedback-right-bg_block
+        position: absolute
+        top: 0
+        right: 15px
+        z-index: -1
+        width: 738px
+        height: 476px
+        background-color: $bg-gray
+        border-radius: 90px
+
+    h2
+        font-weight: 600
+        line-height: 60px
+        color: $green-text
+
+    form
+        position: absolute
+        top: 50%
+        display: flex
+        flex-direction: column
+        width: 450px
+        transform: translateY(-50%)
+
+
+        input
+            display: block
+            margin-bottom: 20px
+            padding: 15px 20px
+            font-size: 14px
+            line-height: 17px
+            color: $form-input
+            border: none
+            border-radius: 50px
+
+        .paragraph-black
+            display: inline
+            margin: 0
+            text-align: center
+
+    .conditions-link
+        display: inline
+        margin-left: 5px
+        font-size: 18px
+        color: $pink-btn
+        text-decoration-line: underline
+
+        &:hover
+            opacity: .8
+
+    .form_btn
+        color: $white
+        margin-bottom: 15px
+        padding: 10px 0
+        font-size: 20px
+        font-weight: 200
+        line-height: 24px
+        border: none
+        border-radius: 50px
+        background-color: $pink-btn

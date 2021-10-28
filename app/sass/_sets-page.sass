@@ -1,0 +1,62 @@
+@import "vars"
+
+.sets-top-section
+    padding-top: 30px
+
+    .show-btn
+        width: 100%
+        margin-top: 60px
+
+.sets
+    position: relative
+
+.sets_card
+
+    &:first-child
+
+        .interesting-useful_left
+            cursor: pointer
+
+            &:hover
+                box-shadow: 15px 15px 20px rgba(0,0,0,0.2)
+
+    &:nth-child(2)
+        height: fit-content
+
+    &:nth-child(3)
+        position: absolute
+        top: 210px
+        right: 0
+        z-index: 3
+
+    &:nth-child(n + 4)
+        margin-top: 60px
+
+    &:hover
+        border-radius: 30px
+        z-index: 5
+
+
+
+.sets-card-small
+    padding: 0 0 20px 0
+    height: fit-content
+    border-radius: 30px
+    background-color: $card-act-bg
+    cursor: pointer
+
+    &:hover
+        box-shadow: 15px 15px 20px rgba(0,0,0,0.2)
+
+    img
+        width: 100%
+        height: 125px
+        border-radius: 30px
+
+    h4
+        font-weight: 600
+
+
+
+
+

@@ -1,0 +1,295 @@
+-
+    var orderDetails = {
+        0: {
+            'number' : '№1234567',
+            'date' : '12.02.21',
+            'subLevel' : {
+                0: {
+                    'name': 'Адрес доставки',
+                    'value': '123456, МО, Красногорск, ул. Пришвина, д. 123, стр. 1'
+                },
+                1: {
+                    'name': 'Способ доставки',
+                    'value': 'Доставка по адресу'
+                },
+                2: {
+                    'name': 'Способ оплаты',
+                    'value': 'Банковский перевод'
+                },
+                3: {
+                    'name': 'ФИО (Контактное лицо)',
+                    'value': 'Константинопольский Константин Константинович'
+                },
+                4: {
+                    'name': 'Телефон',
+                    'value': '+7 999 999 99 99'
+                },
+                5: {
+                    'name': 'Комментарий к заказу',
+                    'value': 'Комментарий к заказу'
+                },
+            },
+        },
+    };
+
+    var delivery = {
+        0: {
+            'name': '30 апреля',
+            'amount' : '999 999 ₽',
+            'status': {
+                0:{
+                    'confirmDate': '10.04.21 18:32',
+                    'currentStatus' : 'Подтверждён',
+                    'statusDate' : '30.04.21  13:45'
+                },
+            },
+            'list' : {
+                0: {
+                    'name': 'Список 1',
+                    'item': {
+                        0: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                        1: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                        2: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                    },
+                },
+                1: {
+                    'name': 'Список 2',
+                    'item': {
+                        0: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                        1: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                    },
+                },
+
+            },
+        },
+        1: {
+            'name': '23 мая',
+            'amount': '999 999 ₽',
+            'status': {
+                0: {
+                    'confirmDate': '10.04.21 18:32',
+                    'currentStatus': 'Доставлен',
+                    'statusDate': '30.04.21  13:45'
+                },
+            },
+            'list': {
+                0: {
+                    'item': {
+                        0: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                        1: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                    },
+                },
+            },
+        },
+        2: {
+            'name': '27 мая',
+            'amount': '999 999 ₽',
+            'status': {
+                0: {
+                    'confirmDate': '10.04.21 18:32',
+                    'currentStatus': 'В пути',
+                    'statusDate': '30.04.21  13:45'
+                },
+            },
+            'list': {
+                0: {
+                    'item': {
+                        0: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                        1: {
+                            'name': 'Название продукта может быть в несколько строк',
+                            'quantity': '999 шт',
+                            'price': '9 999 ₽'
+                        },
+                    },
+                },
+            },
+        },
+    };
+
+section.lk-section.lk-order-details-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-order-details-menu.pug
+            include _lk-menu-mobile
+        .col-12.col-md-8.col-lg-9
+            .row
+                each val, key in orderDetails
+                    .col-12
+                        .personal_header-block.justify-content-between.align-items-end
+                            .row
+                                .col-12.col-sm-6.col-md-7
+                                    h1.page-header
+                                        span.page-header Заказ
+                                        span.page-header=val.number
+                                        span.page-header от
+                                        span.page-header=val.date
+                                .col-12.col-sm-6.col-md-5.d-flex.justify-content-sm-end
+                                    a.edit-btn(href='lk-my-orders.html') Назад к списку
+                        section.lk-right-section
+                            h2.hidden-heading 1
+                            ul.order-details
+                                each subVal, subKey in val.subLevel
+                                    li.order-details_item
+                                        span.order-details_name=subVal.name
+                                        span.order-details_value=subVal.value
+
+
+            .col-12.delivery-section.details-delivery-section
+                each val, key in delivery
+                    .row
+                        .col-12.delivery-block
+                            .delivery-header-block
+                                span.delivery_header Доставка
+                                span.delivery_header=val.name
+                            .row
+                                each subVal, subKey in val.status
+                                    .col-12
+                                        if (subVal.currentStatus === 'Подтверждён')
+                                            .order-status-condition
+                                                .row
+                                                    .col-12.col-sm-5.col-md-7.col-lg-4.col-xl-3
+                                                        a.btn.delivery-btn.order-confirmed-btn(href='javascript:void(0)')=subVal.currentStatus
+                                                    .col-12
+                                                        .order-status_block.preparing
+                                                            .row.confirm-order
+                                                                .col-12.order-status-dots.d-flex.align-items-center.justify-content-between
+                                                                    .order-confirm
+                                                                        span.order-status-span
+                                                                        .order-status-block_confirm.d-flex.flex-column.align-items-start
+                                                                            span.list_sum Заказ подтвержден
+                                                                            span.order-details_name=subVal.confirmDate
+                                                                    span.order-status-span
+                                                                    span.order-status-span
+                                                                    span.order-status-span
+                                                                    span.order-status-span
+
+                                        if (subVal.currentStatus === 'Доставлен')
+                                            .order-status-condition
+                                                .row
+                                                    .col-12.col-sm-5.col-md-7.col-lg-4.col-xl-3
+                                                        a.btn.delivery-btn(href='javascript:void(0)')=subVal.currentStatus
+                                                    .col-12
+                                                        .order-status_block.delivered
+                                                            .row.confirm-order
+                                                                .col-12.order-status-dots.d-flex.align-items-center.justify-content-between
+                                                                    .order-confirm
+                                                                        span.order-status-span
+                                                                        .order-status-block_confirm.d-flex.flex-column.align-items-start
+                                                                            span.list_sum Заказ подтвержден
+                                                                            span.order-details_name=subVal.confirmDate
+                                                                    span.order-status-span
+                                                                    span.order-status-span
+                                                                    span.order-status-span
+                                                                    .current-status
+                                                                        span.order-status-span
+                                                                        .order-status-block_confirm.d-flex.flex-column.align-items-end
+                                                                            span.list_sum=subVal.currentStatus
+                                                                            span.order-details_name=subVal.statusDate
+
+                                        if (subVal.currentStatus === 'В пути')
+                                            .order-status-condition
+                                                .row
+                                                    .col-12.col-sm-5.col-md-7.col-lg-4.col-xl-3
+                                                        a.btn.delivery-btn.order-on-way-btn(href='javascript:void(0)')=subVal.currentStatus
+                                                    .col-12
+                                                        .order-status_block.on-the-way
+                                                            .row.confirm-order
+                                                                .col-12.order-status-dots.d-flex.align-items-center.justify-content-between
+                                                                    .order-confirm
+                                                                        span.order-status-span
+                                                                        .order-status-block_confirm.d-flex.flex-column.align-items-start
+                                                                            span.list_sum Заказ подтвержден
+                                                                            span.order-details_name=subVal.confirmDate
+                                                                    span.order-status-span
+                                                                    span.order-status-span
+                                                                    .current-status
+                                                                        span.order-status-span
+                                                                        .order-status-block_confirm.d-flex.flex-column.align-items-start
+                                                                            span.list_sum=subVal.currentStatus
+                                                                            span.order-details_name=subVal.statusDate
+                                                                    span.order-status-span
+                            .row.align-items-center
+                                each subVal, subKey in val.list
+                                    .col-12
+                                        if (subVal.name)
+                                            h2.cart-list_title=subVal.name
+
+                                        each subList in subVal.item
+                                            .cart-product
+                                                .row.align-items-center
+
+                                                    .col-10.col-sm-6
+                                                        .goods-title=subList.name
+
+                                                    .col-5.col-sm-3.d-flex.justify-content-sm-end
+                                                        span.new-price=subList.quantity
+
+                                                    .col-5.col-sm-3.d-flex.justify-content-start.justify-content-sm-end
+                                                        .cart-price_block.align-items-center
+                                                            span.new-price=subList.price
+                                        .list-sum_block
+                                            .row
+                                                .col-12.col-sm-6
+                                                    span.list_sum Сумма по списку:
+                                                .col-12.col-sm-6.d-flex.justify-content-sm-end
+                                                    span.list_sum-digits=val.amount
+
+            .col-12.total-amount
+                ul.total-amount_list
+                    li.total-amount_item
+                        .row.justify-content-between.align-items-center
+                            .col-12.col-sm-6
+                                span.cart_span Стоимость всего заказа
+                            .col-12.col-sm-6.d-flex.justify-content-sm-end
+                                span.list_sum-digits 9 999 999 ₽
+                    li.total-amount_item
+                        .row.justify-content-between.align-items-center
+                            .col-12.col-sm-6
+                                span.cart_span Сумма скидки:
+                            .col-12.col-sm-6.d-flex.justify-content-sm-end
+                                span.list_sum-digits 9 999 ₽
+                    li.total-amount_item
+                        .row.justify-content-between.align-items-center
+                            .col-12.col-sm-6
+                                span.total-amount_span Итоговая сумма:
+                            .col-12.col-sm-6.d-flex.justify-content-sm-end
+                                span.list_sum-digits 9 900 000 р.
+
+            .row.button-block.justify-content-around
+                .col-12.col-md-8.col-lg-6.d-flex.flex-column.justify-content-between.align-items-center
+
+                    a(class='btn changes-btn' href='#') Повторить заказ
+                    a(class='return-btn' href='lk-my-orders.html') Вернуться ко всем заказам

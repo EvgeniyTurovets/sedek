@@ -1,0 +1,18 @@
+section.lk-partner-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-partner-menu-mobile.pug
+            include _lk-partner-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Мой кабинет (Партнер)
+            nav.lk-menu-right
+                .menu-right-wrapper
+                    .row
+                        each val, key in menu
+                            .col-12.col-sm-6.col-lg-4.menu-right_item
+                                a.menu-right_link.d-flex.align-items-center(href=val.link)
+                                    if(val.img)
+                                        img(src=val.img alt=val.alt)
+                                        span=val.name

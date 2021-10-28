@@ -1,0 +1,78 @@
+-
+    var clients = {
+        0: {
+            'name' : 'Название компании',
+            'data' : {
+                 0: {
+                    'name': 'Адрес:',
+                    'value1': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.'
+                },
+                 1: {
+                    'name': 'Телефон:',
+                    'value1': '+7 999 999 99 99',
+                    'value2': '+7 999 999 99 90'
+                },
+                 2: {
+                    'name': 'E-mail:',
+                    'value1': 'hello@site.ru'
+                },
+            },
+        },
+        1: {
+            'name': 'Название компании 2',
+            'data': {
+                0: {
+                    'name': 'Адрес:',
+                    'value1': 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.'
+                },
+                1: {
+                    'name': 'Телефон:',
+                    'value1': '+7 999 999 99 99',
+                    'value2': '+7 999 999 99 90'
+                },
+                2: {
+                    'name': 'E-mail:',
+                    'value1': 'hello@site.ru'
+                },
+            },
+        },
+    };
+
+
+section.lk-partner-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-partner-menu-mobile.pug
+            include _lk-partner-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Мои клиенты
+
+            section.clients-section
+                .row.justify-content-around
+                    .col-12.col-sm-10.col-md-8.col-lg-6
+                        a.btn.view-button(href='#') Добавить клиента
+                .all-clients
+                    each val, key in clients
+                        .clients_card
+                            .clients-card_top
+                                h2.lk-subheader=val.name
+                            .row
+                                .col-12.col-lg-8.col-xl-6
+                                    each subVal, subKey in val.data
+                                        .clients-data_block
+                                            .client-data_item=subVal.name
+                                            .client-data_value=subVal.value1
+                                            .client-data_value=subVal.value2
+                                .col-12
+                                    .clients-card_buttons
+                                        .row
+                                            .col-12.col-sm-6.col-lg-3
+                                                a.view-button(href='#') Редактировать
+                                            .col-12.col-sm-6.col-lg-3
+                                                a.cancel-button(href='javascript:void(0)') Удалить
+
+
+
+

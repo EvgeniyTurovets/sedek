@@ -1,0 +1,114 @@
+-
+    var status = {
+        0: {
+            'name' : 'Член клуба',
+            'img' : 'img/lk/status-1.png',
+            'alt' : 'Член клуба',
+            'current': false
+        },
+        1: {
+            'name': 'Почетный член клуба',
+            'img': 'img/lk/status-2.png',
+            'alt': 'Почетный член клуба',
+            'current': true
+        },
+        2: {
+            'name': 'VIP член клуба',
+            'img': 'img/lk/status-3.png',
+            'alt': 'VIP член клуба',
+            'current': false
+        },
+        3: {
+            'name': 'Золотой член клуба',
+            'img': 'img/lk/status-4.png',
+            'alt': 'Золотой член клуба',
+            'current': false
+        },
+    };
+
+    var payService = {
+        0: {
+            'name': 'PayPal',
+            'link': '#'
+        },
+        1: {
+            'name': 'Yandex.Money',
+            'link': '#'
+        },
+        2: {
+            'name': 'Qiwi',
+            'link': '#'
+        },
+        3: {
+            'name': 'Visa / MasterCard',
+            'link': '#'
+        },
+        4: {
+            'name': 'PayPal',
+            'link': '#'
+        },
+        5: {
+            'name': 'PayPal',
+            'link': '#'
+        },
+    };
+
+section.lk-member-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-member-menu.pug
+            include _lk-member-menu-mobile
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Клубная программа
+
+            section.club-program-section
+                .row
+                    .col-12
+                        .club-program_description
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    .col-12
+                        .member-status_block
+                            h2.lk-subheader Ваш клубный статус:
+                            .row.align-items-start
+                                each val, key in status
+                                    .col-12.col-lg-3.member_status.d-flex.flex-column.justify-content-around.align-items-center
+                                        img(src=val.img alt=val.alt)
+                                        if (val.current === true)
+                                            .current-status=val.name
+                                        else
+                                            .your-status=val.name
+
+                            .row.justify-content-around
+                                .col-8.align-items-center
+                                    .status-description Вам доступна дополнительная скидка 5% на любой заказ. А к заказам на сумму от 2000₽ мы будем добавлять подарки из ваших любимых товаров. Также вам доступны конференции с агрономами в соответствующем разделе вашего личного кабинета.
+
+
+                    .col-12
+                        .member-status_block.membership-fee_block
+                            h2.lk-subheader Членский взнос клуба:
+                            .club-program_description
+                                p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    .col-12.col-lg-8
+                        .row.monthly-fee_block
+                            .col-10.col-sm-6
+                                h2.lk-subheader Ежемесячный взнос
+                                span.my-bill_digits 999 ₽
+                            .col-12.col-sm-6
+                                .row.justify-content-between
+                                    .col-12
+                                        a.view-button(href='#') Подключить автоплатеж
+                                    .col-12
+                                        a.cancel-button.popup-with-form(href='#refill') Оплатить
+
+                                        form.col-12.refill_form.mfp-hide.white-popup-block(id='refill')
+                                            .row
+                                                .col-10
+                                                    h2.page-header Пополнение счета
+                                                each val, key in payService
+                                                    .col-12.col-sm-6.col-md-4
+                                                        .pay-service_block
+                                                            a.pay-service-btn(href=val.link)=val.name
+
+

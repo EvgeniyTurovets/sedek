@@ -1,0 +1,221 @@
+-
+    var orderDetails = {
+        0: {
+            'number' : '№1234567',
+            'date' : '12.02.21',
+            'subLevel' : {
+                0: {
+                    'name': 'Адрес доставки',
+                    'value': '123456, МО, Красногорск, ул. Пришвина, д. 123, стр. 1'
+                },
+                1: {
+                    'name': 'Способ доставки',
+                    'value': 'Доставка по адресу'
+                },
+                2: {
+                    'name': 'Способ оплаты',
+                    'value': 'Банковский перевод'
+                },
+                3: {
+                    'name': 'ФИО (Контактное лицо)',
+                    'value': 'Константинопольский Константин Константинович'
+                },
+                4: {
+                    'name': 'Телефон',
+                    'value': '+7 999 999 99 99'
+                },
+                5: {
+                    'name': 'Комментарий к заказу',
+                    'value': 'Комментарий к заказу'
+                },
+            },
+        },
+    };
+
+    var orderCommon = {
+        0: {
+            'name': 'Список 1',
+            'item': {
+                0: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+                1: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+                2: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+            },
+        },
+        1: {
+            'name': 'Список 2',
+            'lastList' : true,
+            'item': {
+                0: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+                1: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+            },
+        },
+    };
+
+    var orderSeparate = {
+        0: {
+            'name': 'Список 3',
+            'combineOrders': true,
+            'item': {
+                0: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+                1: {
+                    'name': 'Название продукта может быть в несколько строк',
+                    'quantity': '999 шт',
+                    'price': '9 999 ₽'
+                },
+            },
+        },
+    };
+
+section.order-section
+    .row
+        .col-12.col-lg-11.col-xl-9
+            h1.page-header Заказ оформлен
+    .row
+        .col-12.col-lg-11.col-xl-9
+            each val, key in orderDetails
+                .order-section_header.row
+                    .col-12.col-sm-7.col-md-5.col-lg-4.col-xl-3.p-0.d-flex.align-items-center.justify-content-between
+                        h2.order-heading
+                            span.delivery-block_header Заказ
+                            span.delivery-block_header=val.number
+                            span.delivery-block_header от
+                            span.delivery-block_header=val.date
+                    .col-12.col-sm-5.col-md-4.p-0.d-flex.align-items-center
+                        .order-status Заказ создан
+                ul.order-details
+                    each subVal, subKey in val.subLevel
+                        li.order-details_item
+                            span.order-details_name=subVal.name
+                            span.order-details_value=subVal.value
+
+section.delivery-section
+    .row
+        .col-12.col-lg-11.col-xl-9
+            .delivery-block
+                .row.align-items-center
+                    .col-12.col-sm-5.col-lg-3.d-flex.align-items-center
+                        h2.delivery-block_header Доставка быстро
+                    .col-12.col-sm-4.col-lg-3.d-flex.align-items-center
+                        .order-status Заказ создан
+                each val, key in orderCommon
+                    .row.no-gutters.align-items-center.justify-content-between
+                        .col-12
+                            .row.align-items-center
+                                .col
+                                    h2.cart-list_title=val.name
+
+                            each subVal, subKey in val.item
+                                .cart-product
+                                    .row.align-items-center.justify-content-between
+                                        .col-10.col-sm-5.align-items-center.d-flex.justify-content-start
+                                            .goods-title=subVal.name
+
+                                        .col-7.col-sm-4.align-items-center.d-flex.justify-content-end.justify-content-sm-around
+                                            span.new-price=subVal.quantity
+
+                                        .col-4.col-sm-3.align-items-center.d-flex.justify-content-end
+                                            .cart-price_block.align-items-center
+                                                span.new-price=subVal.price
+                    if (val.lastList)
+                        .order-list-amount
+                            .row
+                                .col-12.d-flex.align-items-center.justify-content-between
+                                    span.list_sum Стоимость доставки:
+                                    span.list_sum-digits 9 999 ₽
+                                .col-12.d-flex.align-items-center.justify-content-between.list-sum_block
+                                    span.list_sum Сумма по списку:
+                                    span.list_sum-digits 999 999 ₽
+                    else
+                        .order-list-amount
+                            .row
+                                .col-12.d-flex.align-items-center.justify-content-between.list-sum_block
+                                    span.list_sum Сумма по списку:
+                                    span.list_sum-digits 999 999 ₽
+    .row
+        .col-12.col-lg-11.col-xl-9
+            .delivery-block
+                .row
+                    .col-12.col-sm-5.col-lg-3.d-flex.align-items-center
+                        h2.delivery-block_header Доставка позже
+                    .col-12.col-sm-4.col-lg-3.d-flex.align-items-center
+                        .order-status Заказ создан
+                each val, key in orderSeparate
+                    .row.no-gutters.align-items-center.justify-content-between
+                        .col-12.p-0
+                            .row.align-items-center
+                                .col
+                                    h2.cart-list_title=val.name
+                            each subVal, subKey in val.item
+                                .cart-product
+                                    .row.align-items-center.justify-content-between
+                                        .col-10.col-sm-5.align-items-center.d-flex.justify-content-start
+                                            .goods-title=subVal.name
+
+                                        .col-7.col-sm-4.align-items-center.d-flex.justify-content-end.justify-content-sm-around
+                                            span.new-price=subVal.quantity
+
+                                        .col-4.col-sm-3.align-items-center.d-flex.justify-content-end
+                                            .cart-price_block.align-items-center
+                                                span.new-price=subVal.price
+                    .order-list-amount
+                        .row
+                            .col-12.d-flex.align-items-center.justify-content-between
+                                span.list_sum Стоимость доставки:
+                                span.list_sum-digits 9 999 ₽
+                .row
+                    .col-12.d-flex.align-items-center.justify-content-between.list-sum_block
+                        span.list_sum Сумма по списку:
+                        span.list_sum-digits 999 999 ₽
+
+    .row
+        .col-12.col-lg-11.col-xl-9
+            .total-amount
+                ul.total-amount_list
+                    li.total-amount_item
+                        .row
+                            .col-12.d-flex.justify-content-between.align-items-center
+                                span.cart_span Стоимость всего заказа
+                                span.list_sum-digits 9 999 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col-12.d-flex.align-items-center.justify-content-between
+                                span.cart_span Стоимость доставки:
+                                span.list_sum-digits 9 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col-12.d-flex.justify-content-between.align-items-center
+                                span.cart_span Сумма скидки:
+                                span.list_sum-digits 9 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col-12.d-flex.justify-content-between.align-items-center
+                                span.total-amount_span Итоговая сумма:
+                                span.list_sum-digits 9 900 000 р.
+
+            .row.justify-content-around
+                .col-12.col-sm-10.col-md-9.col-lg-7.col-xl-6.d-flex.justify-content-around.align-items-center
+                    a(class='btn separate-pay-btn' href='lk-buyer-start.html') В личный кабинет

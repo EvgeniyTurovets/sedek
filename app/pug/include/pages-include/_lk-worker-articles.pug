@@ -1,0 +1,110 @@
+-
+    var recommendations = {
+        0: {
+            'name': 'Как правильно ухаживать за урожаем?',
+            'date': '25.11.2020',
+            'link': '#',
+            'img' : 'img/recommendations-sect/recom_1.png'
+        },
+        1: {
+            'name': 'Как предотвратить появление вредителей на участке',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        2: {
+            'name': 'Правила поливки',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        3: {
+            'name': 'Как предотвратить появление вредителей на участке',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        4: {
+            'name': 'Правила поливки',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        5: {
+            'name': 'Как предотвратить появление вредителей на участке',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        6: {
+            'name': 'Правила поливки',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+    };
+
+
+section.lk-worker-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-worker-menu-mobile.pug
+            include _lk-worker-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Полезные советы
+            section.news-section.worker-news-section.worker-articles
+                h2.hidden-heading 1
+                .row.top-news.all-news
+                    .col-12.col-xl-8
+                        a.news-card-active(href='news-article.html')
+                            .news-card.news-card-grid-first
+                                img(src='img/recommendations-sect/recom_1.png' alt='новости')
+                                .recom-card-active_heading
+                                    h3.news-active-heading Как правильно ухаживать за урожаем?
+                                    span.card-date 25.11.2020
+
+                    .col-12.col-xl-4
+                        .row.justify-content-between
+                            .col-12.col-sm-6.col-xl-12
+                                .news-card.news-card-grid
+                                    a.recom-top_card.d-flex.flex-column.justify-content-between(href='news-article.html')
+                                        h4.rec-card_heading Правила поливки
+                                        span.card-date 25.11.2020
+                            .col-12.col-sm-6.col-xl-12
+                                .news-card.news-card-grid
+                                    a.recom-top_card.d-flex.flex-column.justify-content-between(href='news-article.html')
+                                        h4.rec-card_heading Как предотвратить появление вредителей на участке
+                                        span.card-date 25.11.2020
+
+                    .col-12.col-sm-6.news-card.news-card-grid.article-card
+                        a.recom-top_card.d-flex.flex-column.justify-content-between(href='news-article.html')
+                            h4.rec-card_heading Правила поливки
+                            span.card-date 25.11.2020
+                    .col-12.col-sm-6.news-card.news-card-grid.article-card
+                        a.recom-top_card.d-flex.flex-column.justify-content-between(href='news-article.html')
+                            h4.rec-card_heading Как предотвратить появление вредителей на участке
+                            span.card-date 25.11.2020
+                    .col-12.col-sm-6.news-card.news-card-grid.article-card
+                        a.recom-top_card.d-flex.flex-column.justify-content-between(href='news-article.html')
+                            h4.rec-card_heading Правила поливки
+                            span.card-date 25.11.2020
+                    .col-12.col-sm-6.news-card.news-card-grid.article-card
+                        a.recom-top_card.d-flex.flex-column.justify-content-between(href='news-article.html')
+                            h4.rec-card_heading Как предотвратить появление вредителей на участке
+                            span.card-date 25.11.2020
+
+                .row.justify-content-around
+                    .col-12.col-sm-10.col-md-6.col-lg-6.d-flex.flex-column.align-items-center
+                        a(class='btn show-btn' href='javascript:void(0)') Показать ещё
+                        .pagination-wrapper
+                            ul.pagination-list.d-flex.align-items-end.justify-content-between
+                                li.pagination-item
+                                    span.pagination-span
+                                li.pagination-item
+                                    span.pagination-span.span-page 1
+                                li.pagination-item
+                                    a(href='#') 2
+                                li.pagination-item
+                                    a(href='#') 3
+                                li.pagination-item
+                                    span.pagination-span  ...
+                                li.pagination-item
+                                    a(href='#') 12
+                                li.pagination-item
+                                    a.pagination-span.span-next(href='javascript:void(0)')

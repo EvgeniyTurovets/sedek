@@ -1,0 +1,17 @@
+section.feedback-main-section
+    .row.align-items-center
+        .col-10.col-md-8.col-lg-6.feedback-heading
+            h2 Остались вопросы? Мы вам перезвоним и все расскажем
+        .col-12.col-lg-6.align-items-center
+            .feedback-right-bg_block
+            form(class='feedback-form' method='post')
+                input(class='form_input' type='text' placeholder='Как к вам обращаться?' required)
+                input(class='form_input form_phone-number' type='text' name='phone' placeholder='Ваш номер телефона?' required)
+                button(class='btn form_btn' type='submit') Перезвонить мне
+                .row.justify-content-around
+                    .col-11.col-sm-9
+                        .paragraph-block.d-inline-block
+                            p.paragraph-black Нажимая кнопку,
+                                |  я соглашаюсь с
+                            a.d-inline(class='conditions-link' href='#') условиями
+                            p.paragraph-black.d-inline обработки данных

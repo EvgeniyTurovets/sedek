@@ -1,0 +1,64 @@
+-
+    var payService = {
+         0: {
+            'name': 'PayPal',
+            'link': '#'
+        },
+        1: {
+            'name': 'Yandex.Money',
+            'link': '#'
+        },
+        2: {
+            'name': 'Qiwi',
+            'link': '#'
+        },
+        3: {
+            'name': 'Visa / MasterCard',
+            'link': '#'
+        },
+        4: {
+            'name': 'PayPal',
+            'link': '#'
+        },
+        5: {
+            'name': 'PayPal',
+            'link': '#'
+        },
+    };
+
+
+section.lk-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-menu-mobile
+            include _lk-menu.pug
+        .col-12.col-md-8.col-lg-9.position-relative
+            .personal_header-block.my-bill_header.d-flex.justify-content-between.align-items-center
+                h1.page-header Мой счет
+
+            .row
+                .col-12.col-lg-10.col-xl-11
+                    .paragraph-text Вы можете хранить средства для оплаты заказов на своем виртуальном счете. Это упростит и ускорит оформление заказа. Просто выберите способ оплаты «С личного счета» и деньги автоматически спишутся со счета.
+
+                .col-12.col-sm-6.col-md-9.col-lg-6.col-xl-5.d-flex.justify-content-around.justify-content-sm-start
+                    .my-bill_block.d-flex.flex-column
+                        span.my-bill_text Сейчас на личном счету:
+                        span.my-bill_digits 999 999 ₽
+                        a.btn.changes-btn.popup-with-form(href='#refill') Пополнить
+
+
+                form.col-12.refill_form.mfp-hide.white-popup-block(id='refill')
+                    .row
+                        .col-10
+                            h2.page-header Пополнение счета
+                        each val, key in payService
+                            .col-12.col-sm-6.col-md-4
+                                .pay-service_block
+                                    a.pay-service-btn(href=val.link)=val.name
+
+
+
+
+
+

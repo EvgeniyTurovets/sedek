@@ -1,0 +1,1149 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_header"
+@import "_footer"
+@import "_catalog-page"
+@import "_catalog-category-lvl1"
+@import "_prod-card"
+@import "_header-menu"
+@import "_shopping-cart"
+@import "_order-registration"
+@import "_order-details-common"
+@import "_order-details-separate"
+@import "_order-success"
+@import "_sets-page"
+@import "_sets-details"
+@import "_lk-buyer-start"
+@import "_lk-personal"
+@import "_all-news"
+@import "_news-article"
+@import "_buyer-favorites"
+@import "_payment"
+@import "_delivery"
+@import "_how-to-order"
+@import "_catalog-category-lvl-last"
+@import "_articles"
+@import "_contacts"
+@import "_about"
+@import "_my-bill"
+@import "_lk-tester-start"
+@import "_lk-member-start"
+@import "_lk-partner-start"
+@import "_lk-worker-start"
+@import "_lk-personal-edit"
+@import "_lk-my-orders"
+@import "_lk-buyer-order-details"
+@import "_lk-tester-reviews"
+@import "_lk-club-member-program"
+@import "_lk-member-event-news"
+@import "_lk-partner-program"
+@import "_lk-partner-client-base"
+@import "_lk-worker-catalog"
+@import "_lk-worker-catalog-category"
+@import "_lk-worker-card"
+@import "_lk-worker-news"
+@import "_lk-worker-news-article"
+@import "_lk-worker-articles"
+@import "_lk-worker-reviews"
+@import "_lk-menu-mobile.sass"
+
+::placeholder
+	color: #777
+
+::selection
+	color: $def-txt
+
+*
+	box-sizing: border-box
+
+body
+	position: relative
+	min-width: 320px
+	font-size: 16px
+	line-height: 1.65
+	font-family: Gilroy
+	overflow-x: hidden
+	color: $text
+	background-color: $white
+
+main
+	min-height: 45vh
+
+h1,
+h2,
+h3,
+h4,
+h5
+	margin: 0
+
+h1
+	font-size: 70px
+	font-weight: 700
+	line-height: 110px
+	letter-spacing: .007em
+	color: $yellow
+
+h2
+	font-size: 50px
+	line-height: 80px
+	font-weight: bold
+
+h3
+	color: $def-txt
+	font-size: 30px
+	line-height: 34px
+	font-weight: 400
+
+h4
+	font-size: 20px
+	font-weight: 200
+	line-height: 24px
+	color: $def-txt
+
+.hidden-heading
+	display: none
+
+.page-header,
+.page-section-header
+	font-size: 30px
+	line-height: 60px
+	font-weight: bold
+	text-shadow: none
+
+.page-header
+	color: $accent
+
+.cart-list_title
+	font-size: 20px
+	font-weight: 600
+	line-height: 30px
+	color: $def-txt
+
+label
+	margin: 0
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+a
+	display: inline-block
+	text-decoration: none
+
+	&:hover
+		color: $def-txt
+		text-decoration: none
+		opacity: .8
+
+.btn
+	white-space: nowrap
+	transition: all .25s ease
+	&:hover
+		opacity: .8
+		transition: all .25s ease
+
+.view-button
+	border: none
+
+input,
+textarea,
+button
+	outline: none
+
+.owl-carousel
+	button.owl-dot
+		outline: none
+
+	.owl-nav
+		button.owl-next,
+		button.owl-prev
+			outline: none
+
+a,
+.btn
+	cursor: pointer
+
+.section-btn
+	width: 230px
+	padding: 10px 0
+	font-size: 20px
+	font-weight: 200
+	text-align: center
+	letter-spacing: .05em
+	background-color: $pink-btn
+	border: 1px solid $purple
+	border-radius: 50px
+	color: $white
+
+	&:hover
+		color: $white
+
+.return-btn
+
+	&:hover
+		text-decoration-line: underline
+
+.remove-btn
+	&:before
+		content: url("../img/lk/trash.svg")
+
+section
+	padding-top: 60px
+
+.page-section
+	padding-top: 30px
+
+span
+	display: inline-block
+
+.options_span,
+.select-current
+	font-size: 14px
+
+.product-qty_btn
+	cursor: pointer
+
+.paragraph-black
+	margin-top: 30px
+	font-size: 19px
+	line-height: 26px
+	letter-spacing: .007em
+	color: $def-txt
+
+.paragraph-content-black
+	margin: 0
+	font-size: 14px
+	line-height: 20px
+	letter-spacing: .007em
+	color: $text
+
+.paragraph-gray
+	margin-top: 20px
+	font-size: 16px
+	line-height: 20px
+	letter-spacing: .007em
+	color: $old-price-gray
+
+.social-block
+	position: relative
+	top: 120px
+	display: flex
+	justify-content: space-between
+	margin-top: 70px
+	padding: 0 80px 0 0
+	z-index: 10
+
+	.social-link
+		display: flex
+		align-items: center
+		width: 70px
+		height: 70px
+		border-radius: 50%
+		background-color: $white
+		transition: all .25s ease
+
+		&:hover
+			background-color: $light-purple
+			.social-icon
+
+				path
+					fill: $white
+
+	.social-icon
+		margin-left: 50%
+		transform: translateX(-50%)
+
+		path
+			fill: $light-purple
+			transition: all .25s ease
+
+.breadcrumbs
+	margin-top: 20px
+
+.chapter-nav_list
+	display: flex
+	margin-top: 20px
+	padding: 0
+
+.chapter-nav_item:not(:first-child)
+	margin-left: 10px
+
+.chapter-nav_item
+	position: relative
+	padding-right: 8px
+
+	&:not(:first-child)
+
+		&:before
+			content: "-"
+			position: absolute
+			left: -14px
+			top: 0
+
+	.current-page
+		position: absolute
+		top: 1px
+		color: $accent
+
+.chapter-nav_link
+	font-size: 16px
+	line-height: 24px
+	font-weight: 200
+	letter-spacing: .15em
+	color: $old-price-gray
+
+	&:hover
+		color: $accent
+
+	&:active
+		color: $accent
+
+.chapter-nav_item
+	&:last-child
+		line-height: 24px
+		font-weight: 200
+		letter-spacing: .15em
+
+//.owl-stage-outer
+
+.owl-stage
+	padding-left: -10px
+
+.slider_card
+
+	&:hover
+		background-color: $card-act-bg
+
+		.product_qty
+			background-color: $card-act-bg
+
+.return-btn
+	margin-top: 25px
+	color: $text
+	text-decoration-line: underline
+
+.pages-search
+	width: 100%
+	margin: 0
+	padding: 12px 0 12px 55px
+	font-size: 14px
+	letter-spacing: .03em
+	color: $gray
+	border: 1px solid $purple
+	border-radius: 24px
+
+//slider
+
+.owl-carousel .owl-item .card-top_img
+	width: 190px
+	height: 195px
+
+.owl-carousel
+	position: relative
+	width: auto
+	
+	.owl-nav
+		display: flex
+		justify-content: space-around
+		margin-top: 40px
+		.owl-prev,
+		.owl-next
+			font-size: 24px
+
+		.owl-prev
+			&:before
+				content: url("../img/discount-goods-sect/owl-nav-left.svg")
+
+			span
+				display: none
+
+		.owl-next
+			&:before
+				content: url("../img/discount-goods-sect/owl-nav-right.svg")
+
+			span
+				display: none
+
+	.owl-dots
+		position: absolute
+		bottom: 10px
+		left: 50%
+		transform: translateX(-50%)
+		display: flex
+		justify-content: space-between
+		width: 250px
+
+		.owl-dot
+
+			&:before
+				content: url("../img/discount-goods-sect/owl-dot.svg")
+
+			&.active
+				&:before
+					content: url("../img/discount-goods-sect/owl-dot-active.svg")
+					position: relative
+					top: 4px
+					transform: scale(2)
+
+.form-textarea
+	padding: 12px 0 12px 55px
+	font-size: 14px
+	letter-spacing: .03em
+	color: $gray
+	border: 1px solid $purple
+	border-radius: 24px
+
+// hero-section
+.hero-section
+	position: relative
+	height: 761px
+	margin-top: 20px
+	padding: 50px 0
+	background-image: url('../img/hero-bg.png')
+	background-size: cover
+	background-repeat: no-repeat
+	border-radius: 80px
+	overflow: hidden
+
+.hero-content
+	margin-top: 150px
+	z-index: 1
+
+	.dark-block
+		position: absolute
+		width: 100%
+		height: 250px
+		background-color: rgba(54, 47, 40, .3)
+		backdrop-filter: blur(1px)
+		opacity: 30%
+		box-shadow: 5px 5px 30px rgba(54, 47, 40, .5)
+		border-radius: 40px
+		z-index: 0
+
+	.hero-heading
+		position: relative
+		text-shadow: 0 0 30px $black
+		z-index: 5
+
+	.hero_subheader
+		position: relative
+		font-size: 24px
+		font-weight: 200
+		letter-spacing: .001em
+		line-height: 35px
+		color: $white
+		text-shadow: 0 0 10px $black
+		z-index: 5
+
+.hero_btn
+	position: relative
+	margin-top: 120px
+	padding: 15px 70px 15px 40px
+	background-color: $pink-btn
+	font-size: 20px
+	line-height: 24px
+	font-weight: 200
+	color: $white
+	border-radius: 50px
+
+	.fa-caret-right
+		position: absolute
+		right: 37px
+		top: 19px
+
+	&:hover
+		color: $white
+
+// discount-goods-sect-section
+
+.section-top
+	margin: 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.discount-heading
+	color: $red
+
+.slider_card
+	position: relative
+	width: 270px
+	min-height: 442px
+	margin-top: 30px
+	margin-left: -10px
+	border: 1px solid $light-purple
+	border-radius: 10px
+	overflow: visible
+
+.discount-block
+	position: absolute
+	left: -5px
+	top: -5px
+	width: 43px
+	height: 43px
+	color: $white
+	background-color: $discount-red
+	border-radius: 50px
+	text-align: center
+	font-size: 14px
+	line-height: 44px
+	letter-spacing: .05em
+
+.discount-card_top
+	position: relative
+	display: flex
+	align-items: baseline
+
+	.card-top_img
+		width: 190px
+		height: 195px
+
+	& .card-top_link
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 100%
+
+.card-icons_block
+	position: absolute
+	right: 30px
+	top: 30px
+	display: flex
+	flex-direction: column
+	cursor: pointer
+
+	.card-icon
+		position: relative
+		margin-bottom: 10px
+		width: 30px
+		height: 30px
+
+		&:first-child
+			background-color: $red
+			border-radius: 50%
+
+			img
+				position: absolute
+				top: 5px
+				left: 5px
+				width: 5px
+
+	.icon-star
+		padding: 5px
+
+.discount-card_bottom
+	padding: 0 10px 20px 10px
+
+.goods-category
+	font-size: 12px
+	line-height: 40px
+	color: $green-text
+
+.goods-title
+	font-size: 14px
+	color: $def-txt
+	overflow: hidden
+
+.discount-card_price
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.new-price_block
+	display: flex
+	flex-direction: column
+	white-space: nowrap
+	margin: 15px 0
+
+	.new-price
+		font-size: 30px
+
+	.order-conditions
+		position: relative
+		display: flex
+		align-items: baseline
+		padding-left: 16px
+		font-size: 14px
+		color: $light-purple
+		cursor: pointer
+
+		&:before
+			content: url("../img/info-circle-solid.svg")
+			position: absolute
+			width: 14px
+			height: 14px
+			top: 2px
+			left: -2px
+			font-size: 14px
+
+.old-price
+	font-size: 20px
+	line-height: 31px
+	color: $old-price-gray
+	text-decoration-line: line-through
+
+.buy-block
+	padding-left: 10px
+	padding-right: 8px
+
+.card-btn
+	position: relative
+	display: inline-block
+	padding: 10px 40px
+	color: $white
+	font-size: 14px
+	line-height: 20px
+	letter-spacing: .04em
+	background-color: $btn-orange
+	border-radius: 10px
+
+	&:hover
+		color: $white
+
+.buy-btn-col
+	padding-left: 0
+	padding-right: 10px
+
+.buy-btn
+	width: 100%
+	padding: 10px  0
+
+	&:before
+		content: url("../img/discount-goods-sect/cart-btn.svg")
+		position: absolute
+		left: 35px
+		bottom: 7px
+		font-size: 14px
+
+.product-qty_block
+	display: flex
+	align-items: center
+	padding: 8px 6px 5px 6px
+	border: 1px solid $btn-brd-pink
+	border-radius: 10px
+
+	& span
+		display: block
+		height: 19px
+		padding-top: 1px
+		font-size: 18px
+		line-height: 18px
+		letter-spacing: .07em
+		cursor: pointer
+
+.product_qty
+	font-size: 20px
+	line-height: 18px
+	text-align: center
+
+.prod-qty_minus
+	padding-right: 8px
+
+.prod-qty_plus
+	padding-left: 8px
+
+.product_qty
+	width: 100%
+	line-height: 14px
+	border: none
+
+.sets_card
+	&.slider_card
+		&:hover
+			background-color: $card-act-bg
+
+			.product_qty
+				background-color: $card-act-bg
+
+//interesting-useful-sect
+
+.useful-heading
+	color: $green-text
+
+.interesting-useful_content
+	margin-top: 30px
+
+.interesting-useful_left
+	position: relative
+	border-radius: 30px
+
+	img
+		width: 100%
+		border-radius: 30px
+		box-shadow: 10px 10px 20px rgba(112, 112, 112, .1)
+		z-index: 2
+
+.interesting-useful-content_block
+	margin-top: -30px
+	padding: 40px 0 20px 20px
+	background-color: $bg-purple
+	z-index: -1
+	border-radius: 0 0 30px 30px
+
+	h3
+		font-weight: 600
+
+	a
+		margin-top: 30px
+
+.interesting-useful_content-right
+	position: relative
+
+.interesting-useful-right_card
+	position: absolute
+	width: 320px
+	padding-bottom: 20px
+	background-color: $card-act-bg
+	border-radius: 30px
+	box-shadow: 10px 10px 20px rgba(112, 112, 112, .1)
+
+	img
+		width: 100%
+		height: 125px
+		border-radius: 30px
+
+	h4
+		margin-top: 10px
+
+.interesting-useful-right_card-2
+	top: 210px
+	left: 190px
+
+.interesting-useful-right_block
+	padding-left: 20px
+
+	a
+		margin-top: 30px
+
+//popular-section
+
+.popular-section
+	position: relative
+
+	.popular-heading
+		color: $heading-pink
+
+	.all-cat_btn
+		position: absolute
+		bottom: -120px
+		left: 50%
+		transform: translateX(-50%)
+		display: inline-block
+		width: 350px
+		padding: 15px 0
+		font-size: 20px
+		line-height: 24px
+		text-align: center
+		color: $def-txt
+		background-color: $btn-bg-yellow
+		border-radius: 50px
+		border: 1px dashed $old-price-gray
+
+.pop-cards-row
+	margin-top: 30px
+
+.popular-card
+	margin-bottom: 15px
+	padding: 0 15px 15px 15px
+	background-color: rgba(249, 230, 250, .3)
+	border-radius: 15px
+
+	&:hover
+		background-color: $card-act-bg
+		box-shadow: 10px 10px 20px rgba(112, 112, 112, .1)
+
+.pop-card_link
+
+	img
+		width: 100%
+
+//seeds-section
+
+.seeds-section
+	padding-top: 200px
+
+	.seeds-heading
+		color: $btn-orange
+
+	.owl-stage
+		overflow: visible
+
+.owl-item
+
+	.sets_card
+		margin-bottom: 0
+
+.slider-card_narrow
+
+	.buy-btn
+		padding: 10px 0 10px 20px
+		text-align: center
+
+		&:before
+			left: 25px
+
+//buy-now-sect-section
+
+.buy-now-section
+
+	h2
+		color: $red
+
+//recommendations-section
+
+.recommendations-section
+
+	h2
+		color: $pale-purple
+
+.recommendations-content
+	margin-top: 15px
+
+.recom-card_active
+	position: relative
+	width: 100%
+	background-color: rgba(249, 230, 250, .3)
+	border-radius: 10px
+	cursor: pointer
+
+	img
+		width: 100%
+
+.recom-card-active_heading
+	margin-top: 10px
+	padding: 0 10px 20px 10px
+
+	h3
+		font-weight: 600
+
+.card-date
+	color: $old-price-gray
+
+.recom-top_card
+	position: relative
+	height: 135px
+	margin-bottom: 15px
+	padding: 10px 10px 20px 10px
+	cursor: pointer
+
+.recom-card_active,
+.recom-top_card,
+.recom-bottom_card,
+	&:hover
+		background-color: $card-act-bg
+
+.recom-card_active,
+.recom-top_card,
+.recom-bottom_card,
+.news-card-active
+
+	&:hover
+		&:before
+			content: url("../img/recommendations-sect/eye-regular.svg")
+			position: absolute
+			right: 25px
+			bottom: 15px
+			padding: 16px
+			font-size: 10px
+			text-align: center
+			width: 48px
+			height: 48px
+			background-color: $btn-orange
+			border-radius: 50%
+
+		&:after
+			background-color: $light-purple
+
+.news-card-active
+	width: 100%
+
+	&:hover
+		background-color: $bg-purple
+
+	img
+		width: 100%
+
+
+
+.recom-top_card,
+.recom-bottom_card
+	border-radius: 10px 10px 40px 10px
+
+.rec-card_heading
+	max-height: 68px
+	padding: 2px
+	font-size: 18px
+	font-weight: 400
+	line-height: 22px
+	overflow: hidden
+	text-overflow: ellipsis
+
+.recom-bottom
+	margin-top: 20px
+
+	.recom-bottom_card
+		position: relative
+		height: 175px
+		padding: 20px
+		cursor: pointer
+
+		&:hover
+			background-color: $rec-card-bg
+			border-radius: 10px 10px 40px 10px
+
+			&:before
+				background-color: $bg-green
+
+//discount-section
+
+.discount-section
+	position: relative
+	margin-top: 120px
+	padding-bottom: 70px
+
+	.discount-sect_heading
+		font-family: Impact
+		font-size: 91px
+		line-height: 77px
+		letter-spacing: .01em
+		color: $pink-btn
+		text-shadow: rgba(112, 112, 112, .4) 7px 7px 8px
+		transform: rotate(4deg)
+
+	.discount-sect_subheader
+		font-size: 23px
+		line-height: 79px
+		color: $old-price-gray
+
+	.discount_btn
+		display: inline-block
+		width: 320px
+		margin-top: 30px
+		padding: 20px 0
+		font-size: 20px
+		color: $white
+		text-align: center
+		background-color: $btn-orange
+		border-radius: 40px
+
+	.discount-sect_discount
+		position: absolute
+		display: inline-block
+		color: $white
+		text-align: center
+		font-weight: bold
+		background-color: $pink-btn
+		border-radius: 50%
+
+	.discount-10
+		top: -40px
+		right: 350px
+		width: 82px
+		height: 82px
+		font-size: 24px
+		line-height: 82px
+
+	.discount-20
+		top: 0
+		right: 30px
+		width: 100px
+		height: 100px
+		font-size: 30px
+		line-height: 100px
+
+	.discount-40
+		bottom: 0
+		right: 380px
+		width: 154px
+		height: 154px
+		font-size: 50px
+		line-height: 154px
+
+	.discount-50
+		bottom: 60px
+		right: 0
+		width: 220px
+		height: 220px
+		font-size: 80px
+		line-height: 220px
+
+//fertilizers-section
+
+.fertilizers-section
+
+	h2
+		color: $heading-purple
+		font-weight: 400
+
+	.interesting-useful_content
+		margin-top: 0
+
+//news-section
+.news-section
+
+	h2
+		color: $red
+		font-weight: 400
+
+	.recom-top_card
+		height: 145px
+
+.recom-top_card
+	width: 100%
+
+
+
+//connect-section
+
+.connect-section
+	position: relative
+	padding: 200px 0
+
+	.connect-left
+		position: absolute
+
+		h2
+			font-weight: 600
+			letter-spacing: .007em
+			color: $accent
+
+
+
+	.connect-right
+		position: relative
+		width: fit-content
+		height: fit-content
+
+		.connect-right-bg_block
+			position: absolute
+			right: 0
+			bottom: -400px
+			z-index: -1
+			width: 738px
+			height: 447px
+			background-color: $bg-green
+			border-radius: 90px
+
+		.connect-rect
+			position: absolute
+
+		.connect-rect_2
+			right: 520px
+			bottom: -370px
+			z-index: 1
+
+		.connect-rect_3
+			top: 10px
+			right: 350px
+			z-index: 1
+
+		.connect-rect_4
+			right: 0
+			top: -130px
+			z-index: 1
+
+		.connect-rect_5
+			right: 150px
+			top: 200px
+			z-index: 1
+
+		.connect-rect_6
+			right: 290px
+			top: 210px
+			z-index: 2
+
+		.connect-rect_7
+			right: 0
+			top: 110px
+			z-index: 2
+
+		.connect-rect_8
+			right: 110px
+			top: -130px
+			z-index: 5
+
+//post-section
+
+.post-section
+	padding-top: 180px
+
+	h2
+		font-weight: 400
+		line-height: 60px
+		letter-spacing: .007em
+		color: $green-text
+
+	.post-txt-block
+		margin-top: 50px
+
+//feedback-section
+.feedback-main-section
+	position: relative
+	margin-top: 70px
+	padding-top: 110px
+	padding-bottom: 140px
+
+	.feedback-right-bg_block
+		position: absolute
+		right: 30px
+		top: -110px
+		z-index: -1
+		width: 738px
+		height: 475px
+		background-color: $bg-gray
+		border-radius: 90px
+
+	h2
+		font-weight: 600
+		line-height: 60px
+		color: $green-text
+
+	form
+		display: flex
+		flex-direction: column
+		width: 450px
+
+		input
+			display: block
+			margin-bottom: 20px
+			padding: 15px 20px
+			font-size: 14px
+			line-height: 17px
+			color: $form-input
+			border: none
+			border-radius: 50px
+
+		.paragraph-black
+			display: inline
+			margin: 0
+			text-align: center
+
+	.conditions-link
+		display: inline
+		margin-left: 5px
+		font-size: 18px
+		color: $pink-btn
+		text-decoration-line: underline
+
+		&:hover
+			opacity: .8
+
+	.form_btn
+		color: $white
+		margin-bottom: 15px
+		padding: 10px 0
+		font-size: 20px
+		font-weight: 200
+		line-height: 24px
+		border: none
+		border-radius: 50px
+		background-color: $pink-btn
+
+
+
+@import "_media"
+// Always at the end

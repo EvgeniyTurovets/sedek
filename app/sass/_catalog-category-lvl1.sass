@@ -1,0 +1,142 @@
+@import "vars"
+
+.catalog-cat-sect
+    position: relative
+    border-bottom: 1px solid $purple
+
+    .page-header
+        color: $accent
+
+.subcat-cards-wrapper
+    position: relative
+    height: 260px
+    padding: 20px 10px
+    overflow-y: hidden
+    overflow-x: hidden
+    transition: all .25s ease
+
+    &.active
+        height: 100%
+        transition: all .25s ease
+
+.subcat-card_link
+    margin-bottom: 20px
+    padding: 20px 40px
+    font-size: 16px
+    line-height: 19px
+    text-align: left
+    transition: all .25s ease
+    color: $text
+    white-space: nowrap
+    border-radius: 20px
+
+    &:hover
+        transition: all .25s ease
+        background-color: $card-act-bg
+        box-shadow: 10px 10px 30px rgba(12, 11, 10, 0.16)
+
+.subcat-open_btn
+    width: 100%
+    padding: 20px
+    font-size: 14px
+    color: $text
+    text-align: center
+    text-decoration-line: underline
+    white-space: nowrap
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #ffffff 100%)
+
+    &:hover
+        color: $accent
+        text-decoration-line: underline
+
+.sort-section
+
+    .filter_block
+        margin-top: -10px
+
+    .select-header
+        padding: 12px 25px 8px 25px
+
+.form-filter
+    display: flex
+
+.filter_block
+    padding: 0
+
+    .select
+        margin: 0 0 0 10px
+
+.form-filter_span
+    font-size: 14px
+
+.prods-page
+    padding-top: 50px
+
+    .sort-section
+        margin-left: 15px
+
+    .sets_card
+        position: relative!important
+        top: 0!important
+
+.pagination-wrapper
+    width: 250px
+    margin: 40px 0 20px 0
+
+
+.pagination-span
+    padding-top: 2.5px
+    padding-left: 10.5px
+    width: 30px
+    height: 30px
+    border-radius: 15px
+
+.span-page
+    padding-top: 2px
+    padding-left: 10.5px
+    color: $text
+    border: 1px solid $purple
+    background-color: $pop-card-bg
+
+.pagination-item
+    &:first-child
+        margin-right: 10px
+        span
+            padding-left: 9px
+            background-color: $purple-2
+            border: 1px solid $purple
+            opacity: .5
+
+            &:before
+                content: url("../img/catalog-cat/chevron-left.svg")
+                left: 10px
+
+.pagination-item
+
+    & a
+        width: 30px
+        height: 30px
+        padding-top: 4px
+        text-align: center
+        color: $text
+
+        &:hover
+            border-bottom: 1px solid $purple
+            opacity: .7
+
+.pagination-item
+    &:last-child
+        margin-left: 10px
+
+        a
+            padding-top: 2.5px
+            padding-left: 2px
+            background-color: $purple-2
+            border: 1px solid $light-purple
+            cursor: pointer
+
+            &:before
+                content: url("../img/catalog-cat/chevron-right.svg")
+
+
+

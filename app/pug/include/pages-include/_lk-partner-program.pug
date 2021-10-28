@@ -1,0 +1,57 @@
+-
+    var status = {
+        0: {
+            'name' : 'Серебряный партнер',
+            'img' : 'img/lk/status-silver.png',
+            'alt' : 'Серебряная медаль',
+            'current': false
+        },
+        1: {
+            'name': 'Золотой партнер',
+            'img': 'img/lk/status-gold.png',
+            'alt': 'Золотая медаль',
+            'current': true
+        },
+        2: {
+            'name': 'Платиновый партнер',
+            'img': 'img/lk/status-platinum.png',
+            'alt': 'Платиновая медаль',
+            'current': false
+        },
+    };
+
+section.lk-partner-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-partner-menu-mobile.pug
+            include _lk-partner-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Партнерская программа
+            section.club-program-section
+                .club-program_description
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+
+                .member-status_block.partner-program_block
+                    h2.lk-subheader Ваш партнерский статус:
+                    .row
+                        each val, key in status
+                            .col-12.col-sm-4
+                                .member_status.d-flex.flex-column.align-items-center
+                                    img(src=val.img alt=val.alt)
+                                    if (val.current === true)
+                                        .current-status=val.name
+                                    else
+                                        .your-status=val.name
+                    .row.justify-content-around
+                        .col-12.col-xl-8.align-items-center
+                            .status-description Вам доступны особые условия:<br>
+                                                | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+
+                .member-status_block.membership-fee_block
+                    h2.lk-subheader Обязательства партнера:
+                    .club-program_description
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod

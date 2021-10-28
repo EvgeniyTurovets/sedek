@@ -1,0 +1,12 @@
+mixin customSelect(listOptions)
+    .select.wrapper
+        .select-header
+            span.select-current
+            span.select-open
+        ul.select-list
+            each val, key in listOptions
+                li.select_options(data-value=val.id)
+                    span.options_span=val.name
+
+
+        input(type='hidden' name='payment' value='')

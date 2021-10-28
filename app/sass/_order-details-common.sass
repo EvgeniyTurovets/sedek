@@ -1,0 +1,172 @@
+@import "vars"
+
+.order-details
+    padding-top: 60px
+
+    .page-top
+        justify-content: space-between
+        align-items: center
+
+        .page-header
+            white-space: nowrap
+
+        .delivery-btn
+            padding: 7px 22px
+            font-size: 14px
+            line-height: 17px
+            color: $white
+            background-color: $green-text
+            border-radius: 15px
+
+    .paragraph-content-black
+        margin-top: 11px
+
+    .cart-product
+        margin-top: 5px
+
+    .cart-card
+        margin: 0
+
+    .new-price
+        font-weight: 400
+
+    .pink-btn
+        width: 100%
+        margin-top: 30px
+        padding: 10px 0
+        text-align: center
+        transition: all .25s ease
+
+        &:before
+            content: none
+
+        &:hover
+            color: $pink-btn
+            opacity: .7
+            transition: all .25s ease
+
+    .form_btn
+        width: 450px
+        margin-top: 40px
+        margin-bottom: 0
+        padding: 15px 0
+        font-size: 16px
+        text-align: center
+
+        &:hover
+            color: $white
+
+    .list_sum
+        font-weight: 400
+
+    .total-amount_span
+        font-weight: 600
+
+    .delivery-block
+        margin-top: 30px
+        padding-right: 20px
+
+        .delivery-block_header
+            font-size: 20px
+            font-weight: 700
+            line-height: 30px
+
+.form_btn
+    color: $white
+
+.total-amount
+    margin-top: 30px
+
+.cart-list_title
+    margin-top: 30px
+
+.prod-remove
+
+    &:before
+        content: url("../img/order-details/prod-remove.svg")
+
+.tooltip-delivery_block
+    position: relative
+    display: flex
+    align-items: center
+    align-content: center
+    width: 20px
+    z-index: 2
+
+    &:hover
+        cursor: pointer
+
+    .icon-tooltip
+        position: absolute
+        top: calc(100% + 7px)
+        left: 50%
+        transform: translateX(-50%)
+        display: none
+        width: 200px
+        text-align: center
+
+        .icon-tooltip_content
+            padding: 10px 5px
+            border: 1px solid $light-purple
+            border-radius: 20px
+            background-color: $white
+            z-index: 2
+            cursor: pointer
+
+            &:before
+                content: ""
+                width: 0
+                height: 0
+                position: absolute
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid transparent
+                border-bottom: 10px solid $light-purple
+                right: 50%
+                transform: translateX(50%)
+                top: -19px
+                z-index: 2
+
+            &:after
+                content: ""
+                width: 0
+                height: 0
+                position: absolute
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid transparent
+                border-bottom: 10px solid $white
+                right: 50%
+                transform: translateX(50%)
+                top: -17px
+                z-index: 2
+
+            a
+                z-index: 3
+
+.delivery-tooltip_text
+    position: relative
+    padding-left: 20px
+
+
+    &:before
+        content: url("../img/order-details/trash.svg")
+        position: absolute
+        bottom: -5px
+        left: -10px
+
+.tooltip-delivery_block:hover > .icon-tooltip
+    display: block
+
+
+
+
+
+
+
+
+
+
+
+
+

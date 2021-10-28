@@ -1,0 +1,50 @@
+-
+    var menu = {
+        0: {
+            'name' : 'Мой кабинет',
+            'link' : 'lk-tester-start.html'
+        },
+        1: {
+            'name': 'Личные данные',
+            'link': '#',
+            'img' : 'img/lk/personal.svg',
+            'alt' : 'Аккаунт'
+        },
+        2: {
+            'name': 'Каталог',
+            'link': '#',
+            'img' : 'img/lk/orders.svg',
+            'alt' : 'Каталог'
+        },
+        3: {
+            'name': 'Любимые товары',
+            'link': '#',
+            'img' : 'img/lk/favor.svg',
+            'alt' : 'Сердечко'
+        },
+        4: {
+            'name': 'Мой счёт',
+            'link': '#',
+            'img' : 'img/lk/calc.svg',
+            'alt' : 'Калькулятор'
+        },
+        5: {
+            'name': 'Мои отзывы',
+            'link': 'lk-tester-reviews.html',
+            'img': 'img/lk/reviews.svg',
+            'alt': 'Отзывы'
+        },
+        6: {
+            'name': 'Выйти',
+            'link': '#',
+            'img' : 'img/lk/exit.svg',
+            'alt' : 'Выйти'
+        },
+    };
+
+
+nav.lk-menu-left.d-none.d-md-block
+    .menu-left-wrapper.d-flex.flex-column
+        each val, key in menu
+            .link-block
+                a.menu-left_item(href=val.link)=val.name

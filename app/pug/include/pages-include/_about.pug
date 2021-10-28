@@ -1,0 +1,56 @@
+-
+    var production = {
+        0: {
+            'img' : 'img/about/slider-img-1.jpg',
+            'alt' : 'Наше производство'
+        },
+        1: {
+            'img': 'img/about/slider-img-1.jpg',
+            'alt' : 'Наше производство'
+        },
+        2: {
+            'img': 'img/about/slider-img-1.jpg',
+            'alt' : 'Наше производство'
+        },
+        3: {
+            'img': 'img/about/slider-img-1.jpg',
+            'alt' : 'Наше производство'
+        },
+    };
+
+.container
+    section.about-top
+        h1.page-header О нас
+        .row.justify-content-between.align-items-start.justify-content-around
+            .col-12.col-lg-6
+                p.paragraph-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                p.paragraph-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+            .col-12.col-md-9.col-lg-6.d-flex
+                img.w-100(src='img/about/about-top-img.jpg' alt='')
+
+section.about-middle
+    .container
+        h2.hidden-heading 1
+        .row
+            .col-12.col-md-4
+                h3.paragraph-heading 1. Lorem ipsum dolor sit amet
+                p.paragraph-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.
+            .col-12.col-md-4
+                h3.paragraph-heading 1. Lorem ipsum dolor sit amet
+                p.paragraph-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.
+            .col-12.col-md-4
+                h3.paragraph-heading 1. Lorem ipsum dolor sit amet
+                p.paragraph-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.
+
+.container
+    section.production-section
+        h2.page-header Наше производство
+        p.paragraph-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+        .row.justify-content-around
+            .col-12.col-lg-10.col-xl-8
+                .owl-carousel.production-slider.owl-stage
+                    each val, key in production
+                        img.w-100.h-100(src=val.img alt=val.alt)
+
+
+

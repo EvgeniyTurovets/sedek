@@ -1,0 +1,414 @@
+include ../../mixins/_mixins
+-
+    var sortGoods = {
+        0: {
+            'name': 'По алфавиту',
+            'id': '1'
+        },
+        1: {
+            'name': 'По другому',
+            'id': '2'
+        },
+        2: {
+            'name': 'По алфавиту',
+            'id': '3'
+        },
+        3: {
+            'name': 'По алфавиту',
+            'id': '4'
+        },
+    };
+    var products = {
+        0: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-1'
+        },
+        1: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-2'
+        },
+        2: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-3'
+        },
+        3: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-4'
+        },
+        4: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-5'
+        },
+        5: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-6'
+        },
+        6: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-7'
+        },
+        7: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-8'
+        },
+        8: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-9'
+        },
+        9: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-10'
+        },
+        10: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-11'
+        },
+        11: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-12'
+        },
+    };
+    var filter = {
+        0: {
+            'name' : 'Срок созревания',
+            'subLevel' : {
+                0: {
+                    'name': 'Срок 1',
+                    'id': '1'
+                },
+                1: {
+                    'name': 'Срок 2',
+                    'id': '2'
+                },
+                2: {
+                    'name': 'Срок 3',
+                    'id': '3'
+                },
+                3: {
+                    'name': 'Срок 4',
+                    'id': '4'
+                },
+            },
+        },
+        1: {
+            'name': 'Форма плода',
+            'subLevel': {
+                0: {
+                    'name': 'Форма 1',
+                    'id': '1'
+                },
+                1: {
+                    'name': 'Форма 2',
+                    'id': '2'
+                },
+                2: {
+                    'name': 'Форма 3',
+                    'id': '3'
+                },
+                3: {
+                    'name': 'Форма 4',
+                    'id': '4'
+                },
+            },
+        },
+        2: {
+            'name': 'Цвет плода',
+            'subLevel': {
+                0: {
+                    'name': 'Цвет плода 1',
+                    'id': '1'
+                },
+                1: {
+                    'name': 'Цвет плода 2',
+                    'id': '2'
+                },
+                2: {
+                    'name': 'Цвет плода 3',
+                    'id': '3'
+                },
+                3: {
+                    'name': 'Цвет плода 4',
+                    'id': '4'
+                },
+            },
+        },
+        3: {
+            'name': 'Цвет мякоти',
+            'subLevel': {
+                0: {
+                    'name': 'Цвет мякоти 1',
+                    'id': '1'
+                },
+                1: {
+                    'name': 'Цвет мякоти 2',
+                    'id': '2'
+                },
+                2: {
+                    'name': 'Цвет мякоти 3',
+                    'id': '3'
+                },
+                3: {
+                    'name': 'Цвет мякоти 4',
+                    'id': '4'
+                },
+            },
+        },
+        4: {
+            'name': 'Вес плода',
+            'subLevel': {
+                0: {
+                    'name': 'Вес плода 1',
+                    'id': '1'
+                },
+                1: {
+                    'name': 'Вес плода 2',
+                    'id': '2'
+                },
+                2: {
+                    'name': 'Вес плода 3',
+                    'id': '3'
+                },
+                3: {
+                    'name': 'Вес плода 4',
+                    'id': '4'
+                },
+            },
+        },
+    };
+
+section.prods-page
+    .row
+        .col-12
+            h1.page-header Последний уровень каталога (например Арбузы)
+    .row.catalog-category_block.align-items-center.justify-content-between
+        .col-11.col-sm-7.col-md-6.col-lg-5.col-xl-4.filter_block.form_inputs.d-flex.align-items-center.justify-content-between
+            span(class='form-filter_span') Сортировать:
+            .select.wrapper
+                .select-header
+                    span.select-current
+                    span.select-open
+                ul.select-list
+                    each val, key in sortGoods
+                        li.select_options(data-value=val.id)
+                            span.options_span=val.name
+            input(type='hidden' name='payment' value='')
+        .col-12.col-sm-6.col-md-5.col-lg-4.col-xl-3
+            a.btn.section-btn.filter-btn(href='javascript:void(0)') Фильтры
+        .col-12
+            form(id='#filter' class='order-form contact-form category-filter')
+                .row.filter-block
+                    each val,key in filter
+                        .col-12.col-sm-10.col-md-6.form_inputs
+                            h4.input-heading=val.name
+                            .select.wrapper
+                                .select-header
+                                    span.select-current
+                                    span.select-open
+                                ul.select-list
+                                    each subVal, subKey in val.subLevel
+                                        li.select_options(data-value=subVal.id)
+                                            span.options_span=subVal.name
+
+                                input(type='hidden' name='payment' value='')
+
+                    .col-12.col-sm-9.col-md-6.col-lg-4.form_inputs
+                        h4.input-heading Розничная цена
+
+                        .row.retail
+                            .col-6
+                                .filter_block.d-flex.align-items-center.justify-content-start
+                                    span(class='form-filter_span') От
+                                    input.header-search(type='text')
+                                    span.placeholder-span ₽
+                            .col-6
+                                .filter_block.d-flex.align-items-center.justify-content-start
+                                    span(class='form-filter_span') До
+                                    input.header-search(type='text')
+                                    span.placeholder-span ₽
+                    .col-12
+                        .row
+                            .col-7.filter-match-block
+                                span Подходит:
+                                span 42 товара
+                    .col-12
+                        .row.filter-btns_block.align-items-center
+                            .col-12.col-sm-8.col-md-7.col-lg-5.col-xl-4
+                                a.btn.all-cat_btn(href='javascript:void(0)') Применить фильтры
+                            .col-12.col-sm-4.col-md-2.d-flex.justify-content-around
+                                button.reset-filters-btn(type='reset') Сбросить
+
+        .col-12.catalog-category-prods
+            .row
+                each val, key in products
+                    .col-12.col-sm-6.col-lg-4.sets_card.d-flex.justify-content-around
+                        .slider_card.slider-card_narrow
+                            .discount-card_top
+                                a(class='card-top_link' href=val.link)
+                                img(class='card-top_img' src=val.img alt=val.alt)
+                                .discount-block -10%
+                                .card-icons_block
+                                    a(class='card-icon icon-star' href='#')
+                                        img(class='i-svg' src=val.icon1 alt='звезда')
+                                    a(class='card-icon' href='#')
+                                        img(class='i-svg' src=val.icon2 alt='категория 1')
+                                    a(class='card-icon' href='#')
+                                        img(class='i-svg' src=val.icon3 alt='категория 2')
+                            .discount-card_bottom
+                                .discount-card_description
+                                    span.goods-category=val.category
+                                    span.goods-title=val.name
+                                    .row.discount-card_price
+                                        .col-5
+                                            .new-price_block
+                                                span.new-price=val.newPrice
+                                                a(class='order-conditions' href='#')=val.conditions
+                                        .col-7
+                                            span.old-price=val.oldPrice
+                                .row
+                                    .col-6.buy-block
+                                        .product-qty_block
+                                            span.prod-qty_minus.product-qty_btn -
+                                            input.product_qty.type_num('maxlength'='3' value=0)
+                                            span.prod-qty_plus.product-qty_btn +
+                                    .col-6.buy-btn-col
+                                        a(class='btn card-btn buy-btn' href='javascript:void(0)') Купить
+
+    .row.justify-content-around
+        .col-12.col-md-8.col-lg-6.d-flex.flex-column.align-items-center
+            a(class='btn show-btn' href='javascript:void(0)') Показать ещё
+            .pagination-wrapper
+                ul.pagination-list.d-flex.align-items-end.justify-content-between
+                    li.pagination-item
+                        span.pagination-span
+                    li.pagination-item
+                        span.pagination-span.span-page 1
+                    li.pagination-item
+                        a(href='#') 2
+                    li.pagination-item
+                        a(href='#') 3
+                    li.pagination-item
+                        span.pagination-span  ...
+                    li.pagination-item
+                        a(href='#') 12
+                    li.pagination-item
+                        a.pagination-span.span-next(href='javascript:void(0)')

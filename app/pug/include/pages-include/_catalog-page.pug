@@ -1,0 +1,175 @@
+-
+    var catalog = {
+        0: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_1.png',
+            'name': 'Томаты',
+            'alt': 'Томаты'
+        },
+        1: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_2.png',
+            'name': 'Огурцы',
+            'alt': 'Огурцы'
+        },
+        2: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_3.png',
+            'name': 'Перцы',
+            'alt': 'Перцы'
+        },
+        3: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_4.png',
+            'name': 'Капуста',
+            'alt': 'Капуста'
+        },
+        4: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_5.png',
+            'name': 'Морковь',
+            'alt': 'Морковь'
+        },
+        5: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_6.png',
+            'name': 'Свекла',
+            'alt': 'Свекла'
+        },
+        6: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_7.png',
+            'name': 'Пряности',
+            'alt': 'Пряности'
+        },
+        7: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_8.png',
+            'name': 'Кабачки',
+            'alt': 'Кабачки'
+        },
+    };
+    var seeds = {
+        0: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-1'
+        },
+        1: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-2'
+        },
+        2: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-3'
+        },
+        3: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-4'
+        },
+    };
+
+section.page-section
+    h1.page-header Каталог
+    .row
+        .col-12
+            .search_block
+                a(class='search-btn' href='javascript:void(0)')
+                    img(src='img/header-icons/search-icon.svg' alt='Кнопка поиска')
+                input(class='header-search' type='search' placeholder='Найти: Помидоры')
+
+    .row.pop-cards-row
+        each val, key in catalog
+            .col-12.col-sm-6.col-md-4.col-lg-3
+                .popular-card
+                    a(class='pop-card_link' href=val.link)
+                        img(src=val.img alt=val.alt)
+                        h3=val.name
+
+section.catalog-discount-section
+    .row
+        .col-12.col-lg-8.d-flex.discount-goods-top.justify-content-between.align-items-center.order-first.order-lg-first
+            h2.page-header Скидки
+        .col-12.col-lg-4.d-flex.discount-goods-top.align-items-center.order-last.order-lg-2.justify-content-around.justify-content-lg-end
+            a(class= 'btn section-btn' href='#') Все скидки
+        .col-12.order2.order-lg-3.slider
+            .owl-carousel.seeds-slider.owl-stage
+                each val, key in seeds
+                    .sets_card.d-flex.justify-content-around
+                        .slider_card.slider-card_narrow
+                            .discount-card_top
+                                a(class='card-top_link' href=val.link)
+                                img(class='card-top_img' src=val.img alt=val.alt)
+                                .discount-block -10%
+                                .card-icons_block
+                                    a(class='card-icon icon-star' href='#')
+                                        img(class='i-svg' src=val.icon1 alt='звезда')
+                                    a(class='card-icon' href='#')
+                                        img(class='i-svg' src=val.icon2 alt='категория 1')
+                                    a(class='card-icon' href='#')
+                                        img(class='i-svg' src=val.icon3 alt='категория 2')
+                            .discount-card_bottom
+                                .discount-card_description
+                                    span.goods-category=val.category
+                                    span.goods-title=val.name
+                                    .row.discount-card_price
+                                        .col-5
+                                            .new-price_block
+                                                span.new-price=val.newPrice
+                                                a(class='order-conditions' href='#')=val.conditions
+                                        .col-7
+                                            span.old-price=val.oldPrice
+                                .row
+                                    .col-6.buy-block
+                                        .product-qty_block
+                                            span.prod-qty_minus.product-qty_btn -
+                                            input.product_qty.type_num('maxlength'='3' value=0)
+                                            span.prod-qty_plus.product-qty_btn +
+                                    .col-6.buy-btn-col
+                                        a(class='btn card-btn buy-btn' href='javascript:void(0)') Купить
+
+section.txt-section
+    h2.hidden-heading 1
+    p.paragraph-content-black Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    p.paragraph-content-black Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    p.paragraph-content-black Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    p.paragraph-content-black Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et

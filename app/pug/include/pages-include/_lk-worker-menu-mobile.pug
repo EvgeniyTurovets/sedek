@@ -1,0 +1,53 @@
+-
+    var menu = {
+        0: {
+            'name' : 'Мой кабинет',
+            'link' : 'lk-worker-start.html'
+        },
+        1: {
+            'name': 'Личные данные',
+            'link': '#',
+            'img' : 'img/lk/personal.svg',
+            'alt' : 'Аккаунт'
+        },
+        2: {
+            'name': 'Каталог',
+            'link': 'lk-worker-catalog.html',
+            'img' : 'img/lk/orders.svg',
+            'alt' : 'Список'
+        },
+        3: {
+            'name': 'Новости',
+            'link': 'lk-worker-news.html',
+            'img' : 'img/lk/news.svg',
+            'alt' : 'Новости'
+        },
+        4: {
+            'name': 'Полезные советы',
+            'link': 'lk-worker-articles.html',
+            'img' : 'img/lk/bulb.svg',
+            'alt' : 'Калькулятор'
+        },
+        5: {
+            'name': 'Отзывы',
+            'link': 'lk-worker-reviews.html',
+            'img': 'img/lk/reviews.svg',
+            'alt': 'Калькулятор'
+        },
+        6: {
+            'name': 'Выйти',
+            'link': '#',
+            'img' : 'img/lk/exit.svg',
+            'alt' : 'Выйти'
+        },
+    };
+
+.row.d-block.d-md-none
+    .col-12.position-relative
+        .wrapper
+            nav.lk-menu_nav
+                .menu-mobile_header Текущая страница
+                ul.menu-mobile-list
+                    each val, key in menu
+                        li
+                            a(href=val.link)=val.name

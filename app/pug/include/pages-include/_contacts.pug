@@ -1,0 +1,51 @@
+-
+    var contacts = {
+        0: {
+            'name' : 'Адрес:',
+            'value1' : 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.'
+        },
+        1: {
+            'name' : 'Телефон:',
+            'value1' : '+7 999 999 99 99',
+            'value2' : '+7 999 999 99 90'
+        },
+        2: {
+            'name': 'E-mail:',
+            'value1' : 'hello@site.ru  — по всем вопросам',
+            'value2' : 'partners@site,ru  — по вопросам сотрудничества'
+        },
+    };
+
+.container
+    section.contacts-section
+        h1.page-header Контакты
+        .row
+            .col-12.col-sm-10.col-md-8.col-lg-6.col-xl-5.page-paragraph
+                each val,key in contacts
+                    h3.paragraph-heading=val.name
+                    p.paragraph-text=val.value1
+                    p.paragraph-text=val.value2
+
+section.map-section
+    h2.hidden-heading 1
+    .row
+        .col-12.map
+            div(id="map" class="map-container")
+
+.container
+    section.contacts-feedback-section
+        .row.align-items-center.justify-content-around
+            .col-11.col-sm-9.col-md-6.d-flex.align-items-center.feedback-heading
+                h2 Остались вопросы? Мы вам перезвоним и все расскажем
+            .col-12.col-md-6.d-flex.align-items-center.feedback-right
+                .feedback-right-bg_block
+                form(class='feedback-form' method='post')
+                    input(class='form_input' type='text' placeholder='Как к вам обращаться?' required)
+                    input(class='form_input form_phone-number' type='text' name='phone' placeholder='Ваш номер телефона?' required)
+                    button(class='btn form_btn' type='submit') Перезвонить мне
+                    .row.justify-content-around
+                        .col-11.col-sm-10.col-lg-9.paragraph-block.d-inline
+                            p.paragraph-black.d-inline Нажимая кнопку, я соглашаюсь с
+                            a.d-inline-block(class='conditions-link' href='#') условиями
+                            p.paragraph-black.d-inline обработки данных
+

@@ -1,0 +1,89 @@
+-
+    var personal = {
+        0: {
+            'name' : 'ФИО'
+        },
+        1: {
+            'name': 'Должность'
+        },
+        2: {
+            'name': 'Телефон'
+        },
+        3: {
+            'name': 'E-mail'
+        },
+    };
+
+    var changePassword = {
+        0:{
+            'name' : 'Старый пароль',
+            'btnImg1' : 'img/personal-edit/eye.svg',
+            'btnImg1Alt' : 'Глаз',
+            'btnImg2' : 'img/personal-edit/question.svg',
+            'btnImg2Alt' : 'Знак вопроса'
+        },
+        1: {
+            'name': 'Новый пароль',
+            'btnImg1': 'img/personal-edit/eye.svg',
+            'btnImg1Alt': 'Глаз',
+            'btnImg2': 'img/personal-edit/question.svg',
+            'btnImg2Alt': 'Знак вопроса'
+        },
+        2: {
+            'name': 'Повторите пароль',
+            'btnImg1': 'img/personal-edit/eye.svg',
+            'btnImg1Alt': 'Глаз',
+            'btnImg2': 'img/personal-edit/question.svg',
+            'btnImg2Alt': 'Знак вопроса'
+        }
+    };
+
+section.lk-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-personal-menu.pug
+            include _lk-menu-mobile
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                .row.align-items-center
+                    .col-12.col-sm-7
+                        h1.page-header Личные данные
+                    .col-12.col-sm-5.d-flex.justify-content-start.justify-content-sm-end
+                        a.edit-btn(href='lk-personal.html') Вернуться назад
+            section.lk-right-section
+                h2.hidden-heading 1
+                .row
+                    .col-12.col-md-10.col-xl-8
+                        form(class='order-form contact-form')
+                            ul.form_list
+                                each val, key in personal
+                                    li.form_item
+                                        h4.input-heading=val.name
+                                        input(class='header-search' type='text' required)
+                            .row.justify-content-around
+                                .col-12.col-md-10.col-xl-8.form-buttons-block.d-flex.flex-column.align-items-center
+                                    button.btn.changes-btn Сохранить изменения
+                                    button.btn.return-btn(type='reset') Отменить изменения
+                .row
+                    .col-12.col-md-10.col-xl-8
+                        h3 Изменить пароль
+                        form(class='order-form contact-form')
+                            ul.form_list
+                                each val, key in changePassword
+                                    li.form_item.form-password_item
+                                        h4.input-heading=val.name
+                                        .form-password_block.d-flex.align-items-center
+                                            input(class='header-search form-password_input' type='text' required)
+                                            a(class='show-password-btn' href='javascript:void(0)')
+                                                img(src=val.btnImg1 alt=val.btnImg1Alt)
+                                            a(class='help-btn' href='javascript:void(0)')
+                                                img(src=val.btnImg2 alt=val.btnImg2Alt)
+
+                            .row.justify-content-around
+                                .col-12.col-md-10.col-xl-8.form-buttons-block.d-flex.flex-column.align-items-center
+                                    button.btn.changes-btn Изменить пароль
+                                    button.btn.return-btn(type='reset') Отменить изменения
+
+
+

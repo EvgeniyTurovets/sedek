@@ -1,0 +1,162 @@
+-
+    var orderData = {
+        0: {
+            'name' : 'Заказ №1234567 от 12.02.21',
+            'id' : '1'
+        },
+        1: {
+            'name': 'Заказ №3214567 от 13.02.21',
+            'id': '1'
+        },
+        2: {
+            'name': 'Заказ №6664567 от 14.02.21',
+            'id': '1'
+        },
+        3: {
+            'name': 'Заказ №3334567 от 15.02.21',
+            'id': '1'
+        },
+    };
+
+    var productName = {
+        0: {
+            'name': 'Семена Тыква баттернат',
+            'id': '1'
+        },
+        1: {
+            'name': 'Семена Тыква баттернат баттернат',
+            'id': '1'
+        },
+    };
+
+    var reviews = {
+        0: {
+            'name': 'Семена Тыква баттернат',
+            'data': 'Заказ №1234567 от 12.02.21',
+            'text': 'текст отзыва текст отзыва текст отзыватекст отзыва текст отзыва текст отзыва текст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва',
+            'images': {
+                0: {
+                    'img': 'img/lk/review-img-1.jpg',
+                    'alt' : 'картинка'
+                },
+                1: {
+                    'img': 'img/lk/review-img-2.jpg',
+                    'alt' : 'картинка'
+                },
+                2: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt' : 'картинка'
+                },
+            },
+        },
+        1: {
+            'name': 'Семена Тыква баттернат баттернат',
+            'data': 'Заказ №1234567 от 22.02.21',
+            'text' : 'текст отзыва текст отзыва текст отзыватекст отзыва текст отзыва текст отзыва текст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыва текст отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва',
+            'images': {
+                0: {
+                    'img': 'img/lk/review-img-1.jpg',
+                    'alt' : 'картинка'
+                },
+                1: {
+                    'img': 'img/lk/review-img-2.jpg',
+                    'alt' : 'картинка'
+                },
+                2: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt' : 'картинка'
+                },
+                3: {
+                    'img': 'img/lk/review-img-1.jpg',
+                    'alt' : 'картинка'
+                },
+                4: {
+                    'img': 'img/lk/review-img-2.jpg',
+                    'alt' : 'картинка'
+                },
+                5: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt' : 'картинка'
+                },
+            },
+        },
+    };
+
+section.tester-lk-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-tester-menu-mobile.pug
+            include _lk-tester-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Мои отзывы
+
+            section.sort-section.reviews-section
+                form.reviews-form
+                    .row
+                        .col-12
+                            h2.lk-subheader Оставить отзыв о товаре
+                        .col-12.col-md-6.col-lg-5.form_inputs.d-flex.flex-column.justify-content-between
+                            h4.input-heading Номер и дата заказа
+                            .select.wrapper
+                                .select-header
+                                    span.select-current
+                                    span.select-open
+                                ul.select-list
+                                    each val, key in orderData
+                                        li.select_options(data-value=val.id)
+                                            span.options_span=val.name
+                        input(type='hidden' name='payment' value='')
+
+                        .col-12.col-md-6.col-lg-7.form_inputs.inputs-right.d-flex.flex-column.justify-content-between
+                            h4.input-heading Название товара
+                            .select.wrapper
+                                .select-header
+                                    span.select-current
+                                    span.select-open
+                                ul.select-list
+                                    each val, key in productName
+                                        li.select_options(data-value=val.id)
+                                            span.options_span=val.name
+                            input(type='hidden' name='payment' value='')
+
+                        .col-12.reviews-form_textarea
+                            h4.input-heading Текст отзыва
+                            textarea(class='header-search form-textarea reviews-textarea' rows='5' name='text')
+                    .row.flex-column
+                        .col-12.col-md-8.col-lg-5.d-flex.align-items-center.justify-content-between
+                            a.btn.add-photo-btn(href='javascript:void(0)')
+                                img(src='img/lk/paperclip.svg' alt='скрепка')
+                                span.input-heading Прикрепить фото
+                        .col-12.col-md-8.col-lg-5
+                            button.btn.view-button Опубликовать отзыв
+
+                .all-reviews
+                    h2.lk-subheader Все отзывы
+                    each val, key in reviews
+                        .review-block
+                            .review-top
+                                .row
+                                    .col-12.d-flex.align-items-center.justify-content-between
+                                        .lk-subheader=val.name
+                                        a.btn.remove-btn(href='javascript:void(0)')
+                                    .col-12
+                                        p=val.order
+                            .review-block-answer
+                                .review-text
+                                    p=val.text
+
+                                .row.review-image_block
+                                    each subVal, subKey in val.images
+                                        .col-6.col-sm-3.col-lg-2.review-image
+                                            img(src=subVal.img alt=subVal.alt)
+
+                                .review-buttons
+                                    .row.align-items-center
+                                        .col-12.col-sm-6.col-lg-3
+                                            a.view-button(href='prod-card.html') К товару
+                                        .col-12.col-sm-6.col-lg-3
+                                            a.cancel-button(href='javascript:void(0)') Редактировать
+
+

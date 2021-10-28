@@ -1,0 +1,136 @@
+-
+    var aboutProd = {
+        0: {
+            'type' : 'Тип продукции: ',
+            'description' : 'Семена'
+        },
+        1: {
+            'type': 'Вес с упаковкой: ',
+            'description': '5 г'
+        },
+        2: {
+            'type': 'Срок созревания: ',
+            'description': 'Скороспелый'
+        },
+        3: {
+            'type': 'Форма плода: ',
+            'description': 'Округлая'
+        },
+        4: {
+            'type': 'Цвет плода: ',
+            'description': 'Зеленый с полосками'
+        },
+        5: {
+            'type': 'Цвет мякоти: ',
+            'description': 'Желтый'
+        },
+        6: {
+            'type': 'Вес плода: ',
+            'description': '1 - 2 кг'
+        },
+        7: {
+            'type': 'Вкусовые качества: ',
+            'description': 'Очень сладкий'
+        },
+        8: {
+            'type': 'Урожайность: ',
+            'description': '4 - 6 кг'
+        },
+        9: {
+            'type': 'Оптимальная температура почвы: ',
+            'description': '20 - 25 Со'
+        },
+        10: {
+            'type': 'Сложность выращивания: ',
+            'description': 'Неприхотливый'
+        },
+    };
+
+    var product = {
+        0: {
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '64,50 ₽',
+            'oldPrice': '64,50 ₽',
+            'status': 'В наличии'
+        },
+    };
+
+section.prod-card-section
+    .row.justify-content-between
+        .col-12.col-sm-10.col-md-5.col-lg-6
+            img.prod-card-img(src='img/prod-card/prod-img.png' alt='Семена')
+        .col-12.col-md-6.prod-description
+            .card-icons_block
+                .card-icon.discount-icon -10%
+                a(class='card-icon' href='#')
+                    img(src='img/prod-card/capsicum.svg' alt='Категория')
+                a(class='card-icon' href='#')
+                    img(src='img/prod-card/beetroot.svg' alt='Категория')
+
+            each val, key in product
+                h2.prod-card-heading=val.name
+                .price-block
+                    span.new-price=val.newPrice
+                    span.old-price=val.oldPrice
+                .in-stock=val.status
+
+            .product-qty_block
+                span.prod-qty_minus.product-qty_btn -
+                input.product_qty.type_num('maxlength'='3' value=0)
+                span.prod-qty_plus.product-qty_btn +
+            .prod-btn_block
+                .row.justify-content-between.align-items-center
+                    .col-12.col-sm-6
+                        a(class='btn card-btn buy-btn' href='javascript:void(0)') Купить
+                    .col-12.col-sm-6
+                        a(class='btn pink-btn' href='javascript:void(0)') Любимый товар
+
+section.about-prod_section
+    .row.justify-content-between
+        .col-12.col-sm-8.col-md-6
+            .about-prod_block
+                h3 О продукте
+                ul.about-prod_list
+                    each val, key in aboutProd
+                        li.about-prod_item
+                            p.paragraph-gray=val.type
+                            p.paragraph-content-black=val.description
+        .col-12.col-md-6
+            .row
+                aside
+                    .col-12
+                        a(class='aside_link' href='#') реклама
+                    .col-12
+                        p.paragraph-content-black Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                                    | tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                                                    | eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                                    | takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                                                    | consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                                                    | dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                                    | dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                                    | ipsum dolor sit amet.
+
+section.feedback-main-section.product-feedback-section
+    .row.align-items-center
+        .col-10.col-md-8.col-lg-6.feedback-heading
+            h2 Остались вопросы? Мы вам перезвоним и все расскажем
+        .col-12.col-lg-6.align-items-center
+            .feedback-right-bg_block
+            form(class='feedback-form' method='post')
+                input(class='form_input' type='text' placeholder='Как к вам обращаться?' required)
+                input(class='form_input form_phone-number' type='text' name='phone' placeholder='Ваш номер телефона?' required)
+                button(class='btn form_btn' type='submit') Перезвонить мне
+                .row.justify-content-around
+                    .col-11.col-sm-9
+                        .paragraph-block.d-inline-block
+                            p.paragraph-black Нажимая кнопку,
+                                |  я соглашаюсь с
+                            a.d-inline(class='conditions-link' href='#') условиями
+                            p.paragraph-black.d-inline обработки данных
+
+
+
+
+
+
+

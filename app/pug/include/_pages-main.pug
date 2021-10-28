@@ -1,0 +1,26 @@
+-
+    var objBreadcrumbs = {
+        0 : {
+            'link' : '/',
+            'page' : 'Страница'
+        },
+        1 : {
+            'link': '/',
+            'page': 'Страница'
+        },
+        2 : {
+            'link': '/',
+            'page': 'Страница'
+        },
+    };
+
+
+nav(class='breadcrumbs')
+    .row.justify-content-start
+        .col.d-flex.justify-content-start.align-items-center
+            each val, key in objBreadcrumbs
+                .chapter-nav_item
+                    if(val.link === false)
+                        span.current-page=val.page
+                    else
+                        a(class='chapter-nav_link' href=val.link)=val.page

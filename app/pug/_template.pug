@@ -1,0 +1,38 @@
+doctype html
+html(lang="ru")
+	head
+
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(charset="utf-8")
+		//-base(href="/")
+
+		// Запрет индексации (убрать по окончании разработки сайта)
+		meta(name="robots" content="nofollow")
+
+		block title
+		title СеДеК
+		meta(name="description" content="Описание страницы в несколько слов несколько слов")
+
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		//Template Basic Images Start
+		meta(property="og:image" content="img/favicon/og-image.png")
+		link(rel="icon", href="img/favicon/favicon.png")
+		link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png")
+
+		//Custom Browsers Color Start
+		meta(name="theme-color", content="#353f42")
+
+	body
+		block header
+			include include/_header-regular.pug
+		block breadcrumbs
+			.container
+				include include/_pages-main
+		block content
+		footer
+			include include/_footer
+
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=77b379b2-d918-499f-ad82-9ccc133773e7")
+		script(src="js/scripts.min.js")

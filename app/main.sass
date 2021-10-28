@@ -1,0 +1,987 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_header"
+@import "_footer"
+@import "_catalog-page"
+@import "_catalog-category-page"
+@import "_prod-card"
+@import "_header-menu"
+@import "_shopping-cart"
+@import "_order-registration"
+@import "_order-details-common"
+
+::placeholder
+	color: #777
+
+::selection
+	color: $def-txt
+
+*
+	box-sizing: border-box
+
+body
+	position: relative
+	min-width: 320px
+	font-size: 16px
+	line-height: 1.65
+	font-family: Gilroy
+	overflow-x: hidden
+	color: $text
+	background-color: $white
+
+h1,
+h2,
+h3,
+h4,
+h5
+	margin: 0
+
+h1
+	width: fit-content
+	font-size: 70px
+	font-weight: 400
+	line-height: 110px
+	letter-spacing: .007em
+	color: $yellow
+
+h2
+	font-size: 50px
+	line-height: 80px
+	font-weight: bold
+	letter-spacing: .06em
+
+h3
+	color: $def-txt
+	font-size: 30px
+	line-height: 34px
+	font-weight: 400
+
+h4
+	font-size: 20px
+	font-weight: 200
+	line-height: 24px
+	color: $def-txt
+
+.hidden-heading
+	display: none
+
+.page-header,
+.page-section-header
+	font-size: 30px
+	line-height: 60px
+	font-weight: bold
+	text-shadow: none
+
+.page-header
+	color: $accent
+
+.cart-list_title
+	font-size: 20px
+	font-weight: 500
+	line-height: 30px
+	color: $def-txt
+
+ul
+	list-style: none
+	margin: 0
+	padding: 0
+
+a
+	display: inline-block
+	text-decoration: none
+
+	&:hover
+		color: $def-txt
+		text-decoration: none
+
+.btn
+	&:hover
+		opacity: .9
+
+a,
+.btn
+	cursor: pointer
+
+.section-btn
+	height: fit-content
+	margin-right: 15px
+	padding: 10px 80px
+	font-size: 20px
+	font-weight: 200
+	letter-spacing: .05em
+	background-color: $pink-btn
+	border: 1px solid $purple
+	border-radius: 50px
+	color: $white
+
+	&:hover
+		color: $white
+
+section
+	padding-top: 100px
+
+.page-section
+	padding-top: 30px
+
+span
+	display: inline-block
+
+.product-qty_btn
+	cursor: pointer
+
+.paragraph-black
+	margin-top: 30px
+	font-size: 19px
+	line-height: 26px
+	letter-spacing: .007em
+	color: $def-txt
+
+.paragraph-content-black
+	margin: 0
+	font-size: 14px
+	line-height: 20px
+	letter-spacing: .007em
+	color: $text
+
+.paragraph-gray
+	margin-top: 20px
+	font-size: 16px
+	line-height: 20px
+	letter-spacing: .007em
+	color: $old-price-gray
+
+.social-block
+	display: flex
+	justify-content: space-between
+	margin-top: 70px
+	padding: 0 80px 0 0
+	z-index: 10
+
+	.social-link
+		display: flex
+		align-items: center
+		width: 70px
+		height: 70px
+		border-radius: 50%
+		background-color: $white
+		transition: all .25s ease
+
+		&:hover
+			background-color: $light-purple
+			.social-icon
+
+				path
+					fill: $white
+
+	.social-icon
+		margin-left: 50%
+		transform: translateX(-50%)
+
+		path
+			fill: $light-purple
+			transition: all .25s ease
+
+.chapter-nav_list
+	display: flex
+	margin-top: 20px
+	padding: 0
+
+.chapter-nav_item:not(:first-child)
+	margin-left: 10px
+
+.chapter-nav_item
+	position: relative
+	padding-right: 8px
+
+	&:not(:first-child)
+
+		&:before
+			content: "-"
+			position: absolute
+			left: -10px
+			top: 0
+
+	.current-page
+		position: absolute
+		top: 1px
+		color: $accent
+
+.chapter-nav_link
+	font-size: 16px
+	line-height: 24px
+	font-weight: 200
+	letter-spacing: .15em
+	color: $old-price-gray
+
+	&:hover
+		color: $accent
+
+	&:active
+		color: $accent
+
+.chapter-nav_item
+	&:last-child
+		line-height: 24px
+		font-weight: 200
+		letter-spacing: .15em
+
+.owl-stage-outer
+	.owl-stage
+		.owl-item
+			.slider_card
+				&:hover
+					background-color: $card-act-bg
+
+//slider
+.owl-carousel
+	position: relative
+
+	.owl-item
+
+		&.center
+
+			.slider_card
+				background-color: $card-act-bg
+
+		&:nth-child(2)
+			&.active
+				.slider_card
+
+					background-color: $card-act-bg
+	
+	.owl-nav
+		display: flex
+		justify-content: space-around
+		margin-top: 40px
+		.owl-prev,
+		.owl-next
+			font-size: 24px
+
+		.owl-prev
+			&:before
+				content: url("../img/discount-goods-sect/owl-nav-left.svg")
+
+			span
+				display: none
+
+		.owl-next
+			&:before
+				content: url("../img/discount-goods-sect/owl-nav-right.svg")
+
+			span
+				display: none
+
+	.owl-dots
+		position: absolute
+		bottom: 10px
+		left: 50%
+		transform: translateX(-50%)
+		display: flex
+		justify-content: space-between
+		width: 250px
+
+		.owl-dot
+
+			&:before
+				content: url("../img/discount-goods-sect/owl-dot.svg")
+
+			&.active
+				&:before
+					content: url("../img/discount-goods-sect/owl-dot-active.svg")
+					position: relative
+					top: 4px
+					width: 20px
+					height: 20px
+
+// hero-section
+.hero-section
+	position: relative
+	width: 1320px
+	height: 761px
+	margin-top: 20px
+	margin-left: 50%
+	transform: translateX(-50%)
+	background-image: url('../img/hero-bg.png')
+	border-radius: 80px
+	overflow: hidden
+
+.hero-content
+	position: relative
+	width: fit-content
+	height: fit-content
+	margin-top: 95px
+	z-index: 2
+
+	.hero-heading
+		text-shadow: 0 0 30px $black
+
+	.hero_subheader
+		font-size: 30px
+		font-weight: 200
+		letter-spacing: .001em
+		line-height: 35px
+		color: $white
+		text-shadow: 0 0 60px $black
+
+.hero_btn
+	position: relative
+	bottom: -130px
+	padding: 15px 70px 15px 40px
+	background-color: $pink-btn
+	font-size: 20px
+	line-height: 24px
+	font-weight: 200
+	color: $white
+	border-radius: 50px
+
+	.fa-caret-right
+		position: absolute
+		right: 37px
+		top: 19px
+
+	&:hover
+		color: $white
+
+// discount-goods-sect-section
+
+.discount-goods
+	margin-top: 30px
+
+.section-top
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.discount-heading
+	color: $red
+
+.discount-goods-top
+	display: flex
+	justify-content: space-between
+
+	.section-btn
+		margin-top: 15px
+
+.slider_card
+	position: relative
+	margin-top: 30px
+	padding: 10px 10px 20px 20px
+	border: 1px solid $light-purple
+	border-radius: 10px
+	overflow: visible
+
+.discount-block
+	position: absolute
+	left: -30px
+	top: -15px
+	width: 43px
+	height: 43px
+	color: $white
+	background-color: $discount-red
+	border-radius: 50px
+	text-align: center
+	font-size: 14px
+	line-height: 44px
+	letter-spacing: .05em
+	z-index: 5
+
+.discount-card_top
+	position: relative
+	display: flex
+	align-items: baseline
+
+	& .card-top_link
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 100%
+		z-index: 1
+
+.card-icons_block
+	position: absolute
+	right: 10px
+	top: 20px
+	display: flex
+	flex-direction: column
+	z-index: 2
+
+	.card-icon
+		position: relative
+		margin-bottom: 10px
+		width: 30px
+		height: 30px
+
+		&:first-child
+			background-color: $red
+			border-radius: 50%
+
+			img
+				position: absolute
+				top: 5px
+				left: 5px
+				width: 10px
+
+.goods-category
+	font-size: 12px
+	line-height: 40px
+	color: $green-text
+
+.goods-title
+	font-size: 14px
+	line-height: 18px
+	color: $def-txt
+
+.discount-card_price
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.new-price_block
+	display: flex
+	flex-direction: column
+	white-space: nowrap
+
+	.new-price
+		font-size: 24px
+
+	.order-conditions
+		position: relative
+		display: flex
+		align-items: baseline
+		padding-left: 16px
+		font-size: 14px
+		color: $light-purple
+		cursor: pointer
+
+		&:before
+			content: url("../img/info-circle-solid.svg")
+			position: absolute
+			width: 14px
+			height: 14px
+			top: 2px
+			left: -2px
+			font-size: 14px
+
+.old-price
+	font-size: 20px
+	line-height: 31px
+	color: $old-price-gray
+	text-decoration-line: line-through
+
+.buy-block
+	display: flex
+	justify-content: space-between
+
+.card-btn
+	position: relative
+	display: inline-block
+	padding: 10px 40px
+	color: $white
+	font-size: 14px
+	line-height: 20px
+	letter-spacing: .04em
+	background-color: $btn-orange
+	border-radius: 10px
+
+	&:hover
+		color: $white
+
+.buy-btn
+	padding: 10px 35px 10px 60px
+
+	&:before
+		content: url("../img/discount-goods-sect/cart-btn.svg")
+		position: absolute
+		left: 35px
+		bottom: 7px
+		font-size: 14px
+
+.product-qty_block
+	display: flex
+	align-items: center
+	padding: 8px 14px 5px 14px
+	border: 1px solid $btn-brd-pink
+	border-radius: 10px
+
+	& span
+		display: block
+		height: 19px
+		padding-top: 1px
+		font-size: 18px
+		line-height: 18px
+		letter-spacing: .07em
+		cursor: pointer
+
+.product_qty
+	font-size: 20px
+	line-height: 18px
+	text-align: center
+
+.prod-qty_minus
+	padding-right: 8px
+
+.prod-qty_plus
+	padding-left: 8px
+
+.product_qty
+	width: 35px
+	line-height: 14px
+	border: none
+
+//interesting-useful-sect
+
+.useful-heading
+	color: $green-text
+
+.interesting-useful_content
+	margin-top: 30px
+
+.interesting-useful_left
+
+	img
+		margin-top: -35px
+		margin-left: -35px
+
+.interesting-useful-content_block
+	padding-left: 20px
+
+	a
+		margin-top: 30px
+
+.card-heading
+	margin-top: -30px
+
+.interesting-useful_content-right
+	position: relative
+
+	.interesting-useful-right_card
+		position: absolute
+		width: 338px
+		padding-bottom: 20px
+		background-color: $card-act-bg
+		border-radius: 30px
+		box-shadow: 10px 10px 20px rgba(112, 112, 112, .1)
+
+		img
+			margin-top: -17px
+			margin-left: -36px
+
+	.interesting-useful-right_card-2
+		right: 0
+		bottom: 0
+
+.interesting-useful-right_block
+	padding-left: 20px
+
+	h4
+		margin-top: -40px
+
+	a
+		margin-top: 30px
+
+//popular-section
+
+.popular-section
+	position: relative
+
+	.popular-heading
+		color: $heading-pink
+
+	.all-cat_btn
+		position: absolute
+		bottom: -120px
+		left: 50%
+		transform: translateX(-50%)
+		display: inline-block
+		padding: 15px 120px
+		font-size: 20px
+		line-height: 24px
+		color: $def-txt
+		background-color: $btn-bg-yellow
+		border-radius: 50px
+		border: 1px dashed $old-price-gray
+
+.pop-cards-row
+	margin-top: 30px
+
+.popular-card
+	padding: 0 15px 15px 15px
+	background-color: rgba(249, 230, 250, .3)
+	border-radius: 15px
+
+	&:hover
+		background-color: $card-act-bg
+		box-shadow: 10px 10px 20px rgba(112, 112, 112, .1)
+
+//seeds-section
+
+.seeds-section
+	padding-top: 200px
+
+	.seeds-heading
+		color: $btn-orange
+
+	.owl-stage
+		overflow: visible
+
+.slider-card_narrow
+	padding: 10px 12px 20px 10px
+
+	&:hover
+
+	.card-top_img
+		height: 260px
+
+
+	.discount-block
+		left: -16px
+		top: -18px
+
+	.buy-btn
+		padding: 10px 20px 10px 36px
+
+		&:before
+			left: 15px
+
+//buy-now-sect-section
+
+.buy-now-section
+
+	h2
+		color: $red
+
+//recommendations-section
+
+.recommendations-section
+
+	h2
+		color: $pale-purple
+
+.recommendations-content
+	margin-top: 60px
+
+.recom-card_active
+	width: fit-content
+	background-color: rgba(249, 230, 250, .3)
+	border-radius: 10px
+	cursor: pointer
+
+.recom-card-active_heading
+	margin-top: 10px
+	padding-left: 10px
+	padding-bottom: 20px
+
+	h3
+		font-weight: 200
+
+.card-active-date
+	margin-top: 20px
+	color: $old-price-gray
+
+.recom-top_card
+	position: relative
+	height: 135px
+	margin-bottom: 15px
+	padding: 10px 10px 20px 10px
+	cursor: pointer
+
+	&:hover
+		background-color: $card-act-bg
+		border-radius: 10px 10px 40px 10px
+
+		&:before
+			content: url("../img/recommendations-sect/eye-regular.svg")
+			position: absolute
+			right: 15px
+			bottom: 15px
+			padding: 16px
+			font-size: 10px
+			text-align: center
+			width: 48px
+			height: 48px
+			background-color: $btn-orange
+			border-radius: 50%
+
+			&:hover
+				background-color: $light-purple
+
+
+
+.rec-card_heading
+	font-size: 20px
+	font-weight: 400
+	line-height: 22px
+
+.recom-top-card_span
+	margin-top: 20px
+	color: $old-price-gray
+
+.recom-bottom
+	margin-top: 20px
+
+.recom-bottom_card
+	position: relative
+	height: 175px
+	padding: 20px
+	cursor: pointer
+
+	&:hover
+		background-color: $rec-card-bg
+		border-radius: 10px 10px 40px 10px
+
+		&:before
+			content: url("../img/recommendations-sect/eye-regular.svg")
+			position: absolute
+			right: 15px
+			bottom: 15px
+			padding: 16px
+			font-size: 10px
+			text-align: center
+			width: 48px
+			height: 48px
+			background-color: $light-purple
+			border-radius: 50%
+
+//discount-section
+
+.discount-section
+	position: relative
+	margin-top: 70px
+	padding-bottom: 70px
+
+	.discount-sect_heading
+		font-family: Impact
+		font-size: 91px
+		line-height: 77px
+		letter-spacing: .01em
+		color: $pink-btn
+		text-shadow: rgba(112, 112, 112, .4) 7px 7px 8px
+		transform: rotate(4deg)
+
+	.discount-sect_subheader
+		font-size: 23px
+		letter-spacing: .02em
+		line-height: 79px
+		color: $old-price-gray
+
+	.discount_btn
+		display: inline-block
+		margin-top: 30px
+		padding: 20px 70px 20px 50px
+		font-size: 20px
+		letter-spacing: .06em
+		color: $white!important
+		background-color: $btn-orange
+		border-radius: 40px
+
+	.discount-sect_discount
+		position: absolute
+		display: inline-block
+		color: $white
+		text-align: center
+		font-weight: bold
+		background-color: $pink-btn
+		border-radius: 50%
+
+	.discount-10
+		top: 30px
+		right: 300px
+		width: 82px
+		height: 82px
+		font-size: 24px
+		line-height: 82px
+
+	.discount-20
+		top: 0
+		right: 30px
+		width: 100px
+		height: 100px
+		font-size: 30px
+		line-height: 100px
+
+	.discount-40
+		bottom: 0
+		right: 380px
+		width: 154px
+		height: 154px
+		font-size: 50px
+		line-height: 154px
+
+	.discount-50
+		bottom: 60px
+		right: 0
+		width: 220px
+		height: 220px
+		font-size: 80px
+		line-height: 220px
+
+//fertilizers-section
+
+.fertilizers-section
+
+	h2
+		color: $heading-purple
+		font-weight: 400
+
+//news-section
+.news-section
+
+	h2
+		color: $red
+		font-weight: 400
+
+	.recom-top_card
+		height: 145px
+
+//connect-section
+
+.connect-section
+	position: relative
+	padding: 200px 0
+
+	.connect-left
+
+		h2
+			font-weight: 400
+			letter-spacing: .007em
+			color: $accent
+
+
+
+	.connect-right
+		position: relative
+		width: fit-content
+		height: fit-content
+
+		.connect-right-bg_block
+			position: absolute
+			right: 0
+			bottom: -400px
+			z-index: -1
+			width: 738px
+			height: 447px
+			background-color: $bg-green
+			border-radius: 90px
+
+		.connect-rect
+			position: absolute
+
+		.connect-rect_2
+			right: 520px
+			bottom: -370px
+			z-index: 1
+
+		.connect-rect_3
+			top: 10px
+			right: 350px
+			z-index: 1
+
+		.connect-rect_4
+			right: 0
+			top: -130px
+			z-index: 1
+
+		.connect-rect_5
+			right: 150px
+			top: 200px
+			z-index: 1
+
+		.connect-rect_6
+			right: 290px
+			top: 210px
+			z-index: 2
+
+		.connect-rect_7
+			right: 0
+			top: 110px
+			z-index: 2
+
+		.connect-rect_8
+			right: 110px
+			top: -130px
+			z-index: 5
+
+//post-section
+
+.post-section
+
+	h2
+		font-weight: 400
+		line-height: 60px
+		letter-spacing: .007em
+		color: $green-text
+
+	.post-txt-block
+		margin-top: 50px
+
+//feedback-section
+.feedback-section
+
+	h2
+		margin-top: 50%
+		transform: translateY(-100%)
+		font-weight: 400
+		line-height: 60px
+		letter-spacing: .007em
+		color: $green-text
+
+	.feedback-right
+		position: relative
+
+		.feedback-right-bg_block
+			position: absolute
+			right: 0
+			z-index: -1
+			width: 738px
+			height: 475px
+			background-color: $bg-gray
+			border-radius: 90px
+
+		form
+			display: flex
+			flex-direction: column
+			width: 450px
+			margin-left: -80px
+			margin-top: 110px
+			//margin-top: 50%
+			//transform: translateY(-50%)
+
+			input
+				display: block
+				margin-bottom: 20px
+				padding: 15px 20px
+				font-size: 14px
+				line-height: 17px
+				color: $form-input
+				border: none
+				border-radius: 50px
+
+			.paragraph-black
+				margin: 0
+				text-align: center
+
+	.conditions-link
+		color: $pink-btn
+		text-decoration-line: underline
+
+		&:hover
+			opacity: .8
+
+.form_btn
+	color: $white
+	margin-bottom: 30px
+	padding: 10px 0
+	font-size: 20px
+	font-weight: 200
+	line-height: 24px
+	border: none
+	border-radius: 50px
+	background-color: $pink-btn
+
+
+
+@import "media"
+// Always at the end

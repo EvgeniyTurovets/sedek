@@ -1,0 +1,227 @@
+@import "vars"
+
+.lk-section
+
+    .lk-right-section
+        padding: 0
+
+    .order-details_item
+        margin-top: 7px
+
+    .order-details_value
+        line-height: 21px
+
+    .page-header
+        margin-right: 10px
+
+.delivery-header-block
+    .delivery_header
+        margin-right: 5px
+        font-size: 20px
+        font-weight: 700
+        line-height: 30px
+        color: $text
+
+.delivery-section
+
+    .order-confirmed-btn
+        background-color: $pink
+
+    .order-on-way-btn
+        background-color: $yellow_4
+
+.order-status-span
+    display: block
+
+.order-status-dots
+    transform: translateY(-55%)
+
+.confirm-order,
+.current-status
+    position: relative
+
+.order-status-block_confirm
+    position: absolute
+
+    .list_sum
+        font-size: 14px
+        line-height: 24px
+        white-space: nowrap
+
+.current-status
+    .order-status-block_confirm
+        white-space: nowrap
+
+.order-status_block
+    position: relative
+    display: none
+    margin-bottom: 30px
+    padding: 25px 0 0 0
+
+    &.active
+        display: block
+
+    &:before
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+
+
+    &.preparing
+        &:before
+            background-color: $terracotta
+
+        .order-status-span
+
+            &:before
+                content: ''
+                display: block
+                width: 10px
+                height: 10px
+                background-color: $white
+                border: 1px solid $terracotta
+                border-radius: 50%
+
+            &:first-child
+
+                &:before
+                    width: 15px
+                    height: 15px
+                    background-color: $terracotta
+
+    &.delivered
+        &:before
+            background-color: $green-2
+
+        .order-status-span
+            width: 10px
+            height: 10px
+
+            &:before
+                content: ''
+                display: block
+                background-color: $green-2
+                border-radius: 50%
+
+            &:last-child
+                width: 15px
+                height: 15px
+
+                &:before
+                    background-color: $green-2
+
+        .confirm-order
+            .order-status-span
+                &:before
+                    width: 10px
+                    height: 10px
+
+        .current-status
+            .order-status-span
+                width: 15px
+                height: 15px
+
+                &:before
+                    width: 15px
+                    height: 15px
+
+            .order-status-block_confirm
+                top: 12px
+                right: 0
+
+            .list_sum
+
+
+    &.on-the-way
+        &:before
+            background-color: $yellow_3
+
+        .order-on-way-btn
+            background-color: $yellow_4
+
+        .order-status-span
+
+            &:before
+                content: ''
+                display: block
+                width: 10px
+                height: 10px
+                background-color: $yellow_3
+                border-radius: 50%
+
+            &:last-child
+                &:before
+                    background-color: $white!important
+                    border: 1px solid $yellow_3
+
+        .confirm-order
+            .order-status-span
+                &:before
+                    background-color: $yellow_3
+
+        .current-status
+            .order-status-span
+                width: 15px
+                height: 15px
+
+                &:before
+                    width: 15px
+                    height: 15px
+                    background-color: $yellow_3
+
+        .order-status-block_confirm
+            top: 12px
+
+.delivery-btn
+    position: relative
+    width: 100%
+    margin-top: 25px
+    padding: 7px 0
+    text-align: center
+    font-weight: 600
+    color: $text
+    border-radius: 20px
+    background-color: $green
+    transition: all .15s ease
+
+    &:hover
+        opacity: .7
+        transition: all .15s ease
+
+    &:before
+        content: url("../img/lk/chevron-down.svg")
+        position: absolute
+        right: 20px
+        transition: all .25s ease
+
+    &.active
+        &:before
+            transform: rotate(180deg)
+            transition: all .25s ease
+
+.details-delivery-section
+
+    .cart-product
+        .goods-title
+            white-space: normal
+
+    .cart-price_block
+        .new-price
+            margin-left: 0
+
+    .list-sum_block
+        margin-top: 15px
+        border-top: 2px solid $yellow_2
+
+.lk-order-details-section
+    .button-block
+        margin-top: 30px
+
+    .changes-btn
+
+        &:hover
+            color: $white
+
+    .return-btn
+        margin-top: 20px

@@ -1,0 +1,108 @@
+-
+    var description = {
+        0: {
+            'type': 'Тип продукции: ',
+            'description': 'Семена'
+        },
+        1: {
+            'type': 'Вес с упаковкой: ',
+            'description': '5 г'
+        },
+    };
+
+    var specification = {
+
+        0: {
+            'type': 'Срок созревания: ',
+            'description': 'Скороспелый'
+        },
+        1: {
+            'type': 'Форма плода: ',
+            'description': 'Округлая'
+        },
+        2: {
+            'type': 'Цвет плода: ',
+            'description': 'Зеленый с полосками'
+        },
+        3: {
+            'type': 'Цвет мякоти: ',
+            'description': 'Желтый'
+        },
+        4: {
+            'type': 'Вес плода: ',
+            'description': '1 - 2 кг'
+        },
+        5: {
+            'type': 'Вкусовые качества: ',
+            'description': 'Очень сладкий'
+        },
+        6: {
+            'type': 'Урожайность: ',
+            'description': '4 - 6 кг'
+        },
+        7: {
+            'type': 'Оптимальная температура почвы: ',
+            'description': '20 - 25 Со'
+        },
+        8: {
+            'type': 'Сложность выращивания: ',
+            'description': 'Неприхотливый'
+        },
+    };
+
+
+section.lk-worker-section.worker-card-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-worker-menu-mobile.pug
+            include _lk-worker-menu.pug
+        .col-12.col-md-8.col-lg-9
+            section.prod-card-section.worker-prod-card-section
+                .card-prod-top.d-flex.align-items-center.justify-content-between
+                    .row
+                        .col-12.col-sm-8.col-md-10.col-lg-6
+                            .card-prod-img
+                                img(src='img/worker-card/prod-card.png' alt='Семена')
+                        .col-12.col-lg-6
+                            .prod-description
+                                .card-icons_block
+                                    .card-icon.discount-icon -10%
+                                    a(class='card-icon' href='#')
+                                        img(src='img/prod-card/capsicum.svg' alt='Категория')
+                                    a(class='card-icon' href='#')
+                                        img(src='img/prod-card/beetroot.svg' alt='Категория')
+
+                                h2.prod-card-heading Название продукта может быть в несколько строк
+                                .price-block
+                                    span.new-price 64,50 ₽
+                                    span.old-price 64,50 ₽
+                                .in-stock В наличии
+
+                                .product-qty_block
+                                    span.prod-qty_minus.product-qty_btn -
+                                    input.product_qty.type_num('maxlength'='3' value=0)
+                                    span.prod-qty_plus.product-qty_btn +
+
+                .worker-card-description
+                    .row
+                        .col-12.col-lg-6
+                            h2.lk-subheader Описание
+                            p.card-description-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            ul.about-prod_list
+                                each val, key in description
+                                    li.about-prod_item
+                                        p.paragraph-gray=val.type
+                                        p.paragraph-content-black=val.description
+
+                        .col-12.col-lg-6.worker-card-specifications
+                            h2.lk-subheader Характеристики
+                            ul.about-prod_list
+                                each val, key in specification
+                                    li.about-prod_item
+                                        p.paragraph-gray=val.type
+                                        p.paragraph-content-black=val.description
+
+                    .row
+                        .col-12.d-flex.justify-content-around
+                            a.return-btn(href='lk-worker-catalog-category.html') Вернуться к категории каталога

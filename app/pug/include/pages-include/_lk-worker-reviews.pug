@@ -1,0 +1,235 @@
+-
+    var reviews = {
+        0: {
+            'name': 'Семена Тыква баттернат',
+            'order': 'Заказ №1234567 от 12.02.21',
+            'text': 'текст отзыва текст отзыва текст отзыватекст отзыва текст отзыва текст отзыва текст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва',
+            'images': {
+                0: {
+                    'img': 'img/lk/review-img-1.jpg',
+                    'alt': 'картинка'
+                },
+                1: {
+                    'img': 'img/lk/review-img-2.jpg',
+                    'alt': 'картинка'
+                },
+                2: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+                3: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+                4: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+                5: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+                6: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+                7: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+                8: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+            },
+        },
+        1: {
+            'name': 'Семена Тыква баттернат',
+            'order': 'Заказ №1234567 от 12.02.21',
+            'text': 'текст отзыва текст отзыва текст отзыватекст отзыва текст отзыва текст отзыва текст отзыватекст отзыватекст текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва',
+            'comment' : 'текст коментария текст коментария текст коментария т коментария текст коментария текст коментария',
+            'images': {
+                0: {
+                    'img': 'img/lk/review-img-1.jpg',
+                    'alt': 'картинка'
+                },
+                1: {
+                    'img': 'img/lk/review-img-2.jpg',
+                    'alt': 'картинка'
+                },
+                2: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+            },
+        },
+        2: {
+            'name': 'Семена Тыква баттернат',
+            'order': 'Заказ №1234567 от 12.02.21',
+            'text': 'текст отзыва текст отзыва текст отзыватекст отзыва текст отзыва текст отзыва текст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыватекст отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва отзыва текст отзыва',
+            'images': {
+                0: {
+                    'img': 'img/lk/review-img-1.jpg',
+                    'alt': 'картинка'
+                },
+                1: {
+                    'img': 'img/lk/review-img-2.jpg',
+                    'alt': 'картинка'
+                },
+                2: {
+                    'img': 'img/lk/review-img-3.jpg',
+                    'alt': 'картинка'
+                },
+            },
+        },
+    };
+
+
+section.lk-worker-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-worker-menu-mobile.pug
+            include _lk-worker-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Все отзывы
+
+            section.reviews-section
+                each val, key in reviews
+                    if (val.comment)
+                        .review-block
+                            .review-top
+                                .row
+                                    .col-12.d-flex.align-items-center.justify-content-between
+                                        .lk-subheader=val.name
+                                        a.btn.remove-btn(href='javascript:void(0)')
+                                    .col-12
+                                        p=val.order
+                            .review-block-answer
+                                .review-text
+                                    p=val.text
+                                .row.review-image_block
+                                    each subVal, subKey in val.images
+                                        .col-6.col-sm-3.col-lg-2.review-image
+                                            img(src=subVal.img alt=subVal.alt)
+
+                                .review-buttons
+                                    .row
+                                        .col-12.col-sm-6.col-lg-3
+                                            a.view-button(href='lk-worker-card.html') К товару
+                                        .col-12.col-sm-6.col-lg-3
+                                            a.cancel-button(href='javascript:void(0)') Ответить
+
+                                form.review-answer-form
+                                    .row
+                                        .col-12.p-0
+                                            .reviews-form_textarea
+                                                h4.input-heading Текст ответа
+                                                textarea(class='form-textarea reviews-textarea' rows='5' name='text' required)
+
+                                        .col-12.d-flex.align-items-center.justify-content-between
+                                            a.btn.add-photo-btn(href='javascript:void(0)')
+                                                img(src='img/lk/paperclip.svg' alt='скрепка')
+                                                span.input-heading Прикрепить фото
+
+                                        .col-12.col-lg-6.col-xl-5
+                                            button.view-button(type='submit') Ответить
+
+                            .review-comment
+                                .row
+                                    .col-12.col-md-2.col-lg-1
+                                        img.review-comment-icon(src='img/lk/envelope-regular.svg' alt='коментарий')
+                                    .col-12.col-md-10.col-lg-11
+                                        .review-top
+                                            .row
+                                                .col-12.d-flex.align-items-center.justify-content-between
+                                                    .lk-subheader=val.name
+                                                .col-12
+                                                    p=val.order
+
+                                        .review-text
+                                            p=val.comment
+                                        .review-buttons
+                                            .col-12.col-sm-6.col-lg-4.col-xl-3.p-0
+                                                a.answer-button(href='javascript:void(0)') Ответить
+
+                                form.review-answer-form
+                                    .row
+                                        .col-12.p-0
+                                            .reviews-form_textarea
+                                                h4.input-heading Текст ответа
+                                                textarea(class='form-textarea reviews-textarea' rows='5' name='text' required)
+
+                                        .col-12.d-flex.align-items-center.justify-content-between
+                                            a.btn.add-photo-btn(href='javascript:void(0)')
+                                                img(src='img/lk/paperclip.svg' alt='скрепка')
+                                                span.input-heading Прикрепить фото
+
+                                        .col-12.col-lg-6.col-xl-5
+                                            button.view-button(type='submit') Ответить
+
+                    else
+                        .review-block
+                            .review-top
+                                .row
+                                    .col-12.d-flex.align-items-center.justify-content-between
+                                        .lk-subheader=val.name
+                                        a.btn.remove-btn(href='javascript:void(0)')
+                                    .col-12
+                                        p=val.order
+                            .review-block-answer
+                                .review-text
+                                    p=val.text
+
+                                .row.review-image_block
+                                    each subVal, subKey in val.images
+                                        .col-6.col-sm-3.col-lg-2.review-image
+                                            img(src=subVal.img alt=subVal.alt)
+
+                                .review-buttons
+                                    .row
+                                        .col-12.col-sm-6.col-lg-3
+                                            a.view-button(href='lk-worker-card.html') К товару
+                                        .col-12.col-sm-6.col-lg-3
+                                            a.cancel-button(href='javascript:void(0)') Ответить
+
+                                form.review-answer-form
+                                    .row
+                                        .col-12.p-0
+                                            .reviews-form_textarea
+                                                h4.input-heading Текст ответа
+                                                textarea(class='form-textarea reviews-textarea' rows='5' name='text' required)
+
+                                        .col-12.d-flex.align-items-center.justify-content-between
+                                            a.btn.add-photo-btn(href='javascript:void(0)')
+                                                img(src='img/lk/paperclip.svg' alt='скрепка')
+                                                span.input-heading Прикрепить фото
+
+                                        .col-12.col-lg-6.col-xl-5
+                                            button.view-button(type='submit') Ответить
+
+                .row.justify-content-around.show-more-block
+                    .col-12.col-sm-10.col-md-8.col-lg-6.d-flex.flex-column.align-items-center
+                        a(class='btn view-button' href='javascript:void(0)') Показать ещё
+                        .pagination-wrapper
+                            ul.pagination-list.d-flex.align-items-end.justify-content-between
+                                li.pagination-item
+                                    span.pagination-span
+                                li.pagination-item
+                                    span.pagination-span.span-page 1
+                                li.pagination-item
+                                    a(href='#') 2
+                                li.pagination-item
+                                    a(href='#') 3
+                                li.pagination-item
+                                    span.pagination-span  ...
+                                li.pagination-item
+                                    a(href='#') 12
+                                li.pagination-item
+                                    a.pagination-span.span-next(href='javascript:void(0)')
+
+
+
+
+

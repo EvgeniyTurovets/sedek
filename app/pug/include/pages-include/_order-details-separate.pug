@@ -1,0 +1,234 @@
+-
+    var orderCommon = {
+        0: {
+            'name' : 'Список 1',
+            'item' :{
+                0: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/delivery.svg',
+                    'iconAlt' : 'курьером',
+                    'method' : 'Только курьером магазина',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+                1: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/delivery.svg',
+                    'iconAlt' : 'курьером',
+                    'method' : 'Только курьером магазина',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+                2: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/delivery.svg',
+                    'iconAlt' : 'курьером',
+                    'method' : 'Только курьером магазина',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+            },
+        },
+        1: {
+            'name': 'Список 2',
+            'item': {
+                0: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/pay-card.svg',
+                    'iconAlt' : 'Картой',
+                    'method' : 'Только по предоплате',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+                1: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/pay-card.svg',
+                    'iconAlt' : 'Картой',
+                    'method' : 'Только по предоплате',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+            },
+        },
+    };
+
+    var orderSeparate = {
+        0: {
+            'name': 'Список 3',
+            'combineOrders' : true,
+            'item': {
+                0: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/pay-card.svg',
+                    'iconAlt' : 'Картой',
+                    'method' : 'Только по предоплате',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+                1: {
+                    'img': 'img/shopping-cart/prod-img.png',
+                    'alt' : 'название товара',
+                    'name': 'Название продукта может быть в несколько строк',
+                    'icon' : 'img/shopping-cart/pay-card.svg',
+                    'iconAlt' : 'Картой',
+                    'method' : 'Только по предоплате',
+                    'quantity' : '999 шт',
+                    'price': '9 999 ₽'
+                },
+            },
+        },
+    };
+
+section.order-details
+    .row
+        .col-12.col-lg-8.page-top.d-flex
+            .row.align-items-center
+                .col-12.col-md-7
+                    h1.page-header Уточнить детали заказа
+                .col-12.col-md-5
+                    .different-delivery-options Разные варианты доставки
+                .col-12
+                    p.paragraph-content-black Проверьте правильность заказа и обратите внимание на возможные даты доставки.
+                    .warning-valid-order.d-block.d-lg-none
+                        span.cart_span У Вас уже есть действующий заказ.
+                        a(class='order-link' href='order-registration,html') Перейти к заказу
+
+    .row
+        .col-12.col-xl-10
+            .delivery-block
+                .row
+                    .col.d-flex.align-items-center.justify-content-between
+                        h2.delivery-block_header Доставка быстро
+                        .tooltip-delivery_block
+                            img(class='i-svg' src='img/order-details/prod-remove.svg' alt='Удалить товар')
+                            .icon-tooltip
+                                .icon-tooltip_content
+                                    span.icon-tooltip_text Удалить товары
+                each val, key in orderCommon
+                    .row.no-gutters.align-items-center.justify-content-between
+                        .col-12
+                            .row.align-items-center
+                               .col
+                                    h2.cart-list_title=val.name
+
+                            each subVal, subKey in val.item
+                                .cart-product
+                                    .row.align-items-center
+                                        .col-12.col-sm-5.align-items-center.d-flex.justify-content-start
+                                            .cart-card
+                                                img(class='cart-card_img' src=subVal.img alt=subVal.alt)
+                                                .goods-title=subVal.name
+
+                                        .col-8.col-sm-4.align-items-center.d-flex.justify-content-around
+                                            .tooltip_block
+                                                img(class='i-svg cart-prod-icon' src=subVal.icon alt=subVal.iconAlt)
+                                                .icon-tooltip
+                                                    .icon-tooltip_content
+                                                        span.icon-tooltip_text=subVal.method
+                                            span.new-price=subVal.quantity
+
+                                        .col-4.col-sm-3.align-items-center.d-flex.justify-content-end
+                                            span.new-price=subVal.price
+                        .col-12.d-flex.align-items-center.justify-content-between.list-sum_block
+                            span.list_sum Сумма по списку:
+                            span.list_sum-digits 999 999 ₽
+                .row
+                    .col-12.delivery-cost_wrapper.d-flex.align-items-center.justify-content-between
+                        span.list_sum Стоимость доставки:
+                        span.list_sum-digits 9 999 ₽
+                .row
+                    .col-12.col-sm-8.col-md-7.col-lg-5
+                        a(class='btn separate-pay-btn' href='javascript:void(0)') Оформить и оплатить отдельно
+
+    .row
+        .col-12.col-xl-10
+            .delivery-block
+                .row
+                    .col.d-flex.align-items-center.justify-content-between
+                        h2.delivery-block_header Доставка позже
+                        .tooltip-delivery_block
+                            img(class='i-svg' src='img/order-details/prod-remove.svg' alt='Удалить товар')
+                            .icon-tooltip
+                                .icon-tooltip_content
+                                    span.icon-tooltip_text Удалить товары
+
+                each val, key in orderSeparate
+                    .row.no-gutters.align-items-center.justify-content-between
+                        .col-12
+                            .row.align-items-center
+                               .col
+                                    h2.cart-list_title=val.name
+
+                            each subVal, subKey in val.item
+                                .cart-product
+                                    .row
+                                        .col-12.col-sm-5.align-items-center.d-flex.justify-content-start
+                                            .cart-card
+                                                img(class='cart-card_img' src=subVal.img alt=subVal.alt)
+                                                .goods-title=subVal.name
+
+                                        .col-8.col-sm-4.align-items-center.d-flex.justify-content-around
+                                            .tooltip_block
+                                                img(class='i-svg cart-prod-icon' src=subVal.icon alt=subVal.iconAlt)
+                                                .icon-tooltip
+                                                    .icon-tooltip_content
+                                                        span.icon-tooltip_text=subVal.method
+                                            span.new-price=subVal.quantity
+
+                                        .col-4.col-sm-3.align-items-center.d-flex.justify-content-end
+                                            span.new-price=subVal.price
+                        .col-12.d-flex.align-items-center.justify-content-between.list-sum_block
+                            span.list_sum Сумма по списку:
+                            span.list_sum-digits 999 999 ₽
+                .row
+                    .col-12.delivery-cost_wrapper.d-flex.align-items-center.justify-content-between
+                        span.list_sum Стоимость доставки:
+                        span.list_sum-digits 9 999 ₽
+
+                .row
+                    .col-12.col-lg-9
+                        .row.order-btn-block.align-items-center.justify-content-between
+                            .col-12.col-sm-8.col-md-7.col-lg-7
+                                a(class='btn separate-pay-btn' href='javascript:void(0)') Оформить и оплатить отдельно
+                            .col-12.col-sm-6.col-md-5.col-lg-5
+                                a(class='btn pink-btn' href='javascript:void(0)') Объединить в один заказ
+
+    .row
+        .col-12.col-xl-10
+            .total-amount
+                ul.total-amount_list
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.cart_span Стоимость всего заказа
+                                span.list_sum-digits 999 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.cart_span Сумма скидки:
+                                span.list_sum-digits 9 999 ₽
+                    li.total-amount_item
+                        .row
+                            .col.d-flex.justify-content-between.align-items-center
+                                span.total-amount_span Итоговая сумма:
+                                span.list_sum-digits 9 900 000 р.
+
+            .row.justify-content-around
+                .col-12.col-md-8.col-lg-6.d-flex.flex-column.justify-content-between.align-items-center
+                    a(class='btn separate-pay-btn' href='#') Оформить и оплатить заказ
+                    a(class='return-btn' href='shopping-cart.html') Вернуться в корзину
+
+
+

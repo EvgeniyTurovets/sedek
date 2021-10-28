@@ -1,0 +1,116 @@
+-
+    var myOrders = {
+        0: {
+            'number' : '1234567',
+            'date' : '12.02.21',
+            'lists' : '2',
+            'goods' : '5',
+            'delivery' : '0',
+            'amount' : '99 999 р.',
+            'track' : '1234567890',
+            'status' : 'Подтвержден'
+        },
+        1: {
+            'number': '1234567',
+            'date': '12.02.21',
+            'lists': '2',
+            'goods': '5',
+            'delivery': '0',
+            'amount': '99 999 р.',
+            'track': '1234567890',
+            'status': 'В пути'
+        },
+        2: {
+            'number': '1234567',
+            'date': '12.02.21',
+            'lists': '2',
+            'goods': '5',
+            'delivery': '0',
+            'amount': '99 999 р.',
+            'track': '1234567890',
+            'status': 'Доставлен'
+        },
+        3: {
+            'number': '1234567',
+            'date': '12.02.21',
+            'lists': '2',
+            'goods': '5',
+            'delivery': '0',
+            'amount': '99 999 р.',
+            'track': '1234567890',
+            'status': 'Доставлен'
+        },
+    };
+
+section.lk-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-menu-mobile
+            include _lk-menu.pug
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block.lk-my-orders
+                h1.page-header Мои заказы
+            section.lk-right-section.my-orders-section
+                h2.hidden-heading 1
+                each val, key in myOrders
+                    .my-order_wrapper
+                        .row
+                            .col-12
+                                .span-block.d-flex.align-items-center
+                                    span.order-number Заказ №
+                                    span.order-number=val.number
+                                .span-block.d-flex.align-items-center
+                                    span.order-date Создан
+                                    span.order-date=val.date
+                        .my-orders-conditions
+                            .row
+                                .col-7
+                                    span.my-orders_span Списков
+                                .col-5.d-flex.justify-content-end
+                                    span.my-orders_span=val.lists
+                                .col-7
+                                    span.my-orders_span Всего товаров
+                                .col-5.d-flex.justify-content-end
+                                    span.my-orders_span=val.goods
+                                .col-7
+                                    span.my-orders_span Доставка по адресу
+                                .col-5.d-flex.justify-content-end
+                                    span.my-orders_span=val.delivery
+                                .col-7
+                                    span.my-orders_span-bold Сумма заказа
+                                .col-5.d-flex.justify-content-end
+                                    span.my-orders_span-bold=val.amount
+                        .order-status-block
+                            .row
+                                if (val.status === 'Доставлен')
+                                    .col-12.col-lg-8.col-xl-9
+                                else
+                                    .col-12.col-lg-8.col-xl-9.d-flex
+                                        .row.w-100
+                                            .col-12.col-sm-6.col-md-7.col-lg-6.col-xl-5
+                                                .span-block.order-tracking-block.d-flex.align-items-center
+                                                    span.my-orders_span Треккинг номер:
+                                                    span.my-orders_span-bold=val.track
+                                            .col-12.col-sm-6.col-md-4.col-lg-6.col-xl-7.d-flex.justify-content-start
+                                                a.order-located(href='#') Где мой заказ?
+                                .col-11.col-sm-5.col-lg-4.col-xl-3.d-flex.justify-content-end
+                                    if (val.status === 'Подтвержден')
+                                        .order-status(style='background-color: #fce4d1')=val.status
+                                    else if (val.status === 'В пути')
+                                        .order-status(style='background-color: #fcfbd1')=val.status
+                                    else
+                                        .order-status(style='background-color: #e9fcd1')=val.status
+                        .row
+                            .col-12.col-sm-9.col-md-11.col-lg-9.col-xl-7
+                                .row.align-items-center.justify-content-between.my-orders-buttons
+                                    .col-12.col-sm-5
+                                        a.view-button(href='lk-buyer-order-details.html') Просмотреть
+                                    .col-8.col-sm-5
+                                        a.cancel-button(href='javascript:void(0)') Отменить
+                                    .col-4.col-sm-2.d-flex.justify-content-end.p-sm-0
+                                        a.help-button(href='#') ?
+                .row.justify-content-around
+                    .col-12.col-md-9.col-lg-8.col-xl-6
+                        a(class='btn view-button' href='javascript:void(0)') Показать предыдущие
+

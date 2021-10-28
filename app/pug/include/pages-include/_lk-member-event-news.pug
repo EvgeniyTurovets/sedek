@@ -1,0 +1,89 @@
+-
+    var events = {
+        0: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        1: {
+            'name': 'ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        2: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        3: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        4: {
+            'name': 'ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        5: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        6: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        7: {
+            'name': 'ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+        8: {
+            'name': 'КОНКУРС! #СеДеКвМоемГороде',
+            'date': '25.11.2020',
+            'link': '#'
+        },
+    };
+
+
+section.lk-member-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-member-menu.pug
+            include _lk-member-menu-mobile
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                h1.page-header Конференции и новости
+
+            section.member-event-section
+                .bottom-news
+                    .row
+                        each val, key in events
+                            .col-12.col-sm-6.col-xl-4.member-event_card
+                                a(href=val.link)
+                                    .recom-top_card.d-flex.flex-column.justify-content-between
+                                        h4.rec-card_heading=val.name
+                                        span.card-date=val.date
+                    .row.justify-content-around
+                        .col-12.col-md-8.col-lg-6.d-flex.flex-column.align-items-center
+                            a(class='btn view-button' href='javascript:void(0)') Показать ещё
+                            .pagination-wrapper
+                                ul.pagination-list.d-flex.align-items-end.justify-content-between
+                                    li.pagination-item
+                                        span.pagination-span
+                                    li.pagination-item
+                                        span.pagination-span.span-page 1
+                                    li.pagination-item
+                                        a(href='#') 2
+                                    li.pagination-item
+                                        a(href='#') 3
+                                    li.pagination-item
+                                        span.pagination-span  ...
+                                    li.pagination-item
+                                        a(href='#') 12
+                                    li.pagination-item
+                                        a.pagination-span.span-next(href='javascript:void(0)')
+

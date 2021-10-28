@@ -1,0 +1,65 @@
+-
+    var category = {
+        0: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_1.png',
+            'name': 'Томаты',
+            'alt': 'Томаты'
+        },
+        1: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_2.png',
+            'name': 'Огурцы',
+            'alt': 'Огурцы'
+        },
+        2: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_3.png',
+            'name': 'Перцы',
+            'alt': 'Перцы'
+        },
+        3: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_4.png',
+            'name': 'Капуста',
+            'alt': 'Капуста'
+        },
+        4: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_5.png',
+            'name': 'Морковь',
+            'alt': 'Морковь'
+        },
+        5: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_6.png',
+            'name': 'Свекла',
+            'alt': 'Свекла'
+        },
+        6: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_7.png',
+            'name': 'Пряности',
+            'alt': 'Пряности'
+        },
+        7: {
+            'link': 'catalog-category-lvl1.html',
+            'img': 'img/popular-sect/pop_8.png',
+            'name': 'Кабачки',
+            'alt': 'Кабачки'
+        },
+    };
+
+
+section.popular-section
+    h2.popular-heading Популярные категории
+
+    .row.pop-cards-row
+        each val, key in category
+            .col-12.col-sm-6.col-md-4.col-lg-3
+                .popular-card
+                    a(class='pop-card_link' href=val.link)
+                        img(src=val.img alt=val.alt)
+                        h3=val.name
+
+    a(class='btn all-cat_btn' href='catalog-category-lvl1.html') Все категории

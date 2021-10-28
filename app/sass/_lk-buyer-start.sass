@@ -1,0 +1,75 @@
+@import "vars"
+
+.menu-left-wrapper
+    padding: 18px 5px 22px 5px
+    border: 1px solid $purple
+    border-radius: 20px
+
+.menu-left_item
+    width: 100%
+    padding: 10px 0 10px 11px
+
+.menu-left_item,
+.link-block a
+
+    &:hover
+        text-decoration-line: underline
+
+.link-block.active > a
+    background-color: $pop-card-bg
+    border-radius: 20px
+
+.link-block
+
+    &:last-child
+        margin-top: 40px
+
+.menu-left_item,
+.menu-right_item > a
+    height: 100%
+    font-size: 14px
+    color: $text
+    font-weight: 600
+
+.personal_header-block
+    padding-bottom: 16px
+    border-bottom: 2px solid $yellow_2
+
+.lk-section,
+.tester-lk-section,
+.lk-partner-section,
+.lk-worker-section,
+.lk-member-section,
+.lk-favorite-section,
+.lk-order-details-section
+
+    .page-header
+        color: $def-txt
+        line-height: 40px
+
+    .menu-right-wrapper
+        padding: 30px 0 0 0
+
+.menu-right_item
+    margin-bottom: 20px
+
+    &:first-child
+        display: none!important
+
+    & img
+        width: 30px
+        height: 30px
+        margin-right: 20px
+
+.menu-right_link
+    padding: 36px 25px
+    transition: all .25s ease
+
+    &:hover
+        background-color: $card-act-bg
+        border-radius: 15px 15px 40px 15px
+        box-shadow: 10px 10px 30px rgba(12, 11, 10, 0.16)
+        transition: all .25s ease
+
+        span
+            text-decoration-line: underline

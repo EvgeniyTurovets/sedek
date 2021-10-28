@@ -1,0 +1,101 @@
+-
+    var fertilizers = {
+        0: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-1'
+        },
+        1: {
+            'img': 'img/seeds-sect/seeds-sect_3.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-2'
+        },
+        2: {
+            'img': 'img/seeds-sect/seeds-sect_4.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-3'
+        },
+        3: {
+            'img': 'img/seeds-sect/seeds-sect_1.png',
+            'category': 'Семена овощей',
+            'name': 'Название продукта может быть в несколько строк',
+            'newPrice': '119,50 ₽',
+            'oldPrice': '162,50 ₽',
+            'conditions': 'Условия заказа',
+            'icon1': 'img/discount-goods-sect/star-regular.svg',
+            'icon2': 'img/discount-goods-sect/icon-2.svg',
+            'icon3': 'img/discount-goods-sect/icon-3.svg',
+            'discount': true,
+            'link': 'prod-card.html',
+            'alt': 'семена-4'
+        },
+    };
+
+section.fertilizers-section.discount-goods
+    .row
+        .col-12.col-lg-8.d-flex.discount-goods-top.justify-content-between.align-items-center.order-first.order-lg-first.section-top
+            h2.seeds-heading Удобрения
+        .col-12.col-lg-4.d-flex.discount-goods-top.align-items-center.order-last.order-lg-2.justify-content-around.justify-content-lg-end
+            a(class= 'btn section-btn' href='#') Все удобрения
+        .col-12.order-2.order-lg-3.interesting-useful_content
+            .owl-carousel.fertilizers-slider.owl-stage
+                each val, key in fertilizers
+                    .sets_card.d-flex.justify-content-around
+                        .slider_card.slider-card_narrow
+                            .discount-card_top
+                                a(class='card-top_link' href=val.link)
+                                img(class='card-top_img' src=val.img alt=val.alt)
+                                .discount-block -10%
+                                .card-icons_block
+                                    a(class='card-icon icon-star' href='#')
+                                        img(class='i-svg' src=val.icon1 alt='звезда')
+                                    a(class='card-icon' href='#')
+                                        img(class='i-svg' src=val.icon2 alt='категория 1')
+                                    a(class='card-icon' href='#')
+                                        img(class='i-svg' src=val.icon3 alt='категория 2')
+                            .discount-card_bottom
+                                .discount-card_description
+                                    span.goods-category=val.category
+                                    span.goods-title=val.name
+                                    .row.discount-card_price
+                                        .col-5
+                                            .new-price_block
+                                                span.new-price=val.newPrice
+                                                a(class='order-conditions' href='#')=val.conditions
+                                        .col-7
+                                            span.old-price=val.oldPrice
+                                .row
+                                    .col-6.buy-block
+                                        .product-qty_block
+                                            span.prod-qty_minus.product-qty_btn -
+                                            input.product_qty.type_num('maxlength'='3' value=0)
+                                            span.prod-qty_plus.product-qty_btn +
+                                    .col-6.buy-btn-col
+                                        a(class='btn card-btn buy-btn' href='javascript:void(0)') Купить

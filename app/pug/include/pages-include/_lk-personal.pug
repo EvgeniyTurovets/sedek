@@ -1,0 +1,39 @@
+-
+    var personal = {
+        0: {
+            'name' : 'ФИО',
+            'value' : 'Константинопольский Константин Константинович'
+        },
+        1: {
+            'name': 'Должность',
+            'value': 'Руководитель производства'
+        },
+        2: {
+            'name': 'Телефон',
+            'value': '+7 999 999 99 99'
+        },
+        3: {
+            'name': 'E-mail',
+            'value': 'konstantin@roga-kopita.ru'
+        },
+    };
+
+section.lk-section
+    h2.hidden-heading 1
+    .row
+        .col-12.col-md-4.col-lg-3
+            include _lk-menu.pug
+            include _lk-menu-mobile
+        .col-12.col-md-8.col-lg-9
+            .personal_header-block
+                .row.align-items-center
+                    .col-12.col-sm-7
+                        h1.page-header Личные данные
+                    .col-12.col-sm-5.d-flex.justify-content-start.justify-content-sm-end
+                        a.edit-btn(href='lk-personal-edit.html') Изменить
+
+            .menu-right-wrapper
+                each val, key in personal
+                    .personal-data_block.d-flex.flex-column
+                        span.personal-data_heading=val.name
+                        span.personal-data_value=val.value
