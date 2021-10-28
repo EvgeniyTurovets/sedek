@@ -1,7 +1,2 @@
 node_modules/
-app/*.html
-app/css/
-.git/
-package-lock.json
-app/js/scripts.min.js
 .idea/

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <!-- Запрет индексации (убрать по окончании разработки сайта)-->
+    <meta name="robots" content="nofollow">
+    <title>СеДеК</title>
+    <meta name="description" content="Описание страницы в несколько слов несколько слов">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Template Basic Images Start-->
+    <meta property="og:image" content="img/favicon/og-image.png">
+    <link rel="icon" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!--Custom Browsers Color Start-->
+    <meta name="theme-color" content="#353f42">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-3 col-sm-2 logo-block"><a class="header-logo" href="index.html"></a></div>
+          <div class="col-9 col-sm-10 header-left">
+            <div class="row m-0">
+              <div class="col-12 p-0">
+                <nav>
+                  <div class="row align-baseline header-nav no-gutters">
+                    <div class="col-1 nav_item p-0 order-12 order-sm-first"><a class="menu-open" href="javascript:void(0)"><img class="i-svg header-menu-img" src="img/header-icons/menu-icon.svg" alt="основное меню"><span class="nav_span d-block">Меню</span></a></div>
+                    <div class="col-1 nav_item p-0 order-2"><a href="catalog-page.html"><img class="i-svg header-menu-img" src="img/header-icons/catalog-icon.svg" alt="каталог"><span class="nav_span">Каталог</span></a></div>
+                    <div class="col-1 nav_item p-0 order-3"><a href="#"><img class="i-svg header-menu-img" src="img/header-icons/promo-icon.svg" alt="акции"><span class="nav_span">Акции</span></a></div>
+                    <div class="col-5 nav_item p-0 order-4 order-sm-2 order-md-3 order-lg-4">
+                      <div class="search_block"><a class="search-btn" href="#"><img class="i-svg" src="img/header-icons/search-icon.svg" alt="кнопка поиска"></a>
+                        <input class="header-search" type="search" placeholder="Найти: Помидоры">
+                      </div>
+                    </div>
+                    <div class="col-1 nav_item p-0 order-5"><a href="#"><img class="i-svg header-menu-img" src="img/header-icons/delivery-icon.svg" alt="доставка"><span class="nav_span">Доставка</span></a></div>
+                    <div class="col-1 nav_item p-0 order-lg-6 d-none d-lg-block"><a href="#"><img class="i-svg header-menu-img" src="img/header-icons/contact-icon.svg" alt="контакты"><span class="nav_span">Контакты</span></a></div>
+                    <div class="col-1 nav_item p-0 order-1 order-sm-3 order-md-4 order-lg-7">
+                      <div class="nav-cart"><a href="shopping-cart.html"><img class="i-svg header-menu-img" src="img/header-icons/cart-icon.svg" alt="корзина"><img class="red-bell i-svg" src="img/header-icons/bell-cart-icon.svg" alt="красный колокольчик"><span class="nav_span">Корзина</span></a></div>
+                    </div>
+                    <div class="col-1 nav_item p-0 order-2 order-sm-4 order-md-8"><a href="#"><img class="i-svg header-menu-img" src="img/header-icons/user-regular.svg" alt="вход в личный кабинет"><span class="nav_span">Вход</span></a></div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="col-12 p-0 header-bottom d-flex justify-content-between align-items-center"><img class="i-svg header-veg-img" src="img/header-img/veg-1.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-2.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-3.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-4.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-5.svg" alt="овощ">
+                <h3 class="header-heading d-none d-sm-block">Урожайная грядка в любом регионе России</h3><img class="i-svg header-veg-img" src="img/header-img/veg-5.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-4.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-3.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-2.svg" alt="овощ"><img class="i-svg header-veg-img" src="img/header-img/veg-1.svg" alt="овощ">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <nav class="header-menu">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-6 col-sm-8 col-lg-9">
+                <div class="row justify-content-between">
+                  <div class="col-12 col-md-4 header-menu_col">
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link promo-menu-link" href="#" style="color:red">% Акции</a></li>
+                    </ul>
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Новинки</a>
+                      </li>
+                    </ul>
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-4 header-menu_col">
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-4 header-menu_col">
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="header-menu_list">
+                      <li class="header-menu_item"><a class="header-menu_link" href="#">Категория каталога</a>
+                        <ul class="header-submenu_list d-none d-md-block">
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                          <li class="header-submenu_item"><a class="header-submenu_link" href="#">Подкатегория каталога</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4 col-lg-3">
+                <div class="header-menu_sidebar">
+                  <ul class="header-menu_list">
+                    <li class="header-menu_item"><a class="header-menu_link" href="#">Условия заказа</a></li>
+                    <li class="header-menu_item"><a class="header-menu_link" href="#">Доставка</a></li>
+                    <li class="header-menu_item"><a class="header-menu_link" href="#">Оплата</a></li>
+                    <li class="header-menu_item"><a class="header-menu_link" href="#">О компании</a></li>
+                    <li class="header-menu_item"><a class="header-menu_link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <nav class="breadcrumbs">
+        <div class="row justify-content-start">
+          <div class="col d-flex justify-content-start align-items-center">
+            <div class="chapter-nav_item"><a class="chapter-nav_link" href="/">Страница</a>
+            </div>
+            <div class="chapter-nav_item"><a class="chapter-nav_link" href="/">Страница</a>
+            </div>
+            <div class="chapter-nav_item"><a class="chapter-nav_link" href="/">Страница</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="container hero-container">
+            <div class="row m-0">
+              <div class="col p-0">
+                <div class="dark-block"></div>
+                <h1 class="hero-heading">Урожайная грядка в любом регионе России</h1>
+                <h3 class="hero_subheader">Большой выбор семян собственного производства</h3><a class="btn hero_btn" href="catalog-page.html">Перейти в каталог<i class="fas fa-caret-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="slider-section discount-goods">
+          <div class="row">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first">
+              <h2 class="discount-heading">Товары со скидкой %!</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="catalog-page.html">В каталог</a></div>
+            <div class="col-12 order2 order-lg-3 slider">
+              <div class="owl-carousel discount-slider owl-stage">
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-1">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_3.png" alt="семена-2">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_4.png" alt="семена-3">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-4">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="interesting-useful">
+          <div class="row">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first">
+              <h2 class="useful-heading">Интересно и полезно</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="#"> К наборам</a></div>
+            <div class="col-12 order-2 order-lg-3 interesting-useful_content">
+              <div class="row">
+                <div class="col-12 col-sm-10 col-lg-6">
+                  <div class="interesting-useful_left"><img src="img/interesting-useful-sect/int-use_1.png" alt="овощи">
+                    <div class="interesting-useful-content_block">
+                      <h3 class="card-heading">Томат, огурчик, перчик. И то, что им необходимо</h3><a class="btn card-btn" href="shopping-cart.html">В корзину</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 interesting-useful_content-right d-flex justify-content-between">
+                  <div class="row">
+                    <div class="col-12 col-sm-6">
+                      <div class="interesting-useful-right_card interesting-useful-right_card-1"><img src="img/interesting-useful-sect/int-use_2.png" alt="овощи">
+                        <div class="interesting-useful-right_block">
+                          <h4>Томат, огурчик, перчик. И то, что им необходимо</h4><a class="btn card-btn" href="shopping-cart.html">В корзину</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div class="interesting-useful-right_card interesting-useful-right_card-2"><img src="img/interesting-useful-sect/int-use_2.png" alt="овощи">
+                        <div class="interesting-useful-right_block">
+                          <h4>Томат, огурчик, перчик. И то, что им необходимо</h4><a class="btn card-btn" href="shopping-cart.html">В корзину</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="popular-section">
+          <h2 class="popular-heading">Популярные категории</h2>
+          <div class="row pop-cards-row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_1.png" alt="Томаты">
+                  <h3>Томаты</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_2.png" alt="Огурцы">
+                  <h3>Огурцы</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_3.png" alt="Перцы">
+                  <h3>Перцы</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_4.png" alt="Капуста">
+                  <h3>Капуста</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_5.png" alt="Морковь">
+                  <h3>Морковь</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_6.png" alt="Свекла">
+                  <h3>Свекла</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_7.png" alt="Пряности">
+                  <h3>Пряности</h3></a></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="popular-card"><a class="pop-card_link" href="catalog-category-lvl1.html"><img src="img/popular-sect/pop_8.png" alt="Кабачки">
+                  <h3>Кабачки</h3></a></div>
+            </div>
+          </div><a class="btn all-cat_btn" href="catalog-category-lvl1.html">Все категории</a>
+        </section>
+        <section class="seeds-section discount-goods">
+          <div class="row">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first section-top">
+              <h2 class="seeds-heading">Семена на любой вкус</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="catalog-page.html">В каталог</a></div>
+            <div class="col-12 order-2 order-lg-3 interesting-useful_content">
+              <div class="owl-carousel seeds-slider owl-stage">
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-1">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_3.png" alt="семена-2">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_4.png" alt="семена-3">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-4">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="buy-now-section discount-goods">
+          <div class="row">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first section-top">
+              <h2 class="seeds-heading">Успейте купить сегодня</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="catalog-page.html">В каталог</a></div>
+            <div class="col-12 order-2 order-lg-3 interesting-useful_content">
+              <div class="owl-carousel buy-now-slider owl-stage">
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-1">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_3.png" alt="семена-2">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_4.png" alt="семена-3">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-4">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="recommendations-section">
+          <div class="row align-items-center">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first section-top">
+              <h2 class="recom-heading">Полезные советы</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="#">К советам</a></div>
+            <div class="col-12 news-section all-news all-articles-section order-2 order-lg-3">
+              <div class="row">
+                <div class="col-12 col-md-8 col-lg-6 news-card news-card-grid-first"><a class="news-card-active" href="#"><img src="img/recommendations-sect/recom_1.png" alt="совет">
+                    <div class="recom-card-active_heading">
+                      <h3 class="news-active-heading">Как правильно ухаживать за урожаем?</h3><span class="card-date">25.11.2020</span>
+                    </div></a></div>
+                <div class="col-md-4 col-lg-6">
+                  <div class="row top-news top-articles">
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">Как предотвратить появление вредителей на участке</h4><span class="card-date">25.11.2020</span></a></div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">Как предотвратить появление вредителей на участке</h4><span class="card-date">25.11.2020</span></a></div>
+                    <div class="col-12 col-sm-6 col-lg-6 movable-card news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">Правила поливки</h4><span class="card-date">25.11.2020</span></a></div>
+                    <div class="col-12 col-sm-6 col-lg-6 movable-card news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">Правила поливки</h4><span class="card-date">25.11.2020</span></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bottom-news bottom-articles">
+                <div class="col-12 col-sm-6 col-lg-4 news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                    <h4 class="rec-card_heading">Как предотвратить появление вредителей на участке</h4><span class="card-date">25.11.2020</span></a></div>
+                <div class="col-12 col-sm-6 col-lg-4 news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                    <h4 class="rec-card_heading">Как предотвратить появление вредителей на участке</h4><span class="card-date">25.11.2020</span></a></div>
+                <div class="col-12 col-sm-6 col-lg-4 news-card-grid article-card"><a class="recom-top_card d-flex flex-column justify-content-between" href="#">
+                    <h4 class="rec-card_heading">Как предотвратить появление вредителей на участке</h4><span class="card-date">25.11.2020</span></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="discount-section">
+          <h2 class="discount-sect_heading">Скидки до 70%<br> на овощи и фрукты!</h2>
+          <h3 class="discount-sect_subheader">Закажите прямо сейчас и получите дополнительную скидку</h3><a class="btn discount_btn" href="catalog-page.html">Перейти в каталог</a>
+          <div class="discount-sect_discount discount-10">-10%</div>
+          <div class="discount-sect_discount discount-20">-20%</div>
+          <div class="discount-sect_discount discount-40">-40%</div>
+          <div class="discount-sect_discount discount-50">-50%</div>
+        </section>
+        <section class="fertilizers-section discount-goods">
+          <div class="row">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first section-top">
+              <h2 class="seeds-heading">Удобрения</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="#">Все удобрения</a></div>
+            <div class="col-12 order-2 order-lg-3 interesting-useful_content">
+              <div class="owl-carousel fertilizers-slider owl-stage">
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-1">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_3.png" alt="семена-2">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_4.png" alt="семена-3">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sets_card d-flex justify-content-around">
+                  <div class="slider_card slider-card_narrow">
+                    <div class="discount-card_top"><a class="card-top_link" href="prod-card.html"></a><img class="card-top_img" src="img/seeds-sect/seeds-sect_1.png" alt="семена-4">
+                      <div class="discount-block">-10%</div>
+                      <div class="card-icons_block"><a class="card-icon icon-star" href="#"><img class="i-svg" src="img/discount-goods-sect/star-regular.svg" alt="звезда"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-2.svg" alt="категория 1"></a><a class="card-icon" href="#"><img class="i-svg" src="img/discount-goods-sect/icon-3.svg" alt="категория 2"></a></div>
+                    </div>
+                    <div class="discount-card_bottom">
+                      <div class="discount-card_description"><span class="goods-category">Семена овощей</span><span class="goods-title">Название продукта может быть в несколько строк</span>
+                        <div class="row discount-card_price">
+                          <div class="col-5">
+                            <div class="new-price_block"><span class="new-price">119,50 ₽</span><a class="order-conditions" href="#">Условия заказа</a></div>
+                          </div>
+                          <div class="col-7"><span class="old-price">162,50 ₽</span></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 buy-block">
+                          <div class="product-qty_block"><span class="prod-qty_minus product-qty_btn">-</span>
+                            <input class="product_qty type_num" maxlength="3" value="0"><span class="prod-qty_plus product-qty_btn">+</span>
+                          </div>
+                        </div>
+                        <div class="col-6 buy-btn-col"><a class="btn card-btn buy-btn" href="javascript:void(0)">Купить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="news-section">
+          <div class="row">
+            <div class="col-12 col-lg-8 d-flex discount-goods-top justify-content-between align-items-center order-first order-lg-first section-top">
+              <h2 class="news-heading">Новости</h2>
+            </div>
+            <div class="col-12 col-lg-4 d-flex discount-goods-top align-items-center order-last order-lg-2 justify-content-around justify-content-lg-end"><a class="btn section-btn" href="all-news.html">Все новости</a></div>
+            <div class="col-12 order-2 order-lg-3 interesting-useful_content">
+              <div class="row recommendations-content">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6"><a href="#">
+                    <div class="news-card-active"><img src="img/recommendations-sect/recom_1.png" alt="новости">
+                      <div class="recom-card-active_heading">
+                        <h3 class="news-active-heading">Для оптового заказа обращайтесь только к нашим менеджерам</h3><span class="card-date">25.11.2020</span>
+                      </div>
+                    </div></a></div>
+                <div class="col-12 col-md-4 col-lg-6 news-col">
+                  <div class="row">
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 recom-top_card"><a class="d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">КОНКУРС! #СеДеКвМоемГороде</h4><span class="card-date">25.11.2020</span></a></div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 recom-top_card"><a class="d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!</h4><span class="card-date">25.11.2020</span></a></div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 recom-top_card"><a class="d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">ЧЕРНАЯ ПЯТНИЦА! Целая неделя больших скидок в интернет-магазине!</h4><span class="card-date">25.11.2020</span></a></div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 recom-top_card"><a class="d-flex flex-column justify-content-between" href="#">
+                        <h4 class="rec-card_heading">КОНКУРС! #СеДеКвМоемГороде</h4><span class="card-date">25.11.2020</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="connect-section">
+          <div class="row">
+            <div class="col-11 col-lg-7 connect-left p-0">
+              <h2>Оставайтесь на связи</h2>
+              <p class="paragraph-gray">Подписывайтесь на нас в соцсетях, узнавайте о новых поступлениях, полезных советах и выгодных предлложениях</p>
+            </div>
+            <div class="col-7">
+              <div class="row social-block justify-content-between">
+                <div class="col-4 col-lg-2 social-item p-0"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/instagram.svg" alt="инстаграм"></a></div>
+                <div class="col-4 col-lg-2 social-item p-0"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/facebook.svg" alt="фэйсбук"></a></div>
+                <div class="col-4 col-lg-2 social-item p-0"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/vk.svg" alt="вконтакте"></a></div>
+                <div class="col-4 col-lg-2 social-item p-0"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/youtube.svg" alt="ютуб"></a></div>
+                <div class="col-4 col-lg-2 social-item p-0"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/twitter.svg" alt="твиттер"></a></div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 connect-right">
+              <div class="connect-right-bg_block"></div><img class="connect-rect connect-rect_2" src="img/connect-sect/connect-rect_2.png" alt="розовый круг"><img class="connect-rect connect-rect_3" src="img/connect-sect/connect-rect_3.png" alt="розовый круг"><img class="connect-rect connect-rect_4" src="img/connect-sect/connect-rect_4.png" alt="розовый круг"><img class="connect-rect connect-rect_5" src="img/connect-sect/connect-rect_5.png" alt="розовый круг"><img class="connect-rect connect-rect_6" src="img/connect-sect/connect-rect_6.png" alt="карточка инстаграм"><img class="connect-rect connect-rect_7" src="img/connect-sect/connect-rect_7.png" alt="карточка инстаграм"><img class="connect-rect connect-rect_8" src="img/connect-sect/connect-rect_8.png" alt="карточка инстаграм">
+            </div>
+          </div>
+        </section>
+        <section class="post-section">
+          <h2>Семена почтой</h2>
+          <div class="post-txt-block">
+            <p class="paragraph-black">
+              Интернет магазин компании «СеДеК» предлагает семена овощных, ягодных и цветочных культур. Также вы всегдаможете купить удобрения, средства защиты растений и другие товары, необходимые каждому садоводу и
+              огороднику. Продукция доставляется курьерами и отправляется почтой!
+            </p>
+            <p class="paragraph-black">
+              В каталоге интернет магазина представлен широкий ассортимент посевного материала. Это семена такихпривычных культур, как томат, лук, картофель или баклажан, а также весьма экзотические варианты. Например,
+              артишок или момордика. Большой выбор семян является залогом того, что каждый из посетителей сайта сможет
+              найти подходящую продукцию.
+            </p>
+            <p class="paragraph-black">В интернет магазине вы можете купить:</p>
+            <p class="paragraph-black">
+              семена компании «СеДеК»;<br>посадочный материал (саженцы цветов, луковичные, семенной картофель, лук-севок);<br>
+              товары для сада и огорода (садовый инвентарь, грунты, удобрения).<br>
+              Заказы на сайте принимаются круглосуточно, и вам не нужно выходить из дома, чтобы сделать выбор и оформить покупку.
+            </p>
+          </div>
+        </section>
+        <section class="feedback-main-section">
+          <div class="row align-items-center">
+            <div class="col-10 col-md-8 col-lg-6 feedback-heading">
+              <h2>Остались вопросы? Мы вам перезвоним и все расскажем</h2>
+            </div>
+            <div class="col-12 col-lg-6 align-items-center">
+              <div class="feedback-right-bg_block"></div>
+              <form class="feedback-form" method="post">
+                <input class="form_input" type="text" placeholder="Как к вам обращаться?" required>
+                <input class="form_input form_phone-number" type="text" name="phone" placeholder="Ваш номер телефона?" required>
+                <button class="btn form_btn" type="submit">Перезвонить мне</button>
+                <div class="row justify-content-around">
+                  <div class="col-11 col-sm-9">
+                    <div class="paragraph-block d-inline-block">
+                      <p class="paragraph-black">
+                        Нажимая кнопку, я соглашаюсь с</p><a class="d-inline conditions-link" href="#">условиями</a>
+                      <p class="paragraph-black d-inline">обработки данных</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-3 d-flex align-items-center justify-content-around"><a class="footer-logo" href="index.html"></a></div>
+            <div class="col-12 col-sm-9">
+              <nav class="footer-nav">
+                <div class="row footer-nav_list">
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 footer-nav_item d-flex align-items-center justify-content-around"><a class="footer-nav_link" href="catalog-page.html">Каталог</a></div>
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 footer-nav_item d-flex align-items-center justify-content-around"><a class="footer-nav_link" href="#">Условия заказа</a></div>
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 footer-nav_item d-flex align-items-center justify-content-around"><a class="footer-nav_link" href="#">Доставка</a></div>
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 footer-nav_item d-flex align-items-center justify-content-around"><a class="footer-nav_link" href="#">Оплата</a></div>
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 footer-nav_item d-flex align-items-center justify-content-around"><a class="footer-nav_link" href="#">О компании</a></div>
+                  <div class="col-6 col-sm-4 col-md-3 col-lg-2 footer-nav_item d-flex align-items-center justify-content-around"><a class="footer-nav_link" href="#">Контакты</a></div>
+                </div>
+              </nav>
+              <div class="row no-gutters footer-contacts_block">
+                <div class="col-12 col-sm-4 col-xl-3">
+                  <div class="footer-contacts">+7 (495) 788-93-90<br><a href="shop@sedek.ru">shop@sedek.ru</a></div>
+                </div>
+                <div class="col-12 col-sm-8 col-xl-5">
+                  <div class="footer-contacts">142006, Московская обл., г. Домодедово,<br> мкр-н Востряково, ул. Парковая, д.19.</div>
+                </div>
+                <div class="col-12 col-xl-4">
+                  <div class="footer-contacts">Реквизиты: 7656 86876 7678 6564<br> 1995-2021 © Компания «СеДеК»</div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-12">
+                  <ul class="social-block">
+                    <li class="social-item"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/instagram.svg" alt="инстаграм"></a></li>
+                    <li class="social-item"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/facebook.svg" alt="фэйсбук"></a></li>
+                    <li class="social-item"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/vk.svg" alt="вконтакте"></a></li>
+                    <li class="social-item"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/youtube.svg" alt="ютуб"></a></li>
+                    <li class="social-item"><a class="social-link social-link_white" href="#"><img class="social-icon i-svg" src="img/connect-sect/twitter.svg" alt="твиттер"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;coordorder=longlat&amp;amp;apikey=77b379b2-d918-499f-ad82-9ccc133773e7"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
